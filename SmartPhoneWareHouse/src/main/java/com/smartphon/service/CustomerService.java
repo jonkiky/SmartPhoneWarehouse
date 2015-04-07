@@ -1,14 +1,14 @@
 package com.smartphon.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.smartphon.dao.user.BuyerDao;
-import com.smartphon.dao.user.MemberDao;
 import com.smartphone.model.Buyer;
 @Service
 public class CustomerService {
 	
-	public BuyerDao buyerDao;
+	private BuyerDao buyerDao=new BuyerDao();
 	
 	public Boolean login(){
 		throw new UnsupportedOperationException("Implement this");

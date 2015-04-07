@@ -56,7 +56,7 @@ public class GlobalExceptionController {
 	@ExceptionHandler(Exception.class)
 	@ResponseBody
 	public String handleAllException(Exception ex) throws JsonProcessingException {
-		return JsonObject.runTimeException("400",lang.unKnow,null);
+		return JsonObject.runTimeException("400",ex.getMessage(),null);
 	}
 
 }

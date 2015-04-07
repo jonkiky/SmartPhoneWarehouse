@@ -27,9 +27,11 @@ import javax.persistence.Table;
 		public int getId() {
 			return id;
 		}
+	
 		public void setId(int id) {
 			this.id = id;
 		}
+
 		@Column(name = "user_name")
 		public String getUser_name() {
 			return user_name;

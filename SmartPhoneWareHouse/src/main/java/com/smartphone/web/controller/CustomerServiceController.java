@@ -16,7 +16,7 @@ import com.smartphone.webservice.util.JsonObject;
 @Controller
 public class CustomerServiceController {
 	
-	private CustomerService customerService; 
+	private CustomerService customerService=new CustomerService(); 
 	private Language lang=i18nConfigure.getInstance().getLanguage();
 	
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
