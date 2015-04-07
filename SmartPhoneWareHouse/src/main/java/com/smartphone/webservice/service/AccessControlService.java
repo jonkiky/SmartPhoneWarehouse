@@ -8,6 +8,7 @@ import org.aspectj.lang.annotation.Pointcut;
 
 import com.smartphone.web.exception.RuntimeExceptionExtend;
 import com.smartphone.web.i18n.EnglishTextString;
+import com.smartphone.web.i18n.i18nConfigure;
 
 
 /**
@@ -16,6 +17,7 @@ import com.smartphone.web.i18n.EnglishTextString;
  */
 @Aspect
 public class AccessControlService  {
+	
 
 //	@Before("@annotation(com.itm.web.anno.Register)")
 //	public void repgister(String name){
@@ -49,7 +51,7 @@ public class AccessControlService  {
 	public String userAccessdControl(String name) throws RuntimeExceptionExtend{
 		
 		
-		throw new RuntimeExceptionExtend("Err404",EnglishTextString.Err404); 
+		throw new RuntimeExceptionExtend("Err404",i18nConfigure.getInstance().getLanguage().userPremissionError); 
 		//throw new UnsupportedOperationException("Null point to TYPE");
 	}
 	

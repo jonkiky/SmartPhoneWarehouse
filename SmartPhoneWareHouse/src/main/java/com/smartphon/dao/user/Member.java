@@ -78,7 +78,6 @@ public abstract class Member {
 		this.bank = bank;
 	}
 	
-	
-	
+
 	
 }

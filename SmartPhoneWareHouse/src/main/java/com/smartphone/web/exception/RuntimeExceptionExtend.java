@@ -8,7 +8,7 @@ public class RuntimeExceptionExtend extends RuntimeException {
 	
 	private static final long serialVersionUID = 1L;
 	 
-	private String errCode;
+	private String errCode="400";
 	private String errMsg;
  
 	public String getErrCode() {

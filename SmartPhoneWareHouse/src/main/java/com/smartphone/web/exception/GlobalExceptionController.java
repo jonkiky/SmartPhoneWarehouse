@@ -5,8 +5,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.smartphone.web.i18n.Language;
+import com.smartphone.web.i18n.i18nConfigure;
 import com.smartphone.webservice.respnose.model.StanderMultiObjsResponse;
-import com.smartphone.webservice.util.JsonObjcet;
+import com.smartphone.webservice.util.JsonObject;
 
 
 /**
@@ -20,7 +22,9 @@ import com.smartphone.webservice.util.JsonObjcet;
 
 @ControllerAdvice
 public class GlobalExceptionController {
-
+	i18nConfigure cfg = i18nConfigure.getInstance();
+	private Language lang=cfg.getLanguage();
+	
 
 	/**
 	 * All the RuntimeExceptionExtend exception will active this function before send to client.
@@ -34,10 +38,8 @@ public class GlobalExceptionController {
 	@ResponseBody
 	public String handleCustomException(RuntimeExceptionExtend ex)
 			throws JsonProcessingException {
-		StanderMultiObjsResponse ce = new StanderMultiObjsResponse();
-		ce.setMessage(ex.getErrMsg());
-		ce.setStatusCode(ex.getErrCode());
-		return JsonObjcet.objcetTOJson(ce);
+		
+		return JsonObject.runTimeException(ex.getErrCode(),ex.getErrMsg(),null);
 
 	}
 	
@@ -54,10 +56,7 @@ public class GlobalExceptionController {
 	@ExceptionHandler(Exception.class)
 	@ResponseBody
 	public String handleAllException(Exception ex) throws JsonProcessingException {
-		StanderMultiObjsResponse ce = new StanderMultiObjsResponse();
-		ce.setMessage("505");
-		ce.setStatusCode("Unknow Exception");
-		return JsonObjcet.objcetTOJson(ce);
+		return JsonObject.runTimeException("500",lang.unKnow,null);
 	}
 
 }

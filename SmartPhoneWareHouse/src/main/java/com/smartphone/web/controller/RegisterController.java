@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.smartphon.dao.user.Buyer;
 import com.smartphon.service.RegisterService;
-import com.smartphone.webservice.util.JsonObjcet;
 
 @Controller
 public class RegisterController {
@@ -20,6 +19,7 @@ public class RegisterController {
 	@ResponseBody 
 	public String Index(@ModelAttribute Buyer customer) throws JsonProcessingException {
 		
-		return  JsonObjcet.objcetTOJson(customer);
+		//return  JsonObjcet.objcetTOJson();
+		throw new UnsupportedOperationException("Implement this");
 	}
 }

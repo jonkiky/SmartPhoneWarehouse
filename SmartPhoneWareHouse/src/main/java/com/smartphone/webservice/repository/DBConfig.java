@@ -15,7 +15,7 @@ import java.sql.Statement;
 public  class DBConfig {
 	
 	/** Default DB_URL */
-	public static final String DB_URL = "jdbc:mysql://localhost:3306/itm";
+	public static final String DB_URL = "jdbc:mysql://localhost:3306/smartphonewarehouse";
 	
 	/** Database User Name */
 	public static final String DB_USER = "root";

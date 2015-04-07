@@ -13,7 +13,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.smartphon.dao.user.Administrator;
 import com.smartphon.service.AdminService;
 import com.smartphone.web.annotation.Register;
-import com.smartphone.webservice.util.JsonObjcet;
 
 /**
  * IndexController : Response to request over HTTP protocol and send back a JSON
