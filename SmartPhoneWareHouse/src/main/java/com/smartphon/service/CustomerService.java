@@ -4,10 +4,11 @@ import org.springframework.stereotype.Service;
 
 import com.smartphon.dao.user.BuyerDao;
 import com.smartphon.dao.user.MemberDao;
+import com.smartphone.model.Buyer;
 @Service
 public class CustomerService {
 	
-	public BuyerDao buyer;
+	public BuyerDao buyerDao;
 	
 	public Boolean login(){
 		throw new UnsupportedOperationException("Implement this");
@@ -19,8 +20,8 @@ public class CustomerService {
 	}
 	
 	
-	public Boolean createCustomer(MemberDao member){
-		return  buyer.createCustomer(member);
+	public Boolean createCustomer(Buyer buyer){
+		return  buyerDao.createCustomer(buyer);
 	}
 	
 	

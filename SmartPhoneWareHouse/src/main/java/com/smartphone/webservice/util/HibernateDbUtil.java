@@ -3,6 +3,7 @@ package com.smartphone.webservice.util;
 
 
 import com.smartphone.model.Admin;
+import com.smartphone.web.i18n.i18nConfigure;
 import com.smartphone.webservice.repository.DBConfig;
 
 import java.util.List;
@@ -12,14 +13,21 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 
-public class HibernateDbUtil{
+public final class HibernateDbUtil{
 	private SessionFactory sessionFactory;
 	private DBConfig db;
 
-		
+
+    private static final HibernateDbUtil instance = new HibernateDbUtil();
+    
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
+	
+	 public static HibernateDbUtil getInstance(){
+	        return instance;
+	  }
+	    
 
 	public HibernateDbUtil(){
 		DBConfig dc = new DBConfig();

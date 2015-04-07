@@ -11,12 +11,12 @@
     <meta name="author" content="">
 
     <!-- Le styles  -->
-    <link href="front//assets/css/bootstrap.css" rel="stylesheet"/>
-    <link href="front//assets/css/bootstrap-responsive.css" rel="stylesheet"/>
-	<link href="front//assets/css/docs.css" rel="stylesheet"/>
+    <link href="front/assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="front/assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+	<link href="front/assets/css/docs.css" rel="stylesheet"/>
 	 
       <link href="<c:url value="front/assets/style.css"/>" rel="stylesheet"/>
-	<link href="front//assets/js/google-code-prettify/prettify.css" rel="stylesheet"/>
+	<link href="front/assets/js/google-code-prettify/prettify.css" rel="stylesheet"/>
 	
 	<!-- Less styles  
 	<link rel="stylesheet/less" type="text/css" href="less/bootsshop.less">

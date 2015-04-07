@@ -18,15 +18,19 @@ public final class JsonObject {
 	
 	
 	public static String  runTimeException(String code,String msg,Object inputObj) throws JsonProcessingException{
-		RuntimeExceptionExtend obj = new RuntimeExceptionExtend();
-		obj.setErrMsg(msg);
+		StanderSingleObjResponse obj = new StanderSingleObjResponse();
+		obj.setMessage(msg);
+		obj.setObj(inputObj);
+		obj.setStatusCode("400");
 		ObjectMapper mapper = new ObjectMapper();
 		return mapper.writeValueAsString(obj);
 	}
 	
 	public static String  customerExcetption (String msg) throws JsonProcessingException{
-		RuntimeExceptionExtend obj = new RuntimeExceptionExtend();
-		obj.setErrMsg(msg);
+		StanderSingleObjResponse obj = new StanderSingleObjResponse();
+		obj.setMessage(msg);
+		obj.setObj(null);
+		obj.setStatusCode("400");
 		ObjectMapper mapper = new ObjectMapper();
 		return mapper.writeValueAsString(obj);
 	}

@@ -7,7 +7,7 @@ package com.smartphone.web.i18n;
  */
 public final class i18nConfigure {
 	
-	//类加载时就初始化
+
     private static final i18nConfigure instance = new i18nConfigure();
     
     private i18nConfigure(){
