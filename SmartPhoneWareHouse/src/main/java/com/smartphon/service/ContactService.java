@@ -2,13 +2,13 @@ package com.smartphon.service;
 
 import org.springframework.stereotype.Service;
 
-import com.smartphon.dao.user.Member;
-import com.smartphon.dao.user.MemberProfile;
+import com.smartphon.dao.user.MemberDao;
+import com.smartphon.dao.user.MemberProfileDao;
 @Service
 public class ContactService {
 
-	public Member member;
-	public MemberProfile getContact(){
+	public MemberDao member;
+	public MemberProfileDao getContact(){
 		throw new UnsupportedOperationException("Implement this");
 	}
 }

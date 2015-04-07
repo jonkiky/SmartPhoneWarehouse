@@ -1,6 +1,6 @@
 package com.smartphon.dao.product;
 
-public class Status {
+public class StatusDao {
 	
 
 }

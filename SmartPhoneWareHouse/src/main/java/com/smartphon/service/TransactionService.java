@@ -3,16 +3,15 @@ package com.smartphon.service;
 import org.springframework.stereotype.Service;
 
 import com.smartphon.dao.product.SmartPhoneDao;
-import com.smartphon.dao.transaction.Order;
-import com.smartphon.dao.transaction.ShoppingCart;
-import com.smartphon.dao.user.Buyer;
+import com.smartphon.dao.transaction.OrderDao;
+import com.smartphon.dao.user.BuyerDao;
 @Service
 public class TransactionService {
 	
 
 	public SmartPhoneDao phone;
-	public Order order;
-	public Buyer buyer;
+	public OrderDao order;
+	public BuyerDao buyer;
 	
 	public void assembleOrder(){
 		
@@ -30,7 +29,7 @@ public class TransactionService {
 		
 	}
 	
-	public Order getOrderInfo(){
+	public OrderDao getOrderInfo(){
 		throw new UnsupportedOperationException("Implement this");
 	}
 

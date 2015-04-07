@@ -4,15 +4,15 @@ import java.util.Date;
 import java.util.List;
 
 import com.smartphon.dao.product.ProductDao;
-import com.smartphon.dao.user.BankInfo;
-import com.smartphon.dao.user.ShippingAddress;
+import com.smartphon.dao.user.BankInfoDao;
+import com.smartphon.dao.user.ShippingAddressDao;
 import com.smartphone.model.User;
 
-public class Order {
+public class OrderDao {
 	private int id ;
-	private List<SmartPhoneForTransaction> phones;
-	private BankInfo bankInfo;
-	private ShippingAddress address;
+	private List<SmartPhoneForTransactionDao> phones;
+	private BankInfoDao bankInfo;
+	private ShippingAddressDao address;
 	private User buyer;
 	private Date orderTime;
 	private String Status;
@@ -22,10 +22,10 @@ public class Order {
 	
 	
 	
-	public List<SmartPhoneForTransaction> getPhones() {
+	public List<SmartPhoneForTransactionDao> getPhones() {
 		return phones;
 	}
-	public void setPhones(List<SmartPhoneForTransaction> phones) {
+	public void setPhones(List<SmartPhoneForTransactionDao> phones) {
 		this.phones = phones;
 	}
 	public int getTotalPrice() {
@@ -41,16 +41,16 @@ public class Order {
 		this.id = id;
 	}
 
-	public BankInfo getBankInfo() {
+	public BankInfoDao getBankInfo() {
 		return bankInfo;
 	}
-	public void setBankInfo(BankInfo bankInfo) {
+	public void setBankInfo(BankInfoDao bankInfo) {
 		this.bankInfo = bankInfo;
 	}
-	public ShippingAddress getAddress() {
+	public ShippingAddressDao getAddress() {
 		return address;
 	}
-	public void setAddress(ShippingAddress address) {
+	public void setAddress(ShippingAddressDao address) {
 		this.address = address;
 	}
 	public User getBuyer() {

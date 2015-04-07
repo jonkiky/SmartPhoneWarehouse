@@ -2,10 +2,10 @@ package com.smartphon.service;
 
 import org.springframework.stereotype.Service;
 
-import com.smartphon.dao.user.Seller;
+import com.smartphon.dao.user.SellerDao;
 @Service
 public class SellerService {
-	public Seller seller;
+	public SellerDao seller;
 	
 	public void provideProduct(){
 		

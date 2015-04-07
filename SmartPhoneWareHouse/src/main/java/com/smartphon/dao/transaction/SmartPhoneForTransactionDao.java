@@ -5,16 +5,16 @@ import java.util.Date;
 import com.smartphon.dao.product.SmartPhoneDao;
 import com.smartphon.dao.product.SmartPhoneStanderDescriptionDao;
 
-public class SmartPhoneForTransaction extends SmartPhoneDao{
+public class SmartPhoneForTransactionDao extends SmartPhoneDao{
 
-	SmartPhoneForTransaction(SmartPhoneStanderDescriptionDao standDesc) {
+	SmartPhoneForTransactionDao(SmartPhoneStanderDescriptionDao standDesc) {
 		super(standDesc);
 		// TODO Auto-generated constructor stub
 	}
 
 	private int count;
 	private Date time;
-	private Order order;
+	private OrderDao order;
 	
 	
 	public int getCount() {
@@ -29,10 +29,10 @@ public class SmartPhoneForTransaction extends SmartPhoneDao{
 	public void setTime(Date time) {
 		this.time = time;
 	}
-	public Order getOrder() {
+	public OrderDao getOrder() {
 		return order;
 	}
-	public void setOrder(Order order) {
+	public void setOrder(OrderDao order) {
 		this.order = order;
 	}
 	

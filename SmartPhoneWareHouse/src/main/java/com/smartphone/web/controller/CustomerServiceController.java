@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.smartphon.dao.user.Member;
+import com.smartphon.dao.user.MemberDao;
 import com.smartphon.service.CustomerService;
 import com.smartphone.web.i18n.Language;
 import com.smartphone.web.i18n.i18nConfigure;
@@ -21,7 +21,7 @@ public class CustomerServiceController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.POST)
 	@ResponseBody
-	public String CreateCustomerAccount(@RequestBody Member member ) throws JsonProcessingException {
+	public String CreateCustomerAccount(@RequestBody MemberDao member ) throws JsonProcessingException {
 		boolean flag=false;
 		if(null!=member){
 			flag=customerService.createCustomer(member);

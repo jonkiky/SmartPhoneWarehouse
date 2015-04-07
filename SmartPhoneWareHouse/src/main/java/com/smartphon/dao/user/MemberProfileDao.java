@@ -2,7 +2,7 @@ package com.smartphon.dao.user;
 
 import java.util.List;
 
-public abstract class MemberProfile {
+public abstract class MemberProfileDao {
 	
 	private String id;
 	private String title;
@@ -15,8 +15,8 @@ public abstract class MemberProfile {
 	private int yearOfBirth;
 	
 	private int phoneNumber;
-	private List<ShippingAddress> addresses;
-	private Member member;
+	private List<ShippingAddressDao> addresses;
+	private MemberDao member;
 	public String getId() {
 		return id;
 	}
@@ -71,16 +71,16 @@ public abstract class MemberProfile {
 	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public List<ShippingAddress> getAddresses() {
+	public List<ShippingAddressDao> getAddresses() {
 		return addresses;
 	}
-	public void setAddresses(List<ShippingAddress> addresses) {
+	public void setAddresses(List<ShippingAddressDao> addresses) {
 		this.addresses = addresses;
 	}
-	public Member getMember() {
+	public MemberDao getMember() {
 		return member;
 	}
-	public void setMember(Member member) {
+	public void setMember(MemberDao member) {
 		this.member = member;
 	}
 	

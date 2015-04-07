@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.smartphon.dao.user.Administrator;
+import com.smartphon.dao.user.AdministratorDao;
 import com.smartphon.service.AdminService;
 import com.smartphone.web.annotation.Register;
 

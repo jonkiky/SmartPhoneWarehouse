@@ -1,8 +1,8 @@
 package com.smartphon.dao.user;
 
-public abstract class ShippingAddress {
+public abstract class ShippingAddressDao {
 
-	private Member member;
+	private MemberDao member;
 	private String fname;
 	private String lname;
 	private String company;
@@ -14,10 +14,10 @@ public abstract class ShippingAddress {
 	private int mobilePhone;
 	
 	
-	public Member getMember() {
+	public MemberDao getMember() {
 		return member;
 	}
-	public void setMember(Member member) {
+	public void setMember(MemberDao member) {
 		this.member = member;
 	}
 	public String getFname() {

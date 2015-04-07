@@ -4,15 +4,15 @@ import java.util.List;
 
 import com.smartphone.model.User;
 
-public class ShoppingCart {
-	private List<SmartPhoneForTransaction> phones;
+public class ShoppingCartDao {
+	private List<SmartPhoneForTransactionDao> phones;
 	private User buyer;
 	
 	
-	public List<SmartPhoneForTransaction> getPhones() {
+	public List<SmartPhoneForTransactionDao> getPhones() {
 		return phones;
 	}
-	public void setPhones(List<SmartPhoneForTransaction> phones) {
+	public void setPhones(List<SmartPhoneForTransactionDao> phones) {
 		this.phones = phones;
 	}
 	public User getBuyer() {

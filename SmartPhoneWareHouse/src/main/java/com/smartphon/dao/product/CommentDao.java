@@ -9,7 +9,7 @@ public class CommentDao {
 	private String email;
 	private String content;
 	private Date postTime;
-	private Status status;
+	private StatusDao status;
 	private ProductDao product;
 	
 	
@@ -56,10 +56,10 @@ public class CommentDao {
 	public void setPostTime(Date postTime) {
 		this.postTime = postTime;
 	}
-	public Status getStatus() {
+	public StatusDao getStatus() {
 		return status;
 	}
-	public void setStatus(Status status) {
+	public void setStatus(StatusDao status) {
 		this.status = status;
 	}
 	

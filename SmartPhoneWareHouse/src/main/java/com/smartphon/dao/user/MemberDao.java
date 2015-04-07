@@ -2,7 +2,7 @@ package com.smartphon.dao.user;
 
 import java.util.List;
 
-public abstract class Member {
+public abstract class MemberDao {
 	
 	private String id;
 	private String userName;
@@ -11,9 +11,9 @@ public abstract class Member {
 	private String lname;
 	private String email;
 	private String password;
-	private MemberProfile profile;
-	private List<ShippingAddress> billAddress;
-	private List<BankInfo> bank;
+	private MemberProfileDao profile;
+	private List<ShippingAddressDao> billAddress;
+	private List<BankInfoDao> bank;
 	
 	
 	public String getPassword() {
@@ -59,22 +59,22 @@ public abstract class Member {
 		this.email = email;
 	}
 
-	public MemberProfile getProfile() {
+	public MemberProfileDao getProfile() {
 		return profile;
 	}
-	public void setProfile(MemberProfile profile) {
+	public void setProfile(MemberProfileDao profile) {
 		this.profile = profile;
 	}
-	public List<ShippingAddress> getBillAddress() {
+	public List<ShippingAddressDao> getBillAddress() {
 		return billAddress;
 	}
-	public void setBillAddress(List<ShippingAddress> billAddress) {
+	public void setBillAddress(List<ShippingAddressDao> billAddress) {
 		this.billAddress = billAddress;
 	}
-	public List<BankInfo> getBank() {
+	public List<BankInfoDao> getBank() {
 		return bank;
 	}
-	public void setBank(List<BankInfo> bank) {
+	public void setBank(List<BankInfoDao> bank) {
 		this.bank = bank;
 	}
 	

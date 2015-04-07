@@ -6,7 +6,7 @@ package com.smartphon.dao.user;
  *  @see  com.smartphone.model.User
  *  @author Yizhen Chen
  */
-public class UserDAO {
+public class UserDao {
 	private  int authorid;
 	private String firstname;
 	private String lastname;

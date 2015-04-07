@@ -2,7 +2,7 @@ package com.smartphon.dao.user;
 
 import com.smartphone.model.User;
 
-public abstract class BankInfo {
+public abstract class BankInfoDao {
 
 	private int id;
 	private int cardNumber;

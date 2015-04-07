@@ -21,8 +21,9 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="com.smartphon.dao.product.Status" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/product/Status.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="com.smartphon.dao.product.StatusDao" project="SmartPhoneWareHouse" 
+    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/product/StatusDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="878" y="707"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -101,8 +102,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="com.smartphon.dao.transaction.Order" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/transaction/Order.java" binary="false" 
+  <class id="11" language="java" name="com.smartphon.dao.transaction.OrderDao" project="SmartPhoneWareHouse" 
+    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/transaction/OrderDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1387" y="1134"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
@@ -111,8 +112,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="com.smartphon.dao.transaction.ShoppingCart" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/transaction/ShoppingCart.java" binary="false" 
+  <class id="12" language="java" name="com.smartphon.dao.transaction.ShoppingCartDao" project="SmartPhoneWareHouse" 
+    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/transaction/ShoppingCartDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1449" y="72"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
@@ -121,10 +122,10 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="com.smartphon.dao.transaction.SmartPhoneForTransaction" 
+  <class id="13" language="java" name="com.smartphon.dao.transaction.SmartPhoneForTransactionDao" 
     project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/transaction/SmartPhoneForTransaction.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/transaction/SmartPhoneForTransactionDao.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1418" y="443"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -132,8 +133,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="com.smartphon.dao.user.Administrator" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/Administrator.java" binary="false" 
+  <class id="14" language="java" name="com.smartphon.dao.user.AdministratorDao" project="SmartPhoneWareHouse" 
+    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/AdministratorDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1886" y="1084"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
@@ -142,8 +143,9 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="com.smartphon.dao.user.BankInfo" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/BankInfo.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="15" language="java" name="com.smartphon.dao.user.BankInfoDao" project="SmartPhoneWareHouse" 
+    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/BankInfoDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2251" y="520"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -151,17 +153,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="com.smartphon.dao.user.Buyer" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/Buyer.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2003" y="1562"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="17" language="java" name="com.smartphon.dao.user.Member" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/Member.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="16" language="java" name="com.smartphon.dao.user.MemberDao" project="SmartPhoneWareHouse" 
+    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/MemberDao.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2314" y="1090"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -169,8 +162,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="com.smartphon.dao.user.MemberProfile" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/MemberProfile.java" binary="false" 
+  <class id="17" language="java" name="com.smartphon.dao.user.MemberProfileDao" project="SmartPhoneWareHouse" 
+    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/MemberProfileDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1993" y="708"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
@@ -179,8 +172,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="com.smartphon.dao.user.Seller" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/Seller.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="18" language="java" name="com.smartphon.dao.user.SellerDao" project="SmartPhoneWareHouse" 
+    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/SellerDao.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2228" y="1590"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -188,8 +181,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="20" language="java" name="com.smartphon.dao.user.ShippingAddress" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/ShippingAddress.java" binary="false" 
+  <class id="19" language="java" name="com.smartphon.dao.user.ShippingAddressDao" project="SmartPhoneWareHouse" 
+    file="/SmartPhoneWareHouse/src/main/java/com/smartphon/dao/user/ShippingAddressDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1754" y="424"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
@@ -198,7 +191,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="com.smartphon.service.AdminService" project="SmartPhoneWareHouse" 
+  <class id="20" language="java" name="com.smartphon.service.AdminService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/AdminService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1371" y="2510"/>    
@@ -208,7 +201,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="com.smartphon.service.CategoryService" project="SmartPhoneWareHouse" 
+  <class id="21" language="java" name="com.smartphon.service.CategoryService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/CategoryService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1631" y="2530"/>    
@@ -218,7 +211,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="com.smartphon.service.CommentService" project="SmartPhoneWareHouse" 
+  <class id="22" language="java" name="com.smartphon.service.CommentService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/CommentService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1167" y="2487"/>    
@@ -228,7 +221,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="com.smartphon.service.ComparationService" project="SmartPhoneWareHouse" 
+  <class id="23" language="java" name="com.smartphon.service.ComparationService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/ComparationService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1818" y="2548"/>    
@@ -238,7 +231,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="25" language="java" name="com.smartphon.service.ContactService" project="SmartPhoneWareHouse" 
+  <class id="24" language="java" name="com.smartphon.service.ContactService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/ContactService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2208" y="2261"/>    
@@ -248,7 +241,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="com.smartphon.service.CustomerService" project="SmartPhoneWareHouse" 
+  <class id="25" language="java" name="com.smartphon.service.CustomerService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/CustomerService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="857" y="2574"/>    
@@ -258,7 +251,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="27" language="java" name="com.smartphon.service.Managerment" project="SmartPhoneWareHouse" 
+  <class id="26" language="java" name="com.smartphon.service.Managerment" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/Managerment.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="630" y="2304"/>    
@@ -268,7 +261,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="28" language="java" name="com.smartphon.service.ProductService" project="SmartPhoneWareHouse" 
+  <class id="27" language="java" name="com.smartphon.service.ProductService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/ProductService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="457" y="2454"/>    
@@ -278,7 +271,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="29" language="java" name="com.smartphon.service.RegisterService" project="SmartPhoneWareHouse" 
+  <class id="28" language="java" name="com.smartphon.service.RegisterService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/RegisterService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2047" y="2600"/>    
@@ -288,7 +281,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="30" language="java" name="com.smartphon.service.SellerService" project="SmartPhoneWareHouse" 
+  <class id="29" language="java" name="com.smartphon.service.SellerService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/SellerService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2047" y="2420"/>    
@@ -298,7 +291,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="31" language="java" name="com.smartphon.service.ShippingCartService" project="SmartPhoneWareHouse" 
+  <class id="30" language="java" name="com.smartphon.service.ShippingCartService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/ShippingCartService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="156" y="2474"/>    
@@ -308,7 +301,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="32" language="java" name="com.smartphon.service.TransactionService" project="SmartPhoneWareHouse" 
+  <class id="31" language="java" name="com.smartphon.service.TransactionService" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphon/service/TransactionService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1851" y="2169"/>    
@@ -318,7 +311,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="33" language="java" name="com.smartphone.web.controller.AdminController" project="SmartPhoneWareHouse" 
+  <class id="32" language="java" name="com.smartphone.web.controller.AdminController" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/AdminController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="666" y="3110"/>    
@@ -328,7 +321,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="34" language="java" name="com.smartphone.web.controller.ProductsController" project="SmartPhoneWareHouse" 
+  <class id="33" language="java" name="com.smartphone.web.controller.ProductsController" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/ProductsController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="389" y="2976"/>    
@@ -338,7 +331,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="35" language="java" name="com.smartphone.web.controller.CommentController" project="SmartPhoneWareHouse" 
+  <class id="34" language="java" name="com.smartphone.web.controller.CommentController" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/CommentController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="506" y="3113"/>    
@@ -348,7 +341,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="36" language="java" name="com.smartphone.web.controller.CustomerServiceController" 
+  <class id="35" language="java" name="com.smartphone.web.controller.CustomerServiceController" 
     project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/CustomerServiceController.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -359,7 +352,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="37" language="java" name="com.smartphone.web.controller.CategoryController" project="SmartPhoneWareHouse" 
+  <class id="36" language="java" name="com.smartphone.web.controller.CategoryController" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/CategoryController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="835" y="3116"/>    
@@ -369,7 +362,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="38" language="java" name="com.smartphone.web.controller.IndexController" project="SmartPhoneWareHouse" 
+  <class id="37" language="java" name="com.smartphone.web.controller.IndexController" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/IndexController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1018" y="3269"/>    
@@ -379,7 +372,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="39" language="java" name="com.smartphone.web.controller.ComparationController" 
+  <class id="38" language="java" name="com.smartphone.web.controller.ComparationController" 
     project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/ComparationController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -390,7 +383,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="40" language="java" name="com.smartphone.web.controller.TransactionController" 
+  <class id="39" language="java" name="com.smartphone.web.controller.TransactionController" 
     project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/TransactionController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -401,7 +394,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="41" language="java" name="com.smartphone.web.controller.ShoppingCartController" 
+  <class id="40" language="java" name="com.smartphone.web.controller.ShoppingCartController" 
     project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/ShoppingCartController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -412,7 +405,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="42" language="java" name="com.smartphone.web.controller.RegisterController" project="SmartPhoneWareHouse" 
+  <class id="41" language="java" name="com.smartphone.web.controller.RegisterController" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/RegisterController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1511" y="3315"/>    
@@ -422,7 +415,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="43" language="java" name="com.smartphone.web.controller.SellerController" project="SmartPhoneWareHouse" 
+  <class id="42" language="java" name="com.smartphone.web.controller.SellerController" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/SellerController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1723" y="3314"/>    
@@ -432,7 +425,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="44" language="java" name="com.smartphone.web.controller.SpecialOfferController" 
+  <class id="43" language="java" name="com.smartphone.web.controller.SpecialOfferController" 
     project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/SpecialOfferController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -443,7 +436,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="45" language="java" name="com.smartphone.web.controller.ContactController" project="SmartPhoneWareHouse" 
+  <class id="44" language="java" name="com.smartphone.web.controller.ContactController" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/ContactController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2000" y="3150"/>    
@@ -453,7 +446,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="46" language="java" name="com.smartphone.web.controller.BuyerController" project="SmartPhoneWareHouse" 
+  <class id="45" language="java" name="com.smartphone.web.controller.BuyerController" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/controller/BuyerController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="359" y="3129"/>    
@@ -463,7 +456,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="47" language="java" name="com.smartphone.web.exception.RuntimeExceptionExtend" 
+  <class id="46" language="java" name="com.smartphone.web.exception.RuntimeExceptionExtend" 
     project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/exception/RuntimeExceptionExtend.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -474,7 +467,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="48" language="java" name="com.smartphone.web.exception.GlobalExceptionController" 
+  <class id="47" language="java" name="com.smartphone.web.exception.GlobalExceptionController" 
     project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/exception/GlobalExceptionController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -485,7 +478,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="49" language="java" name="com.smartphone.web.i18n.EnglishTextString" project="SmartPhoneWareHouse" 
+  <class id="48" language="java" name="com.smartphone.web.i18n.EnglishTextString" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/web/i18n/EnglishTextString.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1069" y="3914"/>    
@@ -495,7 +488,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="50" language="java" name="com.smartphone.webservice.repository.Query" project="SmartPhoneWareHouse" 
+  <class id="49" language="java" name="com.smartphone.webservice.repository.Query" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/webservice/repository/Query.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="933" y="4176"/>    
@@ -505,7 +498,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="51" language="java" name="com.smartphone.webservice.repository.DBConfig" project="SmartPhoneWareHouse" 
+  <class id="50" language="java" name="com.smartphone.webservice.repository.DBConfig" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/webservice/repository/DBConfig.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="170" y="3895"/>    
@@ -515,7 +508,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="52" language="java" name="com.smartphone.webservice.respnose.model.StanderSingleObjResponse" 
+  <class id="51" language="java" name="com.smartphone.webservice.respnose.model.StanderSingleObjResponse" 
     project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/webservice/respnose/model/StanderSingleObjResponse.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -526,7 +519,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="53" language="java" name="com.smartphone.webservice.respnose.model.StanderMultiObjsResponse" 
+  <class id="52" language="java" name="com.smartphone.webservice.respnose.model.StanderMultiObjsResponse" 
     project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/webservice/respnose/model/StanderMultiObjsResponse.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -537,7 +530,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="54" language="java" name="com.smartphone.webservice.util.HibernateDbUtil" project="SmartPhoneWareHouse" 
+  <class id="53" language="java" name="com.smartphone.webservice.util.HibernateDbUtil" project="SmartPhoneWareHouse" 
     file="/SmartPhoneWareHouse/src/main/java/com/smartphone/webservice/util/HibernateDbUtil.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="229" y="3548"/>    
@@ -547,542 +540,542 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="55" language="java" name="com.smartphone.webservice.util.JsonObjcet" project="SmartPhoneWareHouse" 
-    file="/SmartPhoneWareHouse/src/main/java/com/smartphone/webservice/util/JsonObjcet.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1340" y="3921"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <association id="56">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="57" name="bank">        
-        <position height="0" width="0" x="761" y="-588"/>      
-      </attribute>      
-      <multiplicity id="58" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="761" y="-588"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="59">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="60" name="member">        
-        <position height="0" width="0" x="315" y="-9"/>      
-      </attribute>      
-      <multiplicity id="61" minimum="0" maximum="1">        
-        <position height="0" width="0" x="315" y="-9"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="62">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="63" name="member">        
-        <position height="0" width="0" x="315" y="-9"/>      
-      </attribute>      
-      <multiplicity id="64" minimum="0" maximum="1">        
-        <position height="0" width="0" x="315" y="-9"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="65">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="66" name="profile">        
-        <position height="0" width="0" x="190" y="-972"/>      
-      </attribute>      
-      <multiplicity id="67" minimum="0" maximum="1">        
-        <position height="0" width="0" x="190" y="-972"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="18" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="68">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <generalization id="69">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <generalization id="70">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <association id="71">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="72" name="order">        
-        <position height="0" width="0" x="216" y="145"/>      
-      </attribute>      
-      <multiplicity id="73" minimum="0" maximum="1">        
-        <position height="0" width="0" x="216" y="145"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="74">    
-    <end type="SOURCE" refId="21" navigable="false">      
-      <attribute id="75" name="admin">        
-        <position height="0" width="0" x="290" y="335"/>      
-      </attribute>      
-      <multiplicity id="76" minimum="0" maximum="1">        
-        <position height="0" width="0" x="290" y="335"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="77">    
-    <end type="SOURCE" refId="25" navigable="false">      
-      <attribute id="78" name="member">        
-        <position height="0" width="0" x="315" y="-9"/>      
-      </attribute>      
-      <multiplicity id="79" minimum="0" maximum="1">        
-        <position height="0" width="0" x="315" y="-9"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="80">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="81" name="customerService">        
-        <position height="0" width="0" x="209" y="73"/>      
-      </attribute>      
-      <multiplicity id="82" minimum="0" maximum="1">        
-        <position height="0" width="0" x="209" y="73"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="26" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="83">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="84" name="des">        
-        <position height="0" width="0" x="5" y="11"/>      
-      </attribute>      
-      <multiplicity id="85" minimum="0" maximum="1">        
-        <position height="0" width="0" x="5" y="11"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="86">    
-    <end type="SOURCE" refId="44" navigable="false">      
-      <attribute id="87" name="transactionService">        
-        <position height="0" width="0" x="32" y="-180"/>      
-      </attribute>      
-      <multiplicity id="88" minimum="0" maximum="1">        
-        <position height="0" width="0" x="32" y="-180"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="89">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="90" name="status">        
-        <position height="0" width="0" x="41" y="63"/>      
-      </attribute>      
-      <multiplicity id="91" minimum="0" maximum="1">        
-        <position height="0" width="0" x="41" y="63"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="92">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <association id="93">    
-    <end type="SOURCE" refId="43" navigable="false">      
-      <attribute id="94" name="sellerService">        
-        <position height="0" width="0" x="1832" y="-193"/>      
-      </attribute>      
-      <multiplicity id="95" minimum="0" maximum="1">        
-        <position height="0" width="0" x="1832" y="-193"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="96">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="97" name="buyer">        
-        <position height="0" width="0" x="543" y="124"/>      
-      </attribute>      
-      <multiplicity id="98" minimum="0" maximum="1">        
-        <position height="0" width="0" x="543" y="124"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="99">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="100" name="commentService">        
-        <position height="0" width="0" x="194" y="-27"/>      
-      </attribute>      
-      <multiplicity id="101" minimum="0" maximum="1">        
-        <position height="0" width="0" x="194" y="-27"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="102">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="103" name="product">        
-        <position height="0" width="0" x="-137" y="70"/>      
-      </attribute>      
-      <multiplicity id="104" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-137" y="70"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="105">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="106" name="order">        
-        <position height="0" width="0" x="216" y="145"/>      
-      </attribute>      
-      <multiplicity id="107" minimum="0" maximum="1">        
-        <position height="0" width="0" x="216" y="145"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="108">    
-    <end type="SOURCE" refId="26" navigable="false">      
-      <attribute id="109" name="buyer">        
-        <position height="0" width="0" x="543" y="124"/>      
-      </attribute>      
-      <multiplicity id="110" minimum="0" maximum="1">        
-        <position height="0" width="0" x="543" y="124"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="111">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="112" name="shoppingCart">        
-        <position height="0" width="0" x="105" y="139"/>      
-      </attribute>      
-      <multiplicity id="113" minimum="0" maximum="1">        
-        <position height="0" width="0" x="105" y="139"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="114">    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="115" name="db">        
-        <position height="0" width="0" x="-1285" y="484"/>      
-      </attribute>      
-      <multiplicity id="116" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-1285" y="484"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="51" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="117">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="118" name="category">        
-        <position height="0" width="0" x="-93" y="112"/>      
-      </attribute>      
-      <multiplicity id="119" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-93" y="112"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="120">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="121" name="phones">        
-        <position height="0" width="0" x="261" y="55"/>      
-      </attribute>      
-      <multiplicity id="122" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="261" y="55"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="123">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="124" name="seller">        
-        <position height="0" width="0" x="573" y="1250"/>      
-      </attribute>      
-      <multiplicity id="125" minimum="0" maximum="1">        
-        <position height="0" width="0" x="573" y="1250"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="126">    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="127" name="buyer">        
-        <position height="0" width="0" x="543" y="124"/>      
-      </attribute>      
-      <multiplicity id="128" minimum="0" maximum="1">        
-        <position height="0" width="0" x="543" y="124"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="129">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="130" name="billAddress">        
-        <position height="0" width="0" x="519" y="-1305"/>      
-      </attribute>      
-      <multiplicity id="131" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="519" y="-1305"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="132">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="133" name="addresses">        
-        <position height="0" width="0" x="519" y="-1305"/>      
-      </attribute>      
-      <multiplicity id="134" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="519" y="-1305"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="135">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="136" name="phone">        
-        <position height="0" width="0" x="886" y="649"/>      
-      </attribute>      
-      <multiplicity id="137" minimum="0" maximum="1">        
-        <position height="0" width="0" x="886" y="649"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="138">    
-    <end type="SOURCE" refId="30" navigable="false">      
-      <attribute id="139" name="seller">        
-        <position height="0" width="0" x="573" y="1250"/>      
-      </attribute>      
-      <multiplicity id="140" minimum="0" maximum="1">        
-        <position height="0" width="0" x="573" y="1250"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="141">    
-    <end type="SOURCE" refId="41" navigable="false">      
-      <attribute id="142" name="shippingcartService">        
-        <position height="0" width="0" x="120" y="5"/>      
-      </attribute>      
-      <multiplicity id="143" minimum="0" maximum="1">        
-        <position height="0" width="0" x="120" y="5"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="144">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="145" name="address">        
-        <position height="0" width="0" x="519" y="-1305"/>      
-      </attribute>      
-      <multiplicity id="146" minimum="0" maximum="1">        
-        <position height="0" width="0" x="519" y="-1305"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="147">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="148" name="admin">        
-        <position height="0" width="0" x="57" y="246"/>      
-      </attribute>      
-      <multiplicity id="149" minimum="0" maximum="1">        
-        <position height="0" width="0" x="57" y="246"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="21" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="150">    
-    <end type="SOURCE" refId="37" navigable="false">      
-      <attribute id="151" name="category">        
-        <position height="0" width="0" x="420" y="36"/>      
-      </attribute>      
-      <multiplicity id="152" minimum="0" maximum="1">        
-        <position height="0" width="0" x="420" y="36"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="153">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="154" name="profile">        
-        <position height="0" width="0" x="190" y="-972"/>      
-      </attribute>      
-      <multiplicity id="155" minimum="0" maximum="1">        
-        <position height="0" width="0" x="190" y="-972"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="18" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="156">    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="157" name="order">        
-        <position height="0" width="0" x="216" y="145"/>      
-      </attribute>      
-      <multiplicity id="158" minimum="0" maximum="1">        
-        <position height="0" width="0" x="216" y="145"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="159">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="160" name="promotion">        
-        <position height="0" width="0" x="-17" y="46"/>      
-      </attribute>      
-      <multiplicity id="161" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-17" y="46"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="162">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <association id="163">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="164" name="phones">        
-        <position height="0" width="0" x="261" y="55"/>      
-      </attribute>      
-      <multiplicity id="165" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="261" y="55"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="166">    
-    <end type="SOURCE" refId="45" navigable="false">      
-      <attribute id="167" name="contactService">        
-        <position height="0" width="0" x="1380" y="-77"/>      
-      </attribute>      
-      <multiplicity id="168" minimum="0" maximum="1">        
-        <position height="0" width="0" x="1380" y="-77"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="25" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="169">    
-    <end type="SOURCE" refId="46" navigable="false">      
-      <attribute id="170" name="buyerService">        
-        <position height="0" width="0" x="209" y="73"/>      
-      </attribute>      
-      <multiplicity id="171" minimum="0" maximum="1">        
-        <position height="0" width="0" x="209" y="73"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="26" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="172">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="173" name="productService">        
-        <position height="0" width="0" x="82" y="72"/>      
-      </attribute>      
-      <multiplicity id="174" minimum="0" maximum="1">        
-        <position height="0" width="0" x="82" y="72"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="28" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="175">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="176" name="category">        
-        <position height="0" width="0" x="-93" y="112"/>      
-      </attribute>      
-      <multiplicity id="177" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-93" y="112"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="178">    
+  <association id="54">    
     <end type="SOURCE" refId="42" navigable="false">      
-      <attribute id="179" name="registerService">        
-        <position height="0" width="0" x="1425" y="444"/>      
+      <attribute id="55" name="sellerService">        
+        <position height="0" width="0" x="1832" y="-193"/>      
       </attribute>      
-      <multiplicity id="180" minimum="0" maximum="1">        
-        <position height="0" width="0" x="1425" y="444"/>      
+      <multiplicity id="56" minimum="0" maximum="1">        
+        <position height="0" width="0" x="1832" y="-193"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="29" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="181">    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="182" name="comment">        
+  <association id="57">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="58" name="comment">        
         <position height="0" width="0" x="184" y="127"/>      
       </attribute>      
-      <multiplicity id="183" minimum="0" maximum="1">        
+      <multiplicity id="59" minimum="0" maximum="1">        
         <position height="0" width="0" x="184" y="127"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="184">    
+  <association id="60">    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="61" name="buyerService">        
+        <position height="0" width="0" x="209" y="73"/>      
+      </attribute>      
+      <multiplicity id="62" minimum="0" maximum="1">        
+        <position height="0" width="0" x="209" y="73"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="63">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="64">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="65" name="promotion">        
+        <position height="0" width="0" x="-17" y="46"/>      
+      </attribute>      
+      <multiplicity id="66" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-17" y="46"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="67">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="68" name="db">        
+        <position height="0" width="0" x="-1285" y="484"/>      
+      </attribute>      
+      <multiplicity id="69" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-1285" y="484"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="50" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="70">    
+    <end type="SOURCE" refId="43" navigable="false">      
+      <attribute id="71" name="transactionService">        
+        <position height="0" width="0" x="32" y="-180"/>      
+      </attribute>      
+      <multiplicity id="72" minimum="0" maximum="1">        
+        <position height="0" width="0" x="32" y="-180"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="73">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="74" name="status">        
+        <position height="0" width="0" x="41" y="63"/>      
+      </attribute>      
+      <multiplicity id="75" minimum="0" maximum="1">        
+        <position height="0" width="0" x="41" y="63"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="76">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="77" name="billAddress">        
+        <position height="0" width="0" x="519" y="-1305"/>      
+      </attribute>      
+      <multiplicity id="78" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="519" y="-1305"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="79">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="80" name="shippingcartService">        
+        <position height="0" width="0" x="120" y="5"/>      
+      </attribute>      
+      <multiplicity id="81" minimum="0" maximum="1">        
+        <position height="0" width="0" x="120" y="5"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="82">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="83" name="status">        
+        <position height="0" width="0" x="41" y="63"/>      
+      </attribute>      
+      <multiplicity id="84" minimum="0" maximum="1">        
+        <position height="0" width="0" x="41" y="63"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="85">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="86" name="des">        
+        <position height="0" width="0" x="5" y="11"/>      
+      </attribute>      
+      <multiplicity id="87" minimum="0" maximum="1">        
+        <position height="0" width="0" x="5" y="11"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="88">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <association id="89">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="90" name="phone">        
+        <position height="0" width="0" x="886" y="649"/>      
+      </attribute>      
+      <multiplicity id="91" minimum="0" maximum="1">        
+        <position height="0" width="0" x="886" y="649"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="92">    
     <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="185" name="profile">        
+      <attribute id="93" name="member">        
+        <position height="0" width="0" x="315" y="-9"/>      
+      </attribute>      
+      <multiplicity id="94" minimum="0" maximum="1">        
+        <position height="0" width="0" x="315" y="-9"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="95">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="96" name="customerService">        
+        <position height="0" width="0" x="209" y="73"/>      
+      </attribute>      
+      <multiplicity id="97" minimum="0" maximum="1">        
+        <position height="0" width="0" x="209" y="73"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="99" name="admin">        
+        <position height="0" width="0" x="290" y="335"/>      
+      </attribute>      
+      <multiplicity id="100" minimum="0" maximum="1">        
+        <position height="0" width="0" x="290" y="335"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="101">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="102" name="profile">        
         <position height="0" width="0" x="190" y="-972"/>      
       </attribute>      
-      <multiplicity id="186" minimum="0" maximum="1">        
+      <multiplicity id="103" minimum="0" maximum="1">        
         <position height="0" width="0" x="190" y="-972"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="104">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="105" name="productService">        
+        <position height="0" width="0" x="82" y="72"/>      
+      </attribute>      
+      <multiplicity id="106" minimum="0" maximum="1">        
+        <position height="0" width="0" x="82" y="72"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="107">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="108">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="109">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="110" name="product">        
+        <position height="0" width="0" x="-137" y="70"/>      
+      </attribute>      
+      <multiplicity id="111" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-137" y="70"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="112">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="113" name="admin">        
+        <position height="0" width="0" x="57" y="246"/>      
+      </attribute>      
+      <multiplicity id="114" minimum="0" maximum="1">        
+        <position height="0" width="0" x="57" y="246"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="115">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="116" name="order">        
+        <position height="0" width="0" x="216" y="145"/>      
+      </attribute>      
+      <multiplicity id="117" minimum="0" maximum="1">        
+        <position height="0" width="0" x="216" y="145"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="118">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="119" name="addresses">        
+        <position height="0" width="0" x="519" y="-1305"/>      
+      </attribute>      
+      <multiplicity id="120" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="519" y="-1305"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="121">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="122" name="shoppingCart">        
+        <position height="0" width="0" x="105" y="139"/>      
+      </attribute>      
+      <multiplicity id="123" minimum="0" maximum="1">        
+        <position height="0" width="0" x="105" y="139"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="124">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="125" name="product">        
+        <position height="0" width="0" x="886" y="649"/>      
+      </attribute>      
+      <multiplicity id="126" minimum="0" maximum="1">        
+        <position height="0" width="0" x="886" y="649"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="127">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="128" name="bankInfo">        
+        <position height="0" width="0" x="761" y="-588"/>      
+      </attribute>      
+      <multiplicity id="129" minimum="0" maximum="1">        
+        <position height="0" width="0" x="761" y="-588"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="130">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="131">    
+    <bendpoint x="738" y="589"/>    
+    <bendpoint x="738" y="-234"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="132">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="133" name="member">        
+        <position height="0" width="0" x="315" y="-9"/>      
+      </attribute>      
+      <multiplicity id="134" minimum="0" maximum="1">        
+        <position height="0" width="0" x="315" y="-9"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="135">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="136" name="order">        
+        <position height="0" width="0" x="216" y="145"/>      
+      </attribute>      
+      <multiplicity id="137" minimum="0" maximum="1">        
+        <position height="0" width="0" x="216" y="145"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="138">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="139" name="profile">        
+        <position height="0" width="0" x="190" y="-972"/>      
+      </attribute>      
+      <multiplicity id="140" minimum="0" maximum="1">        
+        <position height="0" width="0" x="190" y="-972"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="141">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="142" name="transactionService">        
+        <position height="0" width="0" x="32" y="-180"/>      
+      </attribute>      
+      <multiplicity id="143" minimum="0" maximum="1">        
+        <position height="0" width="0" x="32" y="-180"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="144">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="145" name="bank">        
+        <position height="0" width="0" x="761" y="-588"/>      
+      </attribute>      
+      <multiplicity id="146" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="761" y="-588"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="147">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="148" name="seller">        
+        <position height="0" width="0" x="573" y="1250"/>      
+      </attribute>      
+      <multiplicity id="149" minimum="0" maximum="1">        
+        <position height="0" width="0" x="573" y="1250"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="187">    
+  <realization id="150">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="151">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="152" name="category">        
+        <position height="0" width="0" x="420" y="36"/>      
+      </attribute>      
+      <multiplicity id="153" minimum="0" maximum="1">        
+        <position height="0" width="0" x="420" y="36"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="154">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="155" name="compare">        
+        <position height="0" width="0" x="236" y="167"/>      
+      </attribute>      
+      <multiplicity id="156" minimum="0" maximum="1">        
+        <position height="0" width="0" x="236" y="167"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="157">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="158" name="seller">        
+        <position height="0" width="0" x="573" y="1250"/>      
+      </attribute>      
+      <multiplicity id="159" minimum="0" maximum="1">        
+        <position height="0" width="0" x="573" y="1250"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="160">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="161" name="address">        
+        <position height="0" width="0" x="519" y="-1305"/>      
+      </attribute>      
+      <multiplicity id="162" minimum="0" maximum="1">        
+        <position height="0" width="0" x="519" y="-1305"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="163">    
     <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="164" name="member">        
+        <position height="0" width="0" x="315" y="-9"/>      
+      </attribute>      
+      <multiplicity id="165" minimum="0" maximum="1">        
+        <position height="0" width="0" x="315" y="-9"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="166">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="167" name="commentService">        
+        <position height="0" width="0" x="194" y="-27"/>      
+      </attribute>      
+      <multiplicity id="168" minimum="0" maximum="1">        
+        <position height="0" width="0" x="194" y="-27"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="169">    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="170" name="registerService">        
+        <position height="0" width="0" x="1425" y="444"/>      
+      </attribute>      
+      <multiplicity id="171" minimum="0" maximum="1">        
+        <position height="0" width="0" x="1425" y="444"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="172">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="173" name="phone">        
+        <position height="0" width="0" x="886" y="649"/>      
+      </attribute>      
+      <multiplicity id="174" minimum="0" maximum="1">        
+        <position height="0" width="0" x="886" y="649"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="175">    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="176" name="contactService">        
+        <position height="0" width="0" x="1380" y="-77"/>      
+      </attribute>      
+      <multiplicity id="177" minimum="0" maximum="1">        
+        <position height="0" width="0" x="1380" y="-77"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="178">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="179" name="category">        
+        <position height="0" width="0" x="-93" y="112"/>      
+      </attribute>      
+      <multiplicity id="180" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-93" y="112"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="181">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="182" name="order">        
+        <position height="0" width="0" x="216" y="145"/>      
+      </attribute>      
+      <multiplicity id="183" minimum="0" maximum="1">        
+        <position height="0" width="0" x="216" y="145"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="184">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="185" name="phones">        
+        <position height="0" width="0" x="261" y="55"/>      
+      </attribute>      
+      <multiplicity id="186" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="261" y="55"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="187">    
+    <end type="SOURCE" refId="30" navigable="false">      
       <attribute id="188" name="phone">        
         <position height="0" width="0" x="886" y="649"/>      
       </attribute>      
@@ -1093,114 +1086,52 @@
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="190">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <association id="191">    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="192" name="phone">        
-        <position height="0" width="0" x="886" y="649"/>      
-      </attribute>      
-      <multiplicity id="193" minimum="0" maximum="1">        
-        <position height="0" width="0" x="886" y="649"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="194">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="195" name="bankInfo">        
-        <position height="0" width="0" x="761" y="-588"/>      
-      </attribute>      
-      <multiplicity id="196" minimum="0" maximum="1">        
-        <position height="0" width="0" x="761" y="-588"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="197">    
+  <association id="190">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="198" name="promotion">        
+      <attribute id="191" name="promotion">        
         <position height="0" width="0" x="-17" y="46"/>      
       </attribute>      
-      <multiplicity id="199" minimum="0" maximum="1">        
+      <multiplicity id="192" minimum="0" maximum="1">        
         <position height="0" width="0" x="-17" y="46"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="200">    
+  <association id="193">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="194" name="phones">        
+        <position height="0" width="0" x="261" y="55"/>      
+      </attribute>      
+      <multiplicity id="195" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="261" y="55"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="196">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="197" name="category">        
+        <position height="0" width="0" x="-93" y="112"/>      
+      </attribute>      
+      <multiplicity id="198" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-93" y="112"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="199">    
     <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="201" name="profile">        
+      <attribute id="200" name="profile">        
         <position height="0" width="0" x="190" y="-972"/>      
       </attribute>      
-      <multiplicity id="202" minimum="0" maximum="1">        
+      <multiplicity id="201" minimum="0" maximum="1">        
         <position height="0" width="0" x="190" y="-972"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="18" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="203">    
-    <bendpoint x="738" y="589"/>    
-    <bendpoint x="738" y="-234"/>    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="204">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="205" name="product">        
-        <position height="0" width="0" x="886" y="649"/>      
-      </attribute>      
-      <multiplicity id="206" minimum="0" maximum="1">        
-        <position height="0" width="0" x="886" y="649"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="207">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <association id="208">    
-    <end type="SOURCE" refId="39" navigable="false">      
-      <attribute id="209" name="compare">        
-        <position height="0" width="0" x="236" y="167"/>      
-      </attribute>      
-      <multiplicity id="210" minimum="0" maximum="1">        
-        <position height="0" width="0" x="236" y="167"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="211">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="212" name="status">        
-        <position height="0" width="0" x="41" y="63"/>      
-      </attribute>      
-      <multiplicity id="213" minimum="0" maximum="1">        
-        <position height="0" width="0" x="41" y="63"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="214">    
-    <end type="SOURCE" refId="40" navigable="false">      
-      <attribute id="215" name="transactionService">        
-        <position height="0" width="0" x="32" y="-180"/>      
-      </attribute>      
-      <multiplicity id="216" minimum="0" maximum="1">        
-        <position height="0" width="0" x="32" y="-180"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
+    <end type="TARGET" refId="17" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 

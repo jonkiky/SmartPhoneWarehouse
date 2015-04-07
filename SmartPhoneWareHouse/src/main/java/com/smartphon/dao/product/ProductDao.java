@@ -3,7 +3,7 @@ package com.smartphon.dao.product;
 import java.util.Date;
 import java.util.List;
 
-import com.smartphon.dao.user.Seller;
+import com.smartphon.dao.user.SellerDao;
 
 public abstract class ProductDao {
 	private int id;
@@ -19,9 +19,9 @@ public abstract class ProductDao {
 	private ProductDescriptionDao des;
 	
 	private Date postTime;
-	private Status status;
+	private StatusDao status;
 	private Date modifyData;
-	private Seller seller;
+	private SellerDao seller;
 	
 	public int getId() {
 		return id;
@@ -89,10 +89,10 @@ public abstract class ProductDao {
 	public void setPostTime(Date postTime) {
 		this.postTime = postTime;
 	}
-	public Status getStatus() {
+	public StatusDao getStatus() {
 		return status;
 	}
-	public void setStatus(Status status) {
+	public void setStatus(StatusDao status) {
 		this.status = status;
 	}
 	public Date getModifyData() {
@@ -101,10 +101,10 @@ public abstract class ProductDao {
 	public void setModifyData(Date modifyData) {
 		this.modifyData = modifyData;
 	}
-	public Seller getSeller() {
+	public SellerDao getSeller() {
 		return seller;
 	}
-	public void setSeller(Seller seller) {
+	public void setSeller(SellerDao seller) {
 		this.seller = seller;
 	}
 	

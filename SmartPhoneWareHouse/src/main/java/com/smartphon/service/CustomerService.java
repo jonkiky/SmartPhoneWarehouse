@@ -2,12 +2,12 @@ package com.smartphon.service;
 
 import org.springframework.stereotype.Service;
 
-import com.smartphon.dao.user.Buyer;
-import com.smartphon.dao.user.Member;
+import com.smartphon.dao.user.BuyerDao;
+import com.smartphon.dao.user.MemberDao;
 @Service
 public class CustomerService {
 	
-	public Buyer buyer;
+	public BuyerDao buyer;
 	
 	public Boolean login(){
 		throw new UnsupportedOperationException("Implement this");
@@ -18,7 +18,7 @@ public class CustomerService {
 		throw new UnsupportedOperationException("Implement this");
 	}
 	
-	public Boolean createCustomer(Member member){
+	public Boolean createCustomer(MemberDao member){
 		Boolean flag =false;
           
 		return flag;

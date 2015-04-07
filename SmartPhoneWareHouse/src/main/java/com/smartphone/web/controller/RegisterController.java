@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.smartphon.dao.user.Buyer;
 import com.smartphon.service.RegisterService;
+import com.smartphone.model.Buyer;
 
 @Controller
 public class RegisterController {

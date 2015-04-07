@@ -2,11 +2,11 @@ package com.smartphon.service;
 
 import org.springframework.stereotype.Service;
 
-import com.smartphon.dao.user.Administrator;
+import com.smartphon.dao.user.AdministratorDao;
 @Service
 public class AdminService {
 
-	public Administrator admin;
+	public AdministratorDao admin;
 	
 	public Boolean login(){
 		throw new UnsupportedOperationException("Implement this");
