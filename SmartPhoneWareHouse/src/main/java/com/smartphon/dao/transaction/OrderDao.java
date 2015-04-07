@@ -5,15 +5,15 @@ import java.util.List;
 
 import com.smartphon.dao.product.ProductDao;
 import com.smartphon.dao.user.BankInfoDao;
+import com.smartphon.dao.user.BuyerDao;
 import com.smartphon.dao.user.ShippingAddressDao;
-import com.smartphone.model.User;
 
 public class OrderDao {
 	private int id ;
 	private List<SmartPhoneForTransactionDao> phones;
 	private BankInfoDao bankInfo;
 	private ShippingAddressDao address;
-	private User buyer;
+	private BuyerDao buyer;
 	private Date orderTime;
 	private String Status;
 	private int packageTrackingCode;
@@ -53,10 +53,12 @@ public class OrderDao {
 	public void setAddress(ShippingAddressDao address) {
 		this.address = address;
 	}
-	public User getBuyer() {
+	
+	
+	public BuyerDao getBuyer() {
 		return buyer;
 	}
-	public void setBuyer(User buyer) {
+	public void setBuyer(BuyerDao buyer) {
 		this.buyer = buyer;
 	}
 	public Date getOrderTime() {

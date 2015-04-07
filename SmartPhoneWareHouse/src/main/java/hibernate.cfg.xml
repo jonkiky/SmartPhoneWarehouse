@@ -12,7 +12,7 @@
         
        
    <!-- List of XML mapping files -->
-   <mapping class="com.itm.webservice.Model.User"/>
-
+   <mapping class="com.smartphone.model.Buyer"/>
+ 	<mapping class="com.smartphone.model.Admin"/>
 </session-factory>
 </hibernate-configuration>

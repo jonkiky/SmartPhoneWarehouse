@@ -18,11 +18,12 @@ public class CustomerService {
 		throw new UnsupportedOperationException("Implement this");
 	}
 	
+	
 	public Boolean createCustomer(MemberDao member){
-		Boolean flag =false;
-          
-		return flag;
+		return  buyer.createCustomer(member);
 	}
+	
+	
 	
 	public Boolean updateProfile(){
 		throw new UnsupportedOperationException("Implement this");

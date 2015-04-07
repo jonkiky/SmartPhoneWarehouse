@@ -11,11 +11,19 @@ public abstract class MemberDao {
 	private String lname;
 	private String email;
 	private String password;
+	private String repassword;
 	private MemberProfileDao profile;
 	private List<ShippingAddressDao> billAddress;
 	private List<BankInfoDao> bank;
 	
 	
+	
+	public String getRepassword() {
+		return repassword;
+	}
+	public void setRepassword(String repassword) {
+		this.repassword = repassword;
+	}
 	public String getPassword() {
 		return password;
 	}

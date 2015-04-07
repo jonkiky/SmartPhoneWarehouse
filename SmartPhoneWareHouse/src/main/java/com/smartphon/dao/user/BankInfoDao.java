@@ -1,6 +1,5 @@
 package com.smartphon.dao.user;
 
-import com.smartphone.model.User;
 
 public abstract class BankInfoDao {
 
@@ -11,7 +10,7 @@ public abstract class BankInfoDao {
 	private int expirationYear;
 	
 	private String status;
-	private User user;
+	private BuyerDao user;
 	private String type;
 	
 	
@@ -57,10 +56,10 @@ public abstract class BankInfoDao {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public User getUser() {
+	public BuyerDao getUser() {
 		return user;
 	}
-	public void setUser(User user) {
+	public void setUser(BuyerDao user) {
 		this.user = user;
 	}
 	

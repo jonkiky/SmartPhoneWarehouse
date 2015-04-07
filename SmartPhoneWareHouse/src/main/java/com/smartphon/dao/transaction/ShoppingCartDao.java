@@ -2,11 +2,11 @@ package com.smartphon.dao.transaction;
 
 import java.util.List;
 
-import com.smartphone.model.User;
+import com.smartphon.dao.user.BuyerDao;
 
 public class ShoppingCartDao {
 	private List<SmartPhoneForTransactionDao> phones;
-	private User buyer;
+	private BuyerDao buyer;
 	
 	
 	public List<SmartPhoneForTransactionDao> getPhones() {
@@ -15,12 +15,13 @@ public class ShoppingCartDao {
 	public void setPhones(List<SmartPhoneForTransactionDao> phones) {
 		this.phones = phones;
 	}
-	public User getBuyer() {
+	public BuyerDao getBuyer() {
 		return buyer;
 	}
-	public void setBuyer(User buyer) {
+	public void setBuyer(BuyerDao buyer) {
 		this.buyer = buyer;
 	}
+	
 	
 	
 }

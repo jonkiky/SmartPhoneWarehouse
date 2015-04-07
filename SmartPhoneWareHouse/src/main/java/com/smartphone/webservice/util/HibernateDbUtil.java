@@ -2,7 +2,7 @@ package com.smartphone.webservice.util;
 
 
 
-import com.smartphone.model.User;
+import com.smartphone.model.Admin;
 import com.smartphone.webservice.repository.DBConfig;
 
 import java.util.List;
@@ -16,6 +16,16 @@ public class HibernateDbUtil{
 	private SessionFactory sessionFactory;
 	private DBConfig db;
 
+		
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	public HibernateDbUtil(){
+		DBConfig dc = new DBConfig();
+		this.setDBConfig(dc);
+		this.sessionFactory=this.setUp(dc.DB_URL);		
+	}
 	
 	public void setDBConfig(DBConfig d){
 		db=d;
@@ -62,12 +72,12 @@ public class HibernateDbUtil{
 //        session.getTransaction().commit();
 //        session.close();
 		DBConfig dc = new DBConfig();
-		dc.setRequestDBUrl("jdbc:mysql://localhost:3306/itm");
+		dc.setRequestDBUrl("jdbc:mysql://localhost:3306/smartphonewarehouse");
 		HibernateDbUtil db = new HibernateDbUtil();
 		db.setDBConfig(dc);
-		List result = db.getListofRecord("from User");
-			for ( User user : (List<User>) result ) {
-				System.out.println( "Event (" + user.getUsename() + ") : " +user.getUsename() );
+		List result = db.getListofRecord("from Admin");
+			for ( Admin user : (List<Admin>) result ) {
+				System.out.println( "Event (" + user.getLname() + ") : " +user.getLname() );
 			}
 		
 	}
