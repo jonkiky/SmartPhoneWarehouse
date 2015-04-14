@@ -1,9 +1,14 @@
 package com.smartphon.dao.product;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.hibernate.Session;
+
 import com.smartphon.dao.user.SellerDao;
+import com.smartphone.model.Product;
+import com.smartphone.webservice.util.HibernateDbUtil;
 
 public abstract class ProductDao {
 	private int id;
@@ -16,7 +21,7 @@ public abstract class ProductDao {
 	private String color;
 	private List<String> img;
 	private int numberInStroe;
-	private ProductDescriptionDao des;
+	private String des;
 	
 	private Date postTime;
 	private StatusDao status;
@@ -77,10 +82,11 @@ public abstract class ProductDao {
 	public void setNumberInStroe(int numberInStroe) {
 		this.numberInStroe = numberInStroe;
 	}
-	public ProductDescriptionDao getDes() {
+
+	public String getDes() {
 		return des;
 	}
-	public void setDes(ProductDescriptionDao des) {
+	public void setDes(String des) {
 		this.des = des;
 	}
 	public Date getPostTime() {
@@ -108,6 +114,23 @@ public abstract class ProductDao {
 		this.seller = seller;
 	}
 	
-	
+	public List<ProductDao> getNumbersOfProduct(int num){
+		List<ProductDao> productDaoLs = new ArrayList<ProductDao>();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		List<Product> product=session.createQuery("from Product").setMaxResults(num).list();
+		session.clear();
+		session.close();
+		if(null!=product){
+			for(Product p : product){
+				ProductDao pd = new SmartPhoneDao();
+				pd.setBrand(p.getBrand());
+				pd.setColor(p.getColor_id());
+				pd.setDes(p.getDes());
+				pd.setName(p.getTitle());
+				productDaoLs.add(pd);
+			}
+		}
+	return 	productDaoLs;
+	}
 
 }

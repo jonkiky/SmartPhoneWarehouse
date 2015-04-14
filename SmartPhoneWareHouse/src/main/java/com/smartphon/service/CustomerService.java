@@ -10,8 +10,17 @@ public class CustomerService {
 	
 	private BuyerDao buyerDao=new BuyerDao();
 	
-	public Boolean login(){
-		throw new UnsupportedOperationException("Implement this");
+	public Boolean login(Buyer buyer){
+		boolean flag = false;
+		if(!buyer.getUser_name().isEmpty()&&!buyer.getPassword().isEmpty()){
+			Buyer buyerInDB=buyerDao.findCustomerbyName(buyer.getUser_name());
+			if(null!=buyerInDB){
+				if(buyerInDB.getPassword().equals(buyer.getPassword())){
+					flag=true;
+				}
+			}
+		}
+		return flag;
 	}
 	
 	

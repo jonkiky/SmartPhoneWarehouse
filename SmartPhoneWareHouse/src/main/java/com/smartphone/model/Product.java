@@ -16,7 +16,7 @@ public class Product {
 	private String title;  
 	private String name; 
 	private String brand; 
-	private int category_id; 
+
 	private double price; 
 	private String color_id; 
 	private int number_in_stroe;
@@ -26,7 +26,7 @@ public class Product {
 	private Date post_time; 
 	private String status;
 	private Date modify_data;
-	private int seller_id;
+	private Integer seller_id;
 	
 	
 	@Id
@@ -58,13 +58,7 @@ public class Product {
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
-	@Column (name="category_id")
-	public int getCategory_id() {
-		return category_id;
-	}
-	public void setCategory_id(int category_id) {
-		this.category_id = category_id;
-	}
+
 	@Column (name="price")
 	public double getPrice() {
 		return price;

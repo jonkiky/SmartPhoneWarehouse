@@ -72,7 +72,7 @@
 							<label class="checkbox">
 							<input type="checkbox"> Remember me
 							</label>
-							<button type="submit" class="btn pull-right">Sign in</button>
+							<button type="button" id="login-btn" class="btn pull-right">Sign in</button>
 						  </div>
 						</form>					
 						</div>
@@ -582,9 +582,59 @@
     <script src="<c:url value="front/assets/js/bootstrap-affix.js"/>"></script>
     <script src="<c:url value="front/assets/js/jquery.lightbox-0.5.js"/>"></script>
 	<script src="<c:url value="front/assets/js/bootsshoptgl.js"/>"></script>
+	<script src="<c:url value="front/js/notify.min.js"/>"></script>
 	 <script type="text/javascript">
     $(function() {
         $('#gallery a').lightBox();
+                       
+        $.ajax({
+          	  type: "POST",
+          	  url: '<c:url value="/productsforHomePage"/>'
+          	}).done(function(e){
+          		 		obj = JSON.parse(e);
+          				if(obj.statusCode!="200"){
+          					$.notify(obj.message, "error");
+          				}else{
+          					$.notify(obj.message, "success");
+          				}
+          		 		
+          	});
+        
+	$("#login-btn").click(function(){
+		var n =2;
+		if($("#inputEmail").val().length===0){
+			$.notify("Plese enter User Name", "warn");
+			n--;
+		}
+		if($("#inputPassword").val().length===0){
+			$.notify("Plese enter password", "warn");
+			n--;
+		}
+		if(n==2){
+			
+			  $.ajax({
+	         	  type: "POST",
+	         	  url: '<c:url value="/buyer/login"/>',
+	         	  data: JSON.stringify({
+	            		"user_name":$("#inputEmail").val(),
+	    				"password":$("#inputPassword").val()
+	            }),
+	            contentType: "application/json"
+	         	}).done(function(e){
+	         		obj = JSON.parse(e);
+      				if(obj.statusCode!="200"){
+      					$.notify(obj.message, "error");
+      				}else{
+      					$.notify(obj.message, "success");
+      				}
+	         	});
+		}
+		
+		
+		
+	})
+        
+        
     });
     </script>
   </body>
