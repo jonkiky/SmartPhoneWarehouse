@@ -1,11 +1,8 @@
 package com.smartphone.web.controller;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.util.Assert;
-
-import com.smartphon.dao.user.BuyerDao;
+import com.smartphone.model.Buyer;
 
 
 
@@ -18,8 +15,8 @@ public class BaseController {
 	 * @param request
 	 * @return
 	 */
-	protected BuyerDao getSessionUser(HttpServletRequest request) {
-		return (BuyerDao) request.getSession().getAttribute("buyer");
+	protected Buyer getSessionUser(HttpServletRequest request) {
+		return (Buyer) request.getSession().getAttribute("buyer");
 	}
    
 	/**
@@ -27,9 +24,8 @@ public class BaseController {
 	 * @param request
 	 * @param user
 	 */
-	protected void setSessionUser(HttpServletRequest request,BuyerDao buyer) {
-		request.getSession().setAttribute("buyer",
-				buyer);
+	protected void setSessionUser(HttpServletRequest request,Buyer buyer) {
+		request.getSession().setAttribute("buyer",buyer);
 	}
 	
 
