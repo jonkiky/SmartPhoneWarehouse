@@ -123,12 +123,15 @@ public abstract class ProductDao {
 		if(null!=product){
 			for(Product p : product){
 				ProductDao pd = new SmartPhoneDao();
+				pd.setId(p.getId());
 				pd.setBrand(p.getBrand());
 				pd.setColor(p.getColor_id());
 				pd.setDes(p.getDes());
 				pd.setName(p.getName());
 				pd.setProductTitle(p.getTitle());
 				pd.setSeller(null);
+				pd.setPrice(p.getPrice());
+				pd.setNumberInStroe(p.getNumber_in_stroe());
 				productDaoLs.add(pd);
 			}
 		}
