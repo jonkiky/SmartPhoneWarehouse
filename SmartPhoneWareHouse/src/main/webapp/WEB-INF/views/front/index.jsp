@@ -140,33 +140,9 @@
 		<li><a href="products">SPORTS & LEISURE [58]</a></li>
 		<li><a href="products">BOOKS & ENTERTAINMENTS [14]</a></li>
 		<li style="border:0"> &nbsp;</li>						
-		<li> <a href="product_summary"><strong>3 Items in your cart  <span class="badge badge-warning pull-right" style="line-height:18px;">$155.00</span></strong></a></li>
+		<li > <a href="product_summary"><strong><span class="number_of_product_in_shoppingcart">3</span> Items in your cart  <span class="shoppingcart_total_price badge badge-warning pull-right" style="line-height:18px;">$155.00</span></strong></a></li>
 		<li style="border:0"> &nbsp;</li>	
-		<li>
-		  <div class="thumbnail">
-			<img src="front/assets/products/1.jpg" alt="">
-			<div class="caption">
-			  <h5>Product name</h5>
-			  <p> 
-				Lorem Ipsum is simply dummy text. 
-			  </p>
-			  <h4><a class="btn" href="product_details">VIEW</a> <span class="pull-right">$222.00</span></h4>
-			</div>
-		  </div>
-		</li>
-		<li style="border:0"> &nbsp;</li>		
-		<li class="last">
-		  <div class="thumbnail">
-			<img src="front/assets/products/2.jpg" alt="">
-			<div class="caption">
-			  <h5>Product name</h5>
-			  <p> 
-				Lorem Ipsum is simply dummy text. 
-			  </p>
-			  <h4><a class="btn" href="product_details">VIEW</a> <span class="pull-right">$222.00</span></h4>
-			</div>
-		  </div>
-		</li> 
+	 
 	  </ul>
 </div>
 
@@ -177,7 +153,7 @@
 		<div id="myCarousel1" class="carousel slide">
             <div class="carousel-inner">
               <div class="item active">
-		  <ul class="thumbnails">
+		  <ul class="thumbnails" >
 			<li class="span3">
 			  <div class="thumbnail">
 			  <a href="#" class="tag" src="front/assets/products/new.png"></a>
@@ -394,7 +370,7 @@
 		  </div>
 		  
 		  
-		  <ul class="thumbnails">
+		  <ul class="thumbnails" id="normProduct">
 			<li class="span3">
 			  <div class="thumbnail">
 				<a  href="product_details"><img src="<c:url value="front/assets/products/6.jpg"/>" alt=""/></a>
@@ -435,7 +411,7 @@
 		  
 		  <h3>Feature Products </h3>
 		  
-		  <ul class="thumbnails">
+		  <ul class="thumbnails" id="featureProduct">
 			<li class="span3">
 			  <div class="thumbnail">
 				<a  href="product_details"><img src="<c:url value="front/assets/products/9.jpg"/>" alt=""/></a>
@@ -537,26 +513,161 @@
 	<script src="<c:url value="front/js/notify.min.js"/>"></script>
 
       <script type="text/javascript">
-
+     
     $(function() {
-        $('#gallery a').lightBox();
-                       
-        $.ajax({
-          	  type: "POST",
-          	  url: '<c:url value="/productsforHomePage"/>'
-          	}).done(function(e){
-          		 		obj = JSON.parse(e);
-          			//	if(obj.statusCode!="200"){
-          			//		$.notify(obj.message, "error");
-          			//	}else{
-          			//		$.notify(obj.message, "success");
-          			//	}
-          		 		
-          	});
-        
-	
-        
-    });
-    </script>
+     	/// function definitions
+    	 var newProduct =function(){
+        	 $.ajax({
+             	  type: "POST",
+             	  url: '<c:url value="/productsforHomePage"/>'
+             	}).done(function(e){
+             		 		obj = JSON.parse(e);
+             				if(obj.statusCode!="200"){
+             					$.notify(obj.message, "error");
+             				}else{
+             					$.notify(obj.message, "success");
+             					
+             					$("#myCarousel1").html("");
+             					var html =" <div class=\"carousel-inner\"> <div class=\"item active\"><ul class=\"thumbnails\" >";
+             				    
+             					for(var d in obj.obj){
+             				    	html+="<li class=\"span3\"><div class=\"thumbnail\">"
+                     				    +"<a href=\"#\" class=\"tag\" src=\"front/assets/products/new.png\"></a>"
+                     				    +"<a  href=\"product_details\"><img src=\"front/assets/products/1.jpg\" alt=\"\"/></a>"
+                     				    +"<div class=\"caption\">"
+                     					+"<h5>Product name</h5> <p>"+ obj.obj[d].name+" </p>"
+                     					+"<h4><a class=\"btn\" href=\"product_details\">VIEW</a> <span class=\"pull-right\">$222.00</span></h4>"
+                     					+"</div> </div></li>";
+             				    }
+             					html+="</ul></div>";
+             					$("#myCarousel1").html(html);
+             					
+             				
+             			 
+             				}
+             		 		
+             	});
+        	
+        };    
+
+        var FeaturedProduct =function(){
+          	 $.ajax({
+               	  type: "POST",
+               	  url: '<c:url value="/productsforHomePage"/>'
+               	}).done(function(e){
+               		 		obj = JSON.parse(e);
+               				if(obj.statusCode!="200"){
+               					$.notify(obj.message, "error");
+               				}else{
+               					$.notify(obj.message, "success");
+               					
+               					$("#featureProduct").html("");
+               					var html ="";
+               				    
+               					for(var d in obj.obj){
+               						
+ 					
+ 							html += "<li class=\"span3\">"
+ 							+ "<div class=\"thumbnail\">"
+ 							+ "<a  href=\"product_details\"><img src=\"front/assets/products/9.jpg\" /></a>"
+ 							+  "<div class=\"caption\">"
+ 							+  "  <h5>Product name</h5>"
+ 							+  "  <p> "
+ 							+  obj.obj[d].name
+ 							+  "	  </p>"
+ 							+  "	  <h4><a class=\"btn btn-large\" href=\"product_details\">VIEW</a> <span class=\"pull-right\">$222.00</span></h4>"
+ 							+  "	</div>"
+ 							+  " </div>"
+ 								+ "</li>";
+ 								}
+
+ 							$("#featureProduct").html(html);
+
+ 														}
+
+ 													});
+
+ 								};
+ 								
+ 								
+ 								
+ 								
+ 								var normProduct =function(){
+ 						         	 $.ajax({
+ 						              	  type: "POST",
+ 						              	  url: '<c:url value="/productsforHomePage"/>'
+ 						              	}).done(function(e){
+ 						              		 		obj = JSON.parse(e);
+ 						              				if(obj.statusCode!="200"){
+ 						              					$.notify(obj.message, "error");
+ 						              				}else{
+ 						              					$.notify(obj.message, "success");
+ 						              					
+ 						              					$("#normProduct").html("");
+ 						              					var html ="";
+ 						              				    
+ 						              					for(var d in obj.obj){
+ 						              						html+="<li class=\"span3\">"
+ 						              					 +" <div class=\"thumbnail\">"
+ 						              					 +"	<a  href=\"product_details\"><img src=\"front/assets/products/6.jpg\"/></a>"
+ 						              					 +"	<div class=\"caption\">"
+ 						              					 +"	  <h5>Product name</h5>"
+ 						              					 +"	  <p> "
+ 						              					 +"		Lorem Ipsum is simply dummy text. "
+ 						              					 +"	  </p>"
+ 						              					 +"	  <h4><a class=\"btn btn-large\" href=\"product_details\">VIEW</a> <span class=\"pull-right\">$222.00</span></h4>"
+ 						              					 +"	</div>"
+ 						              					 +"  </div>"
+ 						              					 +"</li>";
+ 						              				    }
+ 						              				
+ 						              					$("#normProduct").html(html);
+ 						              					
+ 						              				
+ 						              			 
+ 						              				}
+ 						              		 		
+ 						              	});
+ 						         	
+ 						         }; 
+ 						         
+ 						         
+ 						         
+
+ 						           var shoppingCart =function(){
+ 						             	 $.ajax({
+ 						                  	  type: "POST",
+ 						                  	  url: '<c:url value="/productsforHomePage"/>'
+ 						                  	}).done(function(e){
+ 						                  		 		obj = JSON.parse(e);
+ 						                  				if(obj.statusCode!="200"){
+ 						                  					$.notify(obj.message, "error");
+ 						                  				}else{
+ 						                  					$.notify("Shopping Cart Update Success", "success");
+ 						                  					
+ 						                  					$(".number_of_product_in_shoppingcart").text(12);
+ 						                  					$(".shoppingcart_total_price").text(12312);
+ 						                  					
+ 						                  				
+ 						                  			 
+ 						                  				}
+ 						                  		 		
+ 						                  	});
+ 						             	
+ 						             };  
+ 						         
+ 						         
+ 						         
+ 						         
+ 						         
+ 						         
+							      
+								newProduct();
+								FeaturedProduct();
+								normProduct();
+								shoppingCart();
+
+							});
+						</script>
   </body>
 </html>

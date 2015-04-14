@@ -126,7 +126,9 @@ public abstract class ProductDao {
 				pd.setBrand(p.getBrand());
 				pd.setColor(p.getColor_id());
 				pd.setDes(p.getDes());
-				pd.setName(p.getTitle());
+				pd.setName(p.getName());
+				pd.setProductTitle(p.getTitle());
+				pd.setSeller(null);
 				productDaoLs.add(pd);
 			}
 		}

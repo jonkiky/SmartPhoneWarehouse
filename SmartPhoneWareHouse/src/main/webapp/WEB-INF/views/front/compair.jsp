@@ -16,7 +16,7 @@
     <link href="front/assets/css/bootstrap-responsive.css" rel="stylesheet"/>
 	<link href="front/assets/css/docs.css" rel="stylesheet"/>
 	 
-      <link href="<c:url value="front/assets/style.css"/>" rel="stylesheet"/>
+    <link href="<c:url value="front/assets/style.css"/>" rel="stylesheet"/>
 	<link href="front/assets/js/google-code-prettify/prettify.css" rel="stylesheet"/>
 	
 	<!-- Less styles  
