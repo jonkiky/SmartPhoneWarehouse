@@ -1,11 +1,11 @@
-s<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <div class="navbar navbar-fixed-top">
               <div class="navbar-inner">
                 <div class="container">
-                 <a id="logoM" href=""><img src="front/assets/img/logo.png" alt="Bootsshop"/></a>
+                 <a id="logoM" href="/"><img src="<c:url value="/front/assets/img/logo.png"/>" alt="Bootsshop"/></a>
 					<a data-target="#sidebar" data-toggle="collapse" class="btn btn-navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -62,7 +62,7 @@ s<%@ page language="java" contentType="text/html; charset=UTF-8"
 <header id="header">
 <div class="row">
 <div class="span12">
-	<a href="index"><img src="front/assets/img/logo.png" alt="Bootsshop"/></a>
+	<a href="index"><img src="<c:url value="/front/assets/img/logo.png" />" alt="Bootsshop"/></a>
 <c:if test="${!empty buyer.user_name}">
 								
 	<div class="pull-right"> <br/>
@@ -78,8 +78,8 @@ s<%@ page language="java" contentType="text/html; charset=UTF-8"
 <div class="clr"></div>
 </header>
         
-   <script src="<c:url value="front/assets/js/jquery.js"/>"></script>
-   	<script src="<c:url value="front/js/notify.min.js"/>"></script>
+   <script src="<c:url value="/front/assets/js/jquery.js"/>"></script>
+   	<script src="<c:url value="/front/js/notify.min.js"/>"></script>
    	
    <script type="text/javascript">
    

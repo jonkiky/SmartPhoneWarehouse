@@ -42,4 +42,11 @@ public class ProductService {
 		return product;
 	}
 
+	
+	public List<ProductDao> getProductbyKeyWords( String key){
+		List<ProductDao> product = new ArrayList<ProductDao>();
+			product = productDao.getProductbyKeyWords(key);
+		return product;
+	}
+
 }

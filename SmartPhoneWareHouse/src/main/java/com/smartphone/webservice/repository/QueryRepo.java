@@ -5,7 +5,7 @@ package com.smartphone.webservice.repository;
  * 
  * @author Yizhen Chen
  */
-public class Query {
+public class QueryRepo {
 	
 	//User Query
 	public final String selectAllUser = "from User";
@@ -23,5 +23,7 @@ public class Query {
 	public final String deleteProj ="";
 	public final String RecoverProj="";
 	public final String updateproject="";
+	
+	public final String SearchProductByKeywords="from Product as p where p.name like :key  or p.brand like :key or p.title like :key";
 
 }

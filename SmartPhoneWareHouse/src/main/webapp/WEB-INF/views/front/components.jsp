@@ -47,7 +47,7 @@
 
 <hr class="soften">
 <div>
-	<h1>Components used in boot'sshop are:</h1>
+	<h1>Components used in Smartphone Warehouse are:</h1>
 </div>
 <hr class="soften"/>	
 <header>
@@ -1368,7 +1368,7 @@
 		 </div> 
 	 </div>
 	 <hr class="soft">
-	<p class="pull-right">&copy; Boot'sshop</p>
+	<p class="pull-right">&copy; Smartphone Warehouse</p>
 </div><!-- /container -->
 
 

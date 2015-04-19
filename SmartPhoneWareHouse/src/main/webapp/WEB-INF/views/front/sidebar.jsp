@@ -31,7 +31,7 @@
 		
 		<li>
 		  <div class="thumbnail">
-			<img src="front/assets/products/adv.jpg" width="200px" alt="">
+			<img src="<c:url value="/front/assets/products/adv.jpg"/>" width="200px" alt="">
 			<div class="caption">
 		
 		
@@ -41,7 +41,7 @@
 		<li style="border:0"> &nbsp;</li>		
 		<li class="last">
 		  <div class="thumbnail">
-			<img src="front/assets/products/adv2.jpg" width="200px" alt="">
+			<img src="<c:url value="/front/assets/products/adv2.jpg"/>" width="200px" alt="">
 			<div class="caption">
 			</div>
 		  </div>

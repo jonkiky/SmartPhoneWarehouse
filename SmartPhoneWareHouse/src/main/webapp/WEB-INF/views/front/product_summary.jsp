@@ -234,7 +234,7 @@
 		 </div> 
 	 </div>
 	 <hr class="soft">
-	<p class="pull-right">&copy; Boot'sshop</p>
+	<p class="pull-right">&copy; Smartphone Warehouse</p>
 </div><!-- /container -->
 
     <!-- Le javascript

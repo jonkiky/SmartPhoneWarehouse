@@ -434,7 +434,7 @@
 		 </div> 
 	 </div>
 	 <hr class="soft">
-	<p class="pull-right">&copy; Boot'sshop</p>
+	<p class="pull-right">&copy; Smartphone Warehouse</p>
 </div><!-- /container -->
             <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
  

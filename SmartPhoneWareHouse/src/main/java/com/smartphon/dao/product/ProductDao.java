@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import com.smartphon.dao.user.SellerDao;
+import com.smartphone.model.Buyer;
 import com.smartphone.model.Product;
+import com.smartphone.webservice.repository.QueryRepo;
 import com.smartphone.webservice.util.HibernateDbUtil;
 
 public abstract class ProductDao {
@@ -135,7 +138,38 @@ public abstract class ProductDao {
 				productDaoLs.add(pd);
 			}
 		}
-	return 	productDaoLs;
+		
+		return 	productDaoLs;
 	}
 
+	public QueryRepo q = new QueryRepo();
+ 	
+	public List<ProductDao> getProductbyKeyWords(String key){
+		List<ProductDao> productDaoLs = new ArrayList<ProductDao>();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		Query query = session.createQuery(q.SearchProductByKeywords);
+		query.setParameter("key", key);
+		List<Product> product = query.list();
+		
+		session.clear();
+		session.close();
+		if(null!=product){
+			for(Product p : product){
+				ProductDao pd = new SmartPhoneDao();
+				pd.setId(p.getId());
+				pd.setBrand(p.getBrand());
+				pd.setColor(p.getColor_id());
+				pd.setDes(p.getDes());
+				pd.setName(p.getName());
+				pd.setProductTitle(p.getTitle());
+				pd.setSeller(null);
+				pd.setPrice(p.getPrice());
+				pd.setNumberInStroe(p.getNumber_in_stroe());
+				productDaoLs.add(pd);
+			}
+		}
+		
+		return 	productDaoLs;
+	}
+		
 }
