@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,24 +40,9 @@
 <body>
   <!-- Navbar
     ================================================== -->
-
+ <%@ include file="navbar.jsp" %>
 <!-- ======================================================================================================================== -->	
-<div id="mainBody" class="container">
-<header id="header">
-<div class="row">
-<div class="span12">
-	<a href="index"><img src="front/assets/img/logo.png" alt="Bootsshop"/></a>
 
-<div class="pull-right"> <br/>
-	<a href="product_summary"> <span class="btn btn-mini btn-warning"> <i class="icon-shopping-cart icon-white"></i> [ 3 ] </span> </a>
-	<a href="product_summary"><span class="btn btn-mini active">$155.00</span></a>
-	<span class="btn btn-mini">&pound;</span>
-	<span class="btn btn-mini">&euro;</span> 
-</div>
-</div>
-</div>
-<div class="clr"></div>
-</header>
 <!-- ==================================================Header End====================================================================== -->
 
 	<hr class="soften">
@@ -68,12 +53,12 @@
 	<div class="row">
 		<div class="span4">
 		<h4>Contact Details</h4>
-		<p>	18 Fresno,<br/> CA 93727, USA
+		<p>	125 Central Ave,<br/> Albany,NY,12205, USA
 			<br/><br/>
-			info@bootsshop.com<br/>
-			﻿Tel 123-456-6780<br/>
+			info@smartphone.com<br/>
+			Tel 123-456-7890<br/>
 			Fax 123-456-5679<br/>
-			web:bootsshop.com
+			web:smartphone.com
 		</p>		
 		</div>
 			
@@ -84,7 +69,7 @@
 			<h5>Saturday</h5>
 			<p>09:00am - 07:00pm<br/><br/></p>
 			<h5>Sunday</h5>
-			<p>12:30pm - 06:00pm<br/><br/></p>
+			<p>10:00am - 06:00pm<br/><br/></p>
 		</div>
 		<div class="span4">
 		<h4>Email Us</h4>
@@ -118,7 +103,7 @@
 	</div>
 	<div class="row">
 	<div class="span12">
-	<iframe width="1170" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=18+California,+Fresno,+CA,+United+States&amp;aq=0&amp;oq=18+California+united+state&amp;sll=39.9589,-120.955336&amp;sspn=0.007114,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=18,+Fresno,+California+93727,+United+States&amp;t=m&amp;ll=36.732762,-119.695787&amp;spn=0.017197,0.100336&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=18+California,+Fresno,+CA,+United+States&amp;aq=0&amp;oq=18+California+united+state&amp;sll=39.9589,-120.955336&amp;sspn=0.007114,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=18,+Fresno,+California+93727,+United+States&amp;t=m&amp;ll=36.732762,-119.695787&amp;spn=0.017197,0.100336&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+	<iframe width="1170" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=18+California,+Fresno,+CA,+United+States&amp;aq=0&amp;oq=;sll=42.691767, -73.823198&amp;sspn=0.007114,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=18,+Fresno,+California+93727,+United+States&amp;t=m&amp;ll=42.689307, -73.824204&amp;spn=0.017197,0.100336&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=18+California,+Fresno,+CA,+United+States&amp;aq=0&amp;oq=18+California+united+state&amp;sll=39.9589,-120.955336&amp;sspn=0.007114,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=18,+Fresno,+California+93727,+United+States&amp;t=m&amp;ll=36.732762,-119.695787&amp;spn=0.017197,0.100336&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 	</div>
 	</div>
 <!-- Footer ------------------------------------------------------ -->
@@ -149,24 +134,23 @@
 			<a href="#">MANUFACTURERS</a> 
 			<a href="#">SUPPLIERS</a> 
 		 </div>
-		<div id="socialMedia" class="span3 pull-right">
+		 	<div id="socialMedia" class="span3 pull-right">
 			<h5>SOCIAL MEDIA </h5>
 			<a href="#"><img width="60" src="front/assets/img/facebook.png" title="facebook"/></a>
 			<a href="#"><img width="60" src="front/assets/img/twitter.png" title="twitter"/></a>
 			<a href="#"><img width="60" src="front/assets/img/rss.png" title="rss"/></a>
 			<a href="#"><img width="60" src="front/assets/img/youtube.png" title="youtube"/></a>
 		 </div> 
-	 </div>
+		</div>
 	 <hr class="soft">
-	<p class="pull-right">&copy; Boot'sshop</p>
-</div><!-- /container -->
+	<p><center>&copy; Smartphone Warehouse</center></p>
+		</div><!-- /container -->
 
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="front/assets/js/jquery.js"></script>
 	<script src="front/assets/js/google-code-prettify/prettify.js"></script>
     <script src="front/assets/js/application.js"></script>
     <script src="front/assets/js/bootstrap-transition.js"></script>

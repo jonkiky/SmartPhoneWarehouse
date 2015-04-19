@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+s<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <div class="navbar navbar-fixed-top">
               <div class="navbar-inner">
                 <div class="container">
-                 <a id="logoM" href="index"><img src="front/assets/img/logo.png" alt="Bootsshop"/></a>
+                 <a id="logoM" href=""><img src="front/assets/img/logo.png" alt="Bootsshop"/></a>
 					<a data-target="#sidebar" data-toggle="collapse" class="btn btn-navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -13,10 +13,10 @@
                   </a>
                   <div class="nav-collapse">
                     <ul class="nav">
-					  <li class=""><a href="<c:url value="/"/>">Home</a></li>
+					  <li class="active"><a href="<c:url value="/"/>">Home</a></li>
 					  <li class=""><a href="special_offer">Specials Offer</a></li>
 					  <li class=""><a href="normal">Delivery</a></li>
-					  <li class="active"><a href="contact">Contact</a></li>
+					  <li class=""><a href="contact">Contact</a></li>
 					</ul>
                     <form action="#" class="navbar-search pull-left">
                      <input id="srchFld" type="text" placeholder="I'm looking for ..." class="search-query span5"/>
@@ -47,19 +47,64 @@
 					</li>
 					</ul></c:if>
 							<c:if test="${!empty buyer.user_name}">
+								
 							<div id="Welcome User">
-							welcome ${buyer.user_name} 
-							<div id="signout"><button type="button" id="signout-btn" class="btn btn-block">Sign out</button></div>
+							Welcome <Strong>${buyer.user_name}</Strong>&nbsp;
+							<a id="signout-btn" >[Sign out]</a>
 							</div>
 							</c:if>
                   </div><!-- /.nav-collapse -->
                 </div>
               </div><!-- /navbar-inner -->
             </div>
-            
+    
+    <div id="mainBody" class="container">
+<header id="header">
+<div class="row">
+<div class="span12">
+	<a href="index"><img src="front/assets/img/logo.png" alt="Bootsshop"/></a>
+<c:if test="${!empty buyer.user_name}">
+								
+	<div class="pull-right"> <br/>
+	<a href="product_summary"> <span class="btn btn-mini btn-warning"> <i class="icon-shopping-cart icon-white"></i><span  id="number_of_product_in_shoppingcart"> [ 3 ]</span> </span> </a>
+	<a href="product_summary"><span class="btn btn-mini active" id="shoppingcart_total_price"><div>$155.00</div></span></a>
+	<!-- <span class="btn btn-mini">&pound;</span>
+	<span class="btn btn-mini">&euro;</span>  --> 
+</div>
+</c:if>
+
+</div>
+</div>
+<div class="clr"></div>
+</header>
+        
    <script src="<c:url value="front/assets/js/jquery.js"/>"></script>
+   	<script src="<c:url value="front/js/notify.min.js"/>"></script>
+   	
    <script type="text/javascript">
    
+   var shoppingCart =function(){
+    	 $.ajax({
+         	  type: "POST",
+         	  url: '<c:url value="/productsforHomePage"/>'
+         	}).done(function(e){
+         		 		obj = JSON.parse(e);
+         				if(obj.statusCode!="200"){
+         					$.notify(obj.message, "error");
+         				}else{
+         					$.notify("Shopping Cart Update Success", "success");
+         					
+         					$("#number_of_product_in_shoppingcart").text(12);
+         					$("#shoppingcart_total_price").text(12312);
+         					
+         				
+         			 
+         				}
+         		 		
+         	});
+    	
+    };  
+
    $("#signout-btn").click(function(){
 	   $.ajax({
       	  type: "GET",
@@ -114,5 +159,12 @@
 		
 	})
 	
+	
+	
+	 $(function() {
+	   
+	   shoppingCart()
+   })
+   
 	</script>
         

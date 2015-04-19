@@ -55,6 +55,11 @@ public class IndexController {
 		// return JsonObjcet.objcetTOJson(user);
 	}
 
+	@RequestMapping(value = "/tac", method = RequestMethod.GET)
+	public String tac() {
+		return "/front/tac";
+		// return JsonObjcet.objcetTOJson(user);
+	}
 	@RequestMapping(value = "/fag", method = RequestMethod.GET)
 	public String fag() {
 		return "/front/fag";

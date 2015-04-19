@@ -1,6 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,67 +38,9 @@
 <body>
   <!-- Navbar
     ================================================== -->
-<div class="navbar navbar-fixed-top">
-              <div class="navbar-inner">
-                <div class="container">
-					<a id="logoM" href="index"><img src="front/assets/img/logo.png" alt="Bootsshop"/></a>
-					<a data-target="#sidebar" data-toggle="collapse" class="btn btn-navbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</a>
-                  <div class="nav-collapse">
-                    <ul class="nav">
-					  <li class=""><a href="<c:url value="/"/>">Home</a></li>
-					  <li class=""><a href="special_offer">Specials Offer</a></li>
-					  <li class=""><a href="normal">Delivery</a></li>
-					  <li class=""><a href="contact">Contact</a></li>
-					</ul>
-                    <form action="#" class="navbar-search pull-left">
-                     <input id="srchFld" type="text" placeholder="I'm looking for ..." class="search-query span5"/>
-                    </form>
-                    <ul class="nav pull-right">
-					<li class="dropdown">
-						<a data-toggle="dropdown" class="dropdown-toggle" href="#">Login <b class="caret"></b></a>
-						<div class="dropdown-menu">
-						<form class="form-horizontal loginFrm">
-						  <div class="control-group">								
-							<input type="text" class="span2" id="inputEmail" placeholder="Email">
-						  </div>
-						  <div class="control-group">
-							<input type="password" class="span2" id="inputPassword" placeholder="Password">
-						  </div>
-						  <div class="control-group">
-							<label class="checkbox">
-							<input type="checkbox"> Remember me
-							</label>
-							<button type="submit" class="btn btn-block">Sign in</button>
-						  </div>
-						</form>					
-						</div>
-					</li>
-					</ul>
-                  </div><!-- /.nav-collapse -->
-                </div>
-              </div><!-- /navbar-inner -->
-            </div>
+ <%@ include file="navbar.jsp" %>
 <!-- ======================================================================================================================== -->	
-<div id="mainBody" class="container">
-<header id="header">
-<div class="row">
-<div class="span12">
-	<a href="index"><img src="front/assets/img/logo.png" alt="Bootsshop"/></a>
 
-<div class="pull-right"> <br/>
-	<a href="product_summary"> <span class="btn btn-mini btn-warning"> <i class="icon-shopping-cart icon-white"></i> [ 3 ] </span> </a>
-	<a href="product_summary"><span class="btn btn-mini active">$155.00</span></a>
-	<span class="btn btn-mini">&pound;</span>
-	<span class="btn btn-mini">&euro;</span> 
-</div>
-</div>
-</div>
-<div class="clr"></div>
-</header>
 <!-- ==================================================Header End====================================================================== -->
 <div class="row">
 <div id="sidebar" class="span3">
@@ -254,7 +194,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="front/assets/js/jquery.js"></script>
 	<script src="front/assets/js/google-code-prettify/prettify.js"></script>
     <script src="front/assets/js/application.js"></script>
     <script src="front/assets/js/bootstrap-transition.js"></script>
