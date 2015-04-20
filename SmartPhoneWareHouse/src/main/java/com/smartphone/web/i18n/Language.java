@@ -7,6 +7,9 @@ public abstract class Language {
 	public  String  createCustomerfailed;
 	public  String  createCustomerSuccess;
 	public String searchNeedKeywords;
+	public String loginSuccess;
+	public String loginFail;
+	public String sigoutSuccess;
 	
 	public Language(){
 		userPremissionError= "User No Permission Error";
@@ -15,5 +18,8 @@ public abstract class Language {
 		createCustomerfailed="Create Customer Failed";
 		createCustomerSuccess="Create Customer Success";
 		searchNeedKeywords="Please provide a keywords for searching";
+		loginSuccess="login Success";
+		loginFail="login Fail";
+		sigoutSuccess="sigout Success";
 	}
 }

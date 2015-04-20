@@ -479,10 +479,10 @@
              					for(var d in obj.obj){
              				    	html+="<li class=\"span3\"><div class=\"thumbnail\">"
                      				    +"<a href=\"#\" class=\"tag\" src=\"front/assets/products/new.png\"></a>"
-                     				    +"<a  href=\"product_details\\"+obj.obj[d].id+"\"><img src=\"front/assets/products/1.jpg\" alt=\"\"/></a>"
+                     				    +"<a  href=\"product_details\/"+obj.obj[d].id+"\"><img src=\"front/assets/products/1.jpg\" alt=\"\"/></a>"
                      				    +"<div class=\"caption\">"
                      					+"<h5>"+obj.obj[d].name+"</h5> <p>"+ obj.obj[d].productTitle+" </p>"
-                     					+"<h4><a class=\"btn\"  href=\"product_details\\"+obj.obj[d].id+"\">VIEW</a> <span class=\"pull-right\">$"+obj.obj[d].price+"</span></h4>"
+                     					+"<h4><a class=\"btn\"  href=\"product_details\/"+obj.obj[d].id+"\">VIEW</a> <span class=\"pull-right\">$"+obj.obj[d].price+"</span></h4>"
                      					+"</div> </div></li>";
              				    }
              					html+="</ul></div>";
@@ -515,13 +515,13 @@
  					
  							html += "<li class=\"span3\">"
  							+ "<div class=\"thumbnail\">"
- 							+ "<a  href=\"product_details\\"+obj.obj[d].id+"\"><img src=\"front/assets/products/9.jpg\" /></a>"
+ 							+ "<a  href=\"product_details\/"+obj.obj[d].id+"\"><img src=\"front/assets/products/9.jpg\" /></a>"
  							+  "<div class=\"caption\">"
  							+  "  <h5>"+  obj.obj[d].name+"</h5>"
  							+  "  <p> "
  							+   obj.obj[d].productTitle
  							+  "	  </p>"
- 							+  "	  <h4><a class=\"btn btn-large\" href=\"product_details\\"+obj.obj[d].id+"\">VIEW</a> <span class=\"pull-right\">$"+obj.obj[d].price+"</span></h4>"
+ 							+  "	  <h4><a class=\"btn btn-large\" href=\"product_details\/"+obj.obj[d].id+"\">VIEW</a> <span class=\"pull-right\">$"+obj.obj[d].price+"</span></h4>"
  							+  "	</div>"
  							+  " </div>"
  								+ "</li>";
@@ -555,13 +555,13 @@
  						              					for(var d in obj.obj){
  						              						html+="<li class=\"span3\">"
  						              					 +" <div class=\"thumbnail\">"
- 						              					 +"	<a  href=\"product_details\\"+obj.obj[d].id+"\"><img src=\"front/assets/products/6.jpg\"/></a>"
+ 						              					 +"	<a  href=\"product_details\/"+obj.obj[d].id+"\"><img src=\"front/assets/products/6.jpg\"/></a>"
  						              					 +"	<div class=\"caption\">"
  						              					 +"	  <h5>"+obj.obj[d].name+"</h5>"
  						              					 +"	  <p> "
  						              					 + obj.obj[d].productTitle
  						              					 +"	  </p>"
- 						              					 +"	  <h4><a class=\"btn btn-large\" href=\"product_details\\"+obj.obj[d].id+"\">VIEW</a> <span class=\"pull-right\">$"+obj.obj[d].price+"</span></h4>"
+ 						              					 +"	  <h4><a class=\"btn btn-large\" href=\"product_details\/"+obj.obj[d].id+"\">VIEW</a> <span class=\"pull-right\">$"+obj.obj[d].price+"</span></h4>"
  						              					 +"	</div>"
  						              					 +"  </div>"
  						              					 +"</li>";

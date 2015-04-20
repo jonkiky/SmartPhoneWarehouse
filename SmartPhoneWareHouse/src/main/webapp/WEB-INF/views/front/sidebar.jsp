@@ -2,7 +2,8 @@
 	<ul class="nav nav-list bs-docs-sidenav" style="display: block;">											
 		<li class="subMenu"><a> Brand</a>
 			<ul>
-			<li><a class="active" href="products">Samsung</a></li>
+			<li><a class="" href="<c:url value="/search/brand/samsung"/>">Samsung</a></li>
+			 	<li><a class="" href="<c:url value="/search/brand/google"/>">Google</a></li>
 			<li><a href=<c:url value="/search/brand/apple"/>>Apple</a></li>
 			<li><a href="<c:url value="/search/brand/htc"/>">HTC</a></li>
 			<li><a href="<c:url value="/search/brand/nokia"/>">Nokia</a></li>

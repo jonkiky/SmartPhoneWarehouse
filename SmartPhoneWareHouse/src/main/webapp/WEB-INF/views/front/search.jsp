@@ -122,7 +122,7 @@
 				  <p> 
 					${i.productTitle}
 				  </p>
-				  <h4><a class="btn btn-large" href="product_details/${i.id}">VIEW</a> <span class="pull-right">$${i.price}</span></h4>
+				  <h4><a class="btn btn-large" href="<c:url value="/product_details/${i.id}"/>">VIEW</a> <span class="pull-right">$${i.price}</span></h4>
 				</div>
 			  </div>
 			</li>

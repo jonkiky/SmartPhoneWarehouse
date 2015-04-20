@@ -14,9 +14,9 @@
                   <div class="nav-collapse">
                     <ul class="nav">
 					  <li class=""><a href="<c:url value="/"/>">Home</a></li>
-					  <li class=""><a href="special_offer">Specials Offer</a></li>
-					  <li class=""><a href="normal">Delivery</a></li>
-					  <li class=""><a href="contact">Contact</a></li>
+					  <li class=""><a href="<c:url value="/special_offer"/>">Specials Offer</a></li>
+					  <li class=""><a href="<c:url value="/normal"/>">Delivery</a></li>
+					  <li class=""><a href="<c:url value="/contact"/>">Contact</a></li>
 					</ul>
                     <form action="search" id="search" class="navbar-search pull-left"  method="GET">
                      <input id="srchFld" type="text" placeholder="I'm looking for ..." class="search-query span5"/>

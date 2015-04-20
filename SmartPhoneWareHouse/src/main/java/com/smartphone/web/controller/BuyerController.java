@@ -34,10 +34,10 @@ public class BuyerController extends BaseController{
 		}
 		if(flag){
 			setSessionUser(request, buyer);
-			String msg = lang.createCustomerSuccess;
+			String msg = lang.loginSuccess;
 			return  JsonObject.objcetTOJson(msg, null);
 		}else{
-			String errMsg=lang.createCustomerfailed;
+			String errMsg=lang.loginFail;
 			return JsonObject.customerExcetption(errMsg);
 			}
 		
@@ -51,7 +51,7 @@ public class BuyerController extends BaseController{
 		
 
 			setSessionUser(request, null);
-			String msg = lang.createCustomerSuccess;
+			String msg = lang.sigoutSuccess;
 			return  JsonObject.objcetTOJson(msg, null);
 	
 		
