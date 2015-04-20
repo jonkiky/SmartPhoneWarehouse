@@ -9,12 +9,12 @@
     <meta name="author" content="">
 
     <!-- Le styles  -->
-    <link href="front/assets/css/bootstrap.css" rel="stylesheet"/>
-    <link href="front/assets/css/bootstrap-responsive.css" rel="stylesheet"/>
-	<link href="front/assets/css/docs.css" rel="stylesheet"/>
+    <link href="<c:url value="/front/assets/css/bootstrap.css"/>" rel="stylesheet"/>
+    <link href="<c:url value="/front/assets/css/bootstrap-responsive.css"/>" rel="stylesheet"/>
+	<link href="<c:url value="/front/assets/css/docs.css"/>" rel="stylesheet"/>
 	 
-      <link href="<c:url value="front/assets/style.css"/>" rel="stylesheet"/>
-	<link href="front/assets/js/google-code-prettify/prettify.css" rel="stylesheet"/>
+      <link  href="<c:url value="/front/assets/style.css"/>" rel="stylesheet"/>
+	<link href="<c:url value="/front/assets/js/google-code-prettify/prettify.css" />"rel="stylesheet"/>
 	
 	<!-- Less styles  
 	<link rel="stylesheet/less" type="text/css" href="less/bootsshop.less">
@@ -28,10 +28,14 @@
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="front/assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="front/assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="front/assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="front/assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="front/assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<c:url value="/front/assets/ico/apple-touch-icon-144-precomposed.png"
+/>">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<c:url value="/front/assets/ico/apple-touch-icon-114-precomposed.png"
+/>">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<c:url value="/front/assets/ico/apple-touch-icon-72-precomposed.png"
+/>">
+    <link rel="apple-touch-icon-precomposed" href="<c:url value="/front/assets/ico/apple-touch-icon-57-precomposed.png"
+/>">
 	
 	
   </head>
@@ -67,20 +71,20 @@
 			#lightbox-image-details-caption { font-weight: bold; }#lightbox-image-details-currentNumber {display: block; clear: left; padding-bottom: 1.0em;}
 			#lightbox-secNav-btnClose {width: 66px; float: right;padding-bottom: 0.7em;	}
 			</style>
-            <a href="front/assets/products/large/f1.jpg" title="<h4>Fujifilm FinePix S2950 Digital Camera</h4>">
-				<img src="front/assets/products/large/3.jpg" width="100%" alt="Fujifilm FinePix S2950 Digital Camera"/>
+            <a href="<c:url value="/front/assets/products/1.jpg"/>" title="<h4>${product.name }</h4>">
+				<img src="<c:url value="/front/assets/products/1.jpg"/>" width="100%" />
             </a>
 			<div id="myCarousel" class="moreOptopm carousel slide">
                 <div class="carousel-inner">
                   <div class="item active">
-                   <a href="front/assets/products/large/f1.jpg"> <img width="29%" src="front/assets/products/large/f1.jpg" alt=""/></a>
-                   <a href="front/assets/products/large/f2.jpg"> <img width="29%" src="front/assets/products/large/f2.jpg" alt=""/></a>
-                   <a href="front/assets/products/large/f3.jpg" > <img width="29%" src="front/assets/products/large/f3.jpg" alt=""/></a>
+                   <a href="<c:url value="/front/assets/products/1.jpg"/>"> <img width="29%" src="<c:url value="/front/assets/products/1.jpg"/>" alt=""/></a>
+                   <a href="<c:url value="/front/assets/products/1.jpg"/>"> <img width="29%" src="<c:url value="/front/assets/products/2.jpg"/>" alt=""/></a>
+                   <a href="<c:url value="/front/assets/products/1.jpg"/>" > <img width="29%" src="<c:url value="/front/assets/products/3.jpg"/>" alt=""/></a>
                   </div>
                   <div class="item">
-                   <a href="front/assets/products/large/f3.jpg" > <img width="29%" src="front/assets/products/large/f3.jpg" alt=""/></a>
-                   <a href="front/assets/products/large/f1.jpg"> <img width="29%" src="front/assets/products/large/f1.jpg" alt=""/></a>
-                   <a href="front/assets/products/large/f2.jpg"> <img width="29%" src="front/assets/products/large/f2.jpg" alt=""/></a>
+                   <a href="<c:url value="/front/assets/products/1.jpg" />"> <img width="29%" src="<c:url value="/front/assets/products/3.jpg" />"alt=""/></a>
+                   <a href="<c:url value="/front/assets/products/1.jpg"/>"> <img width="29%" src="<c:url value="/front/assets/products/1.jpg"/>" alt=""/></a>
+                   <a href="<c:url value="/front/assets/products/1.jpg"/>"> <img width="29%" src="<c:url value="/front/assets/products/2.jpg"/>" alt=""/></a>
                   </div>
                 </div>
               <!--  
@@ -101,12 +105,12 @@
 			</div>
 			</div>
 			<div class="span6">
-				<h3>Fujifilm FinePix S2950 Digital Camera  </h3>
-				<small>- (14MP, 18x Optical Zoom) 3-inch LCD</small>
+				<h3>${product.name }-${product.brand } </h3>
+				<small>- ${product.productTitle }</small>
 				<hr class="soft"/>
 				<form class="form-horizontal qtyFrm">
 				  <div class="control-group">
-					<label class="control-label"><span>$222.00</span></label>
+					<label class="control-label"><span>$${product.price }</span></label>
 					<div class="controls">
 					<input type="number" class="span1" placeholder="Qty."/>
 					  <button type="submit" class="btn btn-large pull-right"><i class=" icon-shopping-cart"></i> Add to cart</button>
@@ -141,12 +145,7 @@
 				  </div> -->
 				</form>
 				<hr class="soft clr"/>
-				<p>
-				14 Megapixels. 18.0 x Optical Zoom. 3.0-inch LCD Screen. Full HD photos and 1280 x 720p HD movie capture. ISO sensitivity ISO6400 at reduced resolution. 
-				Tracking Auto Focus. Motion Panorama Mode. Face Detection technology with Blink detection and Smile and shoot mode. 4 x AA batteries not included. WxDxH 110.2 ×81.4x73.4mm. 
-				Weight 0.341kg (excluding battery and memory card). Weight 0.437kg (including battery and memory card).
 				
-				</p>
 				<a class="btn btn-small pull-right" href="#detail">More Details</a>
 				<br class="clr"/>
 			<a name="detail"></a>
@@ -164,42 +163,20 @@
                 <table class="table table-bordered" cellspacing="0">
 				<tbody>
 				<tr class="techSpecRow"><th colspan="2">Product Details</th></tr>
-				<tr class="techSpecRow"><td class="techSpecTD1">Brand: </td><td class="techSpecTD2">Fujifilm</td></tr>
-				<tr class="techSpecRow"><td class="techSpecTD1">Model:</td><td class="techSpecTD2">FinePix S2950HD</td></tr>
+				<tr class="techSpecRow"><td class="techSpecTD1">Brand: </td><td class="techSpecTD2">${product.brand }</td></tr>
+				<tr class="techSpecRow"><td class="techSpecTD1">Model:</td><td class="techSpecTD2">S</td></tr>
 				<tr class="techSpecRow"><td class="techSpecTD1">Released on:</td><td class="techSpecTD2"> 2011-01-28</td></tr>
 				<tr class="techSpecRow"><td class="techSpecTD1">Dimensions:</td><td class="techSpecTD2"> 5.50" h x 5.50" w x 2.00" l, .75 pounds</td></tr>
-				<tr class="techSpecRow"><td class="techSpecTD1">Display size:</td><td class="techSpecTD2">3</td></tr>
 				</tbody>
 				</table>
+				<p>
+				${product.des }
 				
-				<h5>Features</h5>
-				<p>
-				14 Megapixels. 18.0 x Optical Zoom. 3.0-inch LCD Screen. Full HD photos and 1280 x 720p HD movie capture. ISO sensitivity ISO6400 at reduced resolution. Tracking Auto Focus. Motion Panorama Mode. Face Detection technology with Blink detection and Smile and shoot mode. 4 x AA batteries not included. WxDxH 110.2 ×81.4x73.4mm. Weight 0.341kg (excluding battery and memory card). Weight 0.437kg (including battery and memory card).<br/>
-				OND363338
 				</p>
-
-				<h4>Editorial Reviews</h4>
-				<h5>Manufacturer's Description </h5>
-				<p>
-				With a generous 18x Fujinon optical zoom lens, the S2950 really packs a punch, especially when matched with its 14 megapixel sensor, large 3.0" LCD screen and 720p HD (30fps) movie capture.
-				</p>
-
-				<h5>Electric powered Fujinon 18x zoom lens</h5>
-				<p>
-				The S2950 sports an impressive 28mm – 504mm* high precision Fujinon optical zoom lens. Simple to operate with an electric powered zoom lever, the huge zoom range means that you can capture all the detail, even when you're at a considerable distance away. You can even operate the zoom during video shooting. Unlike a bulky D-SLR, bridge cameras allow you great versatility of zoom, without the hassle of carrying a bag of lenses.
-				</p>
-				<h5>Impressive panoramas</h5>
-				<p>
-				With its easy to use Panoramic shooting mode you can get creative on the S2950, however basic your skills, and rest assured that you will not risk shooting uneven landscapes or shaky horizons. The camera enables you to take three successive shots with a helpful tool which automatically releases the shutter once the images are fully aligned to seamlessly stitch the shots together in-camera. It's so easy and the results are impressive.
-				</p>
-
-				<h5>Sharp, clear shots</h5>
-				<p>
-				Even at the longest zoom settings or in the most challenging of lighting conditions, the S2950 is able to produce crisp, clean results. With its mechanically stabilised 1/2 3", 14 megapixel CCD sensor, and high ISO sensitivity settings, Fujifilm's Dual Image Stabilisation technology combines to reduce the blurring effects of both hand-shake and subject movement to provide superb pictures.
-				</p>
+				
               </div>
 		<div class="tab-pane fade" id="profile">
-		<div id="myTab" class="pull-right">
+		<!-- <div id="myTab" class="pull-right">
 		 <a href="#listView" data-toggle="tab"><span class="btn btn-large"><i class="icon-list"></i></span></a>
 		 <a href="#blockView" data-toggle="tab"><span class="btn btn-large active"><i class="icon-th-large icon-white"></i></span></a>
 		</div>
@@ -462,7 +439,7 @@
 			</div>
 		</div>
 				<br class="clr">
-					 </div>
+					 </div>-->
 		</div>
           </div>
 
@@ -499,10 +476,10 @@
 		 </div>
 		<div id="socialMedia" class="span3 pull-right">
 			<h5>SOCIAL MEDIA </h5>
-			<a href="#"><img width="60" src="front/assets/img/facebook.png" title="facebook"/></a>
-			<a href="#"><img width="60" src="front/assets/img/twitter.png" title="twitter"/></a>
-			<a href="#"><img width="60" src="front/assets/img/rss.png" title="rss"/></a>
-			<a href="#"><img width="60" src="front/assets/img/youtube.png" title="youtube"/></a>
+			<a href="#"><img width="60" src="<c:url value="/front/assets/img/facebook.png"/>" title="facebook"/></a>
+			<a href="#"><img width="60" src="<c:url value="/front/assets/img/twitter.png"/>" title="twitter"/></a>
+			<a href="#"><img width="60" src="<c:url value="/front/assets/img/rss.png" />"title="rss"/></a>
+			<a href="#"><img width="60" src="<c:url value="/front/assets/img/youtube.png"/>" title="youtube"/></a>
 		 </div> 
 	 </div>
 	 <hr class="soft">
@@ -513,23 +490,23 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-	<script src="front/assets/js/google-code-prettify/prettify.js"></script>
-    <script src="front/assets/js/application.js"></script>
-    <script src="front/assets/js/bootstrap-transition.js"></script>
-    <script src="front/assets/js/bootstrap-modal.js"></script>
-    <script src="front/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="front/assets/js/bootstrap-alert.js"></script>
-    <script src="front/assets/js/bootstrap-dropdown.js"></script>
-    <script src="front/assets/js/bootstrap-tab.js"></script>
-    <script src="front/assets/js/bootstrap-tooltip.js"></script>
-    <script src="front/assets/js/bootstrap-popover.js"></script>
-    <script src="front/assets/js/bootstrap-button.js"></script>
-    <script src="front/assets/js/bootstrap-collapse.js"></script>
-    <script src="front/assets/js/bootstrap-carousel.js"></script>
-    <script src="front/assets/js/bootstrap-typeahead.js"></script>
-    <script src="front/assets/js/bootstrap-affix.js"></script>
-    <script src="front/assets/js/jquery.lightbox-0.5.js"></script>
-	<script src="front/assets/js/bootsshoptgl.js"></script>
+	<script src="<c:url value="/front/assets/js/google-code-prettify/prettify.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/application.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-transition.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-modal.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-scrollspy.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-alert.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-dropdown.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-tab.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-tooltip.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-popover.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-button.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-collapse.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-carousel.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-typeahead.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/bootstrap-affix.js"/>"></script>
+    <script src="<c:url value="/front/assets/js/jquery.lightbox-0.5.js"/>"></script>
+	<script src="<c:url value="/front/assets/js/bootsshoptgl.js"/>"></script>
 	 <script type="text/javascript">
     $(function() {
         $('#gallery a').lightBox();

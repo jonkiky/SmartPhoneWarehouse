@@ -3,28 +3,28 @@
 		<li class="subMenu"><a> Brand</a>
 			<ul>
 			<li><a class="active" href="products">Samsung</a></li>
-			<li><a href="products">Apple</a></li>
-			<li><a href="products">HTC</a></li>
-			<li><a href="products">Nokia</a></li>
-			<li><a href="products">Motorola</a></li>
+			<li><a href=<c:url value="/search/brand/apple"/>>Apple</a></li>
+			<li><a href="<c:url value="/search/brand/htc"/>">HTC</a></li>
+			<li><a href="<c:url value="/search/brand/nokia"/>">Nokia</a></li>
+			<li><a href="<c:url value="/search/brand/motorola"/>">Motorola</a></li>
 			</ul>
 		</li>
 		<li class="subMenu"><a> Price</a>
 		<ul>
-			<li><a href="products"><$200</a></li>
-			<li><a href="products">$200 ~ $400</a></li>												
-			<li><a href="products">$400 ~ $600</a></li>	
-			<li><a href="products">>$600</a></li>
+			<li><a href="<c:url value="/search/price/<200"/>"><$200</a></li>
+			<li><a href="<c:url value="/search/price/200@400"/>">$200 ~ $400</a></li>												
+			<li><a href="<c:url value="/search/price/400@600"/>">$400 ~ $600</a></li>	
+			<li><a href="<c:url value="/search/price/>600"/>">>$600</a></li>
 												
 		</ul>
 		</li>
 		<li class="subMenu"><a>Color</a>
 			<ul>
-			<li><a href="products">Black</a></li>
-			<li><a href="products">Red</a></li>												
-			<li><a href="products">White</a></li>	
-			<li><a href="products">Golden</a></li>
-			<li><a href="products">silver</a></li>												
+			<li><a href="<c:url value="/search/color/black"/>">Black</a></li>
+			<li><a href="<c:url value="/search/colore/red"/>">Red</a></li>												
+			<li><a href="<c:url value="/search/color/white"/>">White</a></li>	
+			<li><a href="<c:url value="/search/color/golden"/>">Golden</a></li>
+			<li><a href="<c:url value="/search/color/silver"/>">silver</a></li>												
 											
 		</ul>
 		</li>

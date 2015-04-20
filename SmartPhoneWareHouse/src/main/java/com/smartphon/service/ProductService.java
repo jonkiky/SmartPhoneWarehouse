@@ -28,8 +28,10 @@ public class ProductService {
 		throw new UnsupportedOperationException("Implement this");
 	}
 	
-	public SmartPhoneDao getSmartPhone(){
-		throw new UnsupportedOperationException("Implement this");
+	public ProductDao getProductById(String key){
+		ProductDao product = new ProductDao();
+		product = productDao.getProductById(key);
+		return product;
 	}
 	
 	public List<SmartPhoneDao> getSmartPhones(){
@@ -48,5 +50,24 @@ public class ProductService {
 			product = productDao.getProductbyKeyWords(key);
 		return product;
 	}
-
+	
+	public List<ProductDao> searchProductByBrand( String key){
+		List<ProductDao> product = new ArrayList<ProductDao>();
+			product = productDao.searchProductByBrand(key);
+		return product;
+	}
+	
+	public List<ProductDao> searchProductByPrice( String key){
+		List<ProductDao> product = new ArrayList<ProductDao>();
+			product = productDao.searchProductByPrice(key);
+		return product;
+	}
+	
+	public List<ProductDao> searchProductByColor( String key){
+		List<ProductDao> product = new ArrayList<ProductDao>();
+			product = productDao.searchProductByColor(key);
+		return product;
+	}
+	
+	
 }

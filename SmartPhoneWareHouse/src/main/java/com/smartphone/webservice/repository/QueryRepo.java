@@ -26,4 +26,11 @@ public class QueryRepo {
 	
 	public final String SearchProductByKeywords="from Product as p where p.name like :key  or p.brand like :key or p.title like :key";
 
+	public final String SearchProductByBrand="from Product as p where p.brand like :key or p.title like :key";
+	public final String SearchProductByPriceBigger="from Product as p where price > :key";
+	public final String SearchProductByPriceSmall="from Product as p where price < :key";
+	public final String SearchProductByPricebetween="from Product as p where price >:skey and price <:bkey";
+	public final String SearchProductByColor="from Product as p where p.color=:key ";
+	public final String getProductById="from Product as p where p.id=:key";
+	
 }

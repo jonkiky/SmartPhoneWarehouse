@@ -56,33 +56,65 @@ public class ProductsController {
 	
 	
 	@RequestMapping(value = "/search/brand/{key}", method = RequestMethod.GET)
-	@ResponseBody
-	public String searchProductByBrand() throws JsonProcessingException {
+	public String searchProductByBrand(@PathVariable String key,ModelMap model) throws JsonProcessingException {
 	
-		List<ProductDao> productls=productService.getProductForHomePage();
-			return JsonObject.objcetTOJson("Retrieve Data Success",productls);
+		if(key.isEmpty()){
+			String errMsg=lang.searchNeedKeywords;
+			return JsonObject.customerExcetption(errMsg);
+		}else{
+			List<ProductDao> productls=productService.searchProductByBrand(key);
+			model.addAttribute("Productlist", productls);
+			return "/front/search";
+		}
 			
 		
 	}
 	
 	
 	@RequestMapping(value = "/search/price/{key}", method = RequestMethod.GET)
-	@ResponseBody
-	public String searchProductByPrice() throws JsonProcessingException {
+	public String searchProductByPrice(@PathVariable String key,ModelMap model) throws JsonProcessingException {
 	
-		List<ProductDao> productls=productService.getProductForHomePage();
-			return JsonObject.objcetTOJson("Retrieve Data Success",productls);
+		if(key.isEmpty()){
+			String errMsg=lang.searchNeedKeywords;
+			return JsonObject.customerExcetption(errMsg);
+		}else{
+			List<ProductDao> productls=productService.searchProductByPrice(key);
+			model.addAttribute("Productlist", productls);
+			return "/front/search";
+		}
 			
 		
 	}
 	
 	
 	@RequestMapping(value = "/search/color/{key}", method = RequestMethod.GET)
-	@ResponseBody
-	public String searchProductByColor() throws JsonProcessingException {
+	public String searchProductByColor(@PathVariable String key,ModelMap model) throws JsonProcessingException {
 	
-		List<ProductDao> productls=productService.getProductForHomePage();
-			return JsonObject.objcetTOJson("Retrieve Data Success",productls);
+		if(key.isEmpty()){
+			String errMsg=lang.searchNeedKeywords;
+			return JsonObject.customerExcetption(errMsg);
+		}else{
+			List<ProductDao> productls=productService.searchProductByColor(key);
+			model.addAttribute("Productlist", productls);
+			return "/front/search";
+		}
+			
+		
+	}
+	
+	
+	
+	@RequestMapping(value = "/product_details/{key}", method = RequestMethod.GET)
+	public String getProductById(@PathVariable String key,ModelMap model) throws JsonProcessingException {
+	
+		if(key.isEmpty()){
+			String errMsg=lang.searchNeedKeywords;
+			return JsonObject.customerExcetption(errMsg);
+		}else{
+			ProductDao productls=productService.getProductById(key);
+			model.addAttribute("product", productls);
+			return "/front/product_details";
+		}
 			
 		
 	}

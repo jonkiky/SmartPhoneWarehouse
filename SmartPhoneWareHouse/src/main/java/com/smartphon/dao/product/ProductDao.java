@@ -13,7 +13,7 @@ import com.smartphone.model.Product;
 import com.smartphone.webservice.repository.QueryRepo;
 import com.smartphone.webservice.util.HibernateDbUtil;
 
-public abstract class ProductDao {
+public  class ProductDao {
 	private int id;
 	private String productTitle;
 	private String name;
@@ -128,7 +128,7 @@ public abstract class ProductDao {
 				ProductDao pd = new SmartPhoneDao();
 				pd.setId(p.getId());
 				pd.setBrand(p.getBrand());
-				pd.setColor(p.getColor_id());
+				pd.setColor(p.getColor());
 				pd.setDes(p.getDes());
 				pd.setName(p.getName());
 				pd.setProductTitle(p.getTitle());
@@ -148,17 +148,18 @@ public abstract class ProductDao {
 		List<ProductDao> productDaoLs = new ArrayList<ProductDao>();
 		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
 		Query query = session.createQuery(q.SearchProductByKeywords);
-		query.setParameter("key", key);
-		List<Product> product = query.list();
+		query.setParameter("key", "%"+key+"%");
+		List product = query.list();
 		
 		session.clear();
 		session.close();
 		if(null!=product){
-			for(Product p : product){
+			for(Object p2 : product){
+				Product p=(Product) p2;
 				ProductDao pd = new SmartPhoneDao();
 				pd.setId(p.getId());
 				pd.setBrand(p.getBrand());
-				pd.setColor(p.getColor_id());
+				pd.setColor(p.getColor());
 				pd.setDes(p.getDes());
 				pd.setName(p.getName());
 				pd.setProductTitle(p.getTitle());
@@ -172,4 +173,136 @@ public abstract class ProductDao {
 		return 	productDaoLs;
 	}
 		
+	
+	
+	public List<ProductDao> searchProductByBrand(String key){
+		List<ProductDao> productDaoLs = new ArrayList<ProductDao>();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		
+		Query query = session.createQuery(q.SearchProductByBrand);
+		query.setParameter("key", "%"+key+"%");
+		List product = query.list();
+		
+		session.clear();
+		session.close();
+		if(null!=product){
+			for(Object p2 : product){
+				Product p=(Product) p2;
+				ProductDao pd = new SmartPhoneDao();
+				pd.setId(p.getId());
+				pd.setBrand(p.getBrand());
+				pd.setColor(p.getColor());
+				pd.setDes(p.getDes());
+				pd.setName(p.getName());
+				pd.setProductTitle(p.getTitle());
+				pd.setSeller(null);
+				pd.setPrice(p.getPrice());
+				pd.setNumberInStroe(p.getNumber_in_stroe());
+				productDaoLs.add(pd);
+			}
+		}
+		
+		return 	productDaoLs;
+	}
+	
+	
+	public List<ProductDao> searchProductByPrice(String key){
+		List<ProductDao> productDaoLs = new ArrayList<ProductDao>();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		Query query = session.createQuery(q.SearchProductByKeywords);
+		if(key.contains("@")){
+			query = session.createQuery(q.SearchProductByPricebetween);
+			query.setParameter("skey", Double.parseDouble(key.split("@")[0]));
+			query.setParameter("bkey", Double.parseDouble(key.split("@")[1]));
+		}
+		if(key.contains(">")){
+			query = session.createQuery(q.SearchProductByPriceBigger);
+			query.setParameter("key", Double.parseDouble(key.replace(">", "")));
+		}
+		if(key.contains("<")){
+			query = session.createQuery(q.SearchProductByPriceSmall);
+			query.setParameter("key", Double.parseDouble(key.replace("<", "")));
+		}
+		
+		List product = query.list();
+		
+		session.clear();
+		session.close();
+		if(null!=product){
+			for(Object p2 : product){
+				Product p=(Product) p2;
+				ProductDao pd = new SmartPhoneDao();
+				pd.setId(p.getId());
+				pd.setBrand(p.getBrand());
+				pd.setColor(p.getColor());
+				pd.setDes(p.getDes());
+				pd.setName(p.getName());
+				pd.setProductTitle(p.getTitle());
+				pd.setSeller(null);
+				pd.setPrice(p.getPrice());
+				pd.setNumberInStroe(p.getNumber_in_stroe());
+				productDaoLs.add(pd);
+			}
+		}
+		
+		return 	productDaoLs;
+	}
+	
+	
+	public List<ProductDao> searchProductByColor(String key){
+		List<ProductDao> productDaoLs = new ArrayList<ProductDao>();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		Query query = session.createQuery(q.SearchProductByColor);
+		query.setParameter("key", "%"+key+"%");
+		List product = query.list();
+		
+		session.clear();
+		session.close();
+		if(null!=product){
+			for(Object p2 : product){
+				Product p=(Product) p2;
+				ProductDao pd = new SmartPhoneDao();
+				pd.setId(p.getId());
+				pd.setBrand(p.getBrand());
+				pd.setColor(p.getColor());
+				pd.setDes(p.getDes());
+				pd.setName(p.getName());
+				pd.setProductTitle(p.getTitle());
+				pd.setSeller(null);
+				pd.setPrice(p.getPrice());
+				pd.setNumberInStroe(p.getNumber_in_stroe());
+				productDaoLs.add(pd);
+			}
+		}
+		
+		return 	productDaoLs;
+	}
+	
+	
+	public ProductDao getProductById(String key){
+		ProductDao pd = new ProductDao();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		Query query = session.createQuery(q.getProductById);
+		query.setParameter("key", Integer.valueOf(key));
+		List product = query.list();
+		
+		session.clear();
+		session.close();
+		if(null!=product){
+			for(Object p2 : product){
+				Product p=(Product) p2;
+				pd.setId(p.getId());
+				pd.setBrand(p.getBrand());
+				pd.setColor(p.getColor());
+				pd.setDes(p.getDes());
+				pd.setName(p.getName());
+				pd.setProductTitle(p.getTitle());
+				pd.setSeller(null);
+				pd.setPrice(p.getPrice());
+				pd.setNumberInStroe(p.getNumber_in_stroe());
+			}
+		}
+		
+		return 	pd;
+	}
 }

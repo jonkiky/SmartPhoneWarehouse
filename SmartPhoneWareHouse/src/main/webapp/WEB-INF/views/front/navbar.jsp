@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+ 
 <div class="navbar navbar-fixed-top">
               <div class="navbar-inner">
                 <div class="container">
@@ -13,14 +13,15 @@
                   </a>
                   <div class="nav-collapse">
                     <ul class="nav">
-					  <li class="active"><a href="<c:url value="/"/>">Home</a></li>
+					  <li class=""><a href="<c:url value="/"/>">Home</a></li>
 					  <li class=""><a href="special_offer">Specials Offer</a></li>
 					  <li class=""><a href="normal">Delivery</a></li>
 					  <li class=""><a href="contact">Contact</a></li>
 					</ul>
-                    <form action="#" class="navbar-search pull-left">
+                    <form action="search" id="search" class="navbar-search pull-left"  method="GET">
                      <input id="srchFld" type="text" placeholder="I'm looking for ..." class="search-query span5"/>
                     </form>
+                  
                     
                     <ul class="nav pull-right">
                     <c:if test="${empty buyer}">
@@ -76,6 +77,7 @@
 </div>
 </div>
 <div class="clr"></div>
+ <form action="search" id="search2" class="navbar-search pull-left"  method="GET"/>
 </header>
         
    <script src="<c:url value="/front/assets/js/jquery.js"/>"></script>
@@ -162,7 +164,18 @@
 	
 	
 	 $(function() {
-	   
+	   $("#search").submit(function(e){
+		   e.preventDefault();
+		   var key=$("#srchFld").val();
+		   if(key!=""){
+			   $('#search2').attr('action', '/smartphone/search/'+key).submit();
+		   }else{
+			   $.notify("Plese enter search keywords", "warn");
+		   }
+		    
+		    
+		   
+	   })
 	   shoppingCart()
    })
    

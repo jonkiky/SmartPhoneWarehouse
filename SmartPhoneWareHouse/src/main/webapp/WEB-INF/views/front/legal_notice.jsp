@@ -43,109 +43,31 @@
 
 <!-- ==================================================Header End====================================================================== -->
 <div class="row">
-<div id="sidebar" class="span3">
-	<ul class="nav nav-list bs-docs-sidenav" style="display: block;">											
-		<li class="subMenu"><a> ELECTRONICS [230]</a>
-			<ul>
-			<li><a class="active" href="products">Cameras (100)</a></li>
-			<li><a href="products">Computers, Tablets & laptop (30)</a></li>
-			<li><a href="products">Mobile Phone (80)</a></li>
-			<li><a href="products">Sound & Vision (15)</a></li>
-			</ul>
-		</li>
-		<li class="subMenu"><a> CLOTHES [840] </a>
-		<ul>
-			<li><a href="products">Women's Clothing (45)</a></li>
-			<li><a href="products">Women's Shoes (8)</a></li>												
-			<li><a href="products">Women's Hand Bags (5)</a></li>	
-			<li><a href="products">Men's Clothings  (45)</a></li>
-			<li><a href="products">Men's Shoes (6)</a></li>												
-			<li><a href="products">Kids Clothing (5)</a></li>												
-			<li><a href="products">Kids Shoes (3)</a></li>												
-		</ul>
-		</li>
-		<li class="subMenu"><a>FOOD AND BEVERAGES [1000]</a>
-			<ul>
-			<li><a href="products">Angoves  (35)</a></li>
-			<li><a href="products">Bouchard Aine & Fils (8)</a></li>												
-			<li><a href="products">French Rabbit (5)</a></li>	
-			<li><a href="products">Louis Bernard  (45)</a></li>
-			<li><a href="products">BIB Wine (Bag in Box) (8)</a></li>												
-			<li><a href="products">Other Liquors & Wine (5)</a></li>												
-			<li><a href="products">Garden (3)</a></li>												
-			<li><a href="products">Khao Shong (11)</a></li>												
-		</ul>
-		</li>
-		<li><a href="products">HEALTH & BEAUTY [18]</a></li>
-		<li><a href="products">SPORTS & LEISURE [58]</a></li>
-		<li><a href="products">BOOKS & ENTERTAINMENTS [14]</a></li>
-		<li style="border:0"> &nbsp;</li>						
-		<li> <a href="product_summary"><strong>3 Items in your cart  <span class="badge badge-warning pull-right" style="line-height:18px;">$155.00</span></strong></a></li>
-		<li style="border:0"> &nbsp;</li>	
-		<li>
-		  <div class="thumbnail">
-			<img src="front/assets/products/1.jpg" alt="">
-			<div class="caption">
-			  <h5>Product name</h5>
-			  <p> 
-				Lorem Ipsum is simply dummy text. 
-			  </p>
-			  <h4><a class="btn" href="product_details">VIEW</a> <span class="pull-right">$222.00</span></h4>
-			</div>
-		  </div>
-		</li>
-		<li style="border:0"> &nbsp;</li>		
-		<li class="last">
-		  <div class="thumbnail">
-			<img src="front/assets/products/2.jpg" alt="">
-			<div class="caption">
-			  <h5>Product name</h5>
-			  <p> 
-				Lorem Ipsum is simply dummy text. 
-			  </p>
-			  <h4><a class="btn" href="product_details">VIEW</a> <span class="pull-right">$222.00</span></h4>
-			</div>
-		  </div>
-		</li> 
-	  </ul>
-</div>
+<%@ include file="sidebar.jsp" %>
 
 	<div class="span9">
-    <ul class="breadcrumb">
+   <ul class="breadcrumb">
 		<li><a href="index">Home</a> <span class="divider">/</span></li>
 		<li class="active">Legal Notice</li>
     </ul>
 	<h3> Legal</h3>	
 	<hr class="soft"/>
 	<div id="legalNotice">
-		<h5>Lorem ipsum dolor sit amet</h5><br/>
+		<h5>Legal Notice</h5><br/>
 		<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum varius dapibus. Sed hendrerit porta felis at sollicitudin. Sed at nunc ac neque semper fermentum. Proin diam sem, semper fermentum eleifend nec, viverra ac est. Sed ultricies, lectus et vehicula imperdiet, felis tortor vehicula turpis, non fermentum enim est et sapien. Nam justo mi, dignissim a euismod ut, pretium sed leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In viverra porta est, consequat elementum metus tristique a. Mauris tempus tellus a metus dapibus faucibus egestas lectus consectetur. Integer libero dolor, luctus non congue vitae, tempus ut neque. Nunc eleifend lorem quis diam pharetra sagittis. Aliquam ut dolor dui. Fusce dictum facilisis ipsum eu porttitor. In ultricies rhoncus tortor vitae tincidunt.
+		2015 smartphonewarehouse.com,ALL RIGHTS RESERVED.Please refer the legal notice below for terms of use.</p> 
+		<p>
+		This website is operated by smartphonewarehouse.com. The mailing address is 125 central avenue, Albany,NY,12205,USA. All users of this website agree that their access to this website is according to our terms and conditions. All the terms and conditions are set forth in this legal notice and is applicable. If any such access is taken then it is user's own risk. These terms and conditions can be subjected to change at any time without any further notice and changes are reflected in the legal notice.
 		</p>
-		<h5>Lorem ipsum dolor sit amet</h5><br/>
 		<p>
-		Nullam a vulputate leo. Nulla tristique metus eros. Curabitur ultrices commodo mauris, sit amet faucibus lectus fermentum in. Nulla eleifend, augue hendrerit tempus faucibus, diam lacus aliquet urna, eget facilisis turpis risus quis arcu. Cras placerat suscipit sem, ac consequat dui iaculis eu. Cras elit enim, adipiscing lobortis rutrum ac, vehicula nec massa. Praesent pharetra ligula ac erat venenatis feugiat. Quisque id nulla mi. Mauris at orci nec nisi eleifend auctor. Mauris placerat consectetur tincidunt. Nam eu tellus vitae dolor vestibulum commodo. Etiam tristique, urna ac convallis laoreet, enim enim aliquet neque, id cursus risus nulla sed ligula. Nunc quam libero, accumsan vitae consequat at, sollicitudin eget mi. Phasellus in molestie diam. Aliquam enim purus, tempor id sodales non, volutpat eu diam. Donec eu nisl lacinia leo semper lobortis sed sit amet elit.
+		By making a purchase from smartphonewarehouse.com, you should understand and agree that we may share information about you and your transaction with other companies for the purpose of processing your transaction, including fraud prevention, vendor direct shipping and credit card authorization.
 		</p>
-		<h5>Lorem ipsum dolor sit amet</h5><br/>
 		<p>
-		Aliquam interdum, ipsum a posuere dictum, tellus risus blandit dolor, at tristique sapien urna vel purus. Pellentesque in dictum urna. Sed feugiat libero sit amet arcu malesuada eu convallis dui convallis. Donec facilisis massa a ipsum aliquam lobortis. Praesent ac lectus sed leo aliquam egestas. Sed ante neque, volutpat ac tempor et, bibendum at ligula. Nunc porta vestibulum sodales.
-			</p>
-			<h5>Lorem ipsum dolor sit amet</h5><br/>
-		<p>
-		Nullam a vulputate leo. Nulla tristique metus eros. Curabitur ultrices commodo mauris, sit amet faucibus lectus fermentum in. Nulla eleifend, augue hendrerit tempus faucibus, diam lacus aliquet urna, eget facilisis turpis risus quis arcu. Cras placerat suscipit sem, ac consequat dui iaculis eu. Cras elit enim, adipiscing lobortis rutrum ac, vehicula nec massa. Praesent pharetra ligula ac erat venenatis feugiat. Quisque id nulla mi. Mauris at orci nec nisi eleifend auctor. Mauris placerat consectetur tincidunt. Nam eu tellus vitae dolor vestibulum commodo. Etiam tristique, urna ac convallis laoreet, enim enim aliquet neque, id cursus risus nulla sed ligula. Nunc quam libero, accumsan vitae consequat at, sollicitudin eget mi. Phasellus in molestie diam. Aliquam enim purus, tempor id sodales non, volutpat eu diam. Donec eu nisl lacinia leo semper lobortis sed sit amet elit.
+		This Web site may contain typographical errors or inaccuracies and may not be complete or current. macys.com therefore reserves the right to correct any errors, inaccuracies or omissions (including after an order has been submitted) and to change or update information at any time without prior notice. Please note that such errors, inaccuracies or omissions may relate to pricing and availability, and we reserve the right to cancel or refuse to accept any order placed based on incorrect pricing or availability information. We apologize for any inconvenience.
 		</p>
-		<h5>Lorem ipsum dolor sit amet</h5><br/>
 		<p>
-		Aliquam interdum, ipsum a posuere dictum, tellus risus blandit dolor, at tristique sapien urna vel purus. Pellentesque in dictum urna. Sed feugiat libero sit amet arcu malesuada eu convallis dui convallis. Donec facilisis massa a ipsum aliquam lobortis. Praesent ac lectus sed leo aliquam egestas. Sed ante neque, volutpat ac tempor et, bibendum at ligula. Nunc porta vestibulum sodales.
-			</p>
-			<h5>Lorem ipsum dolor sit amet</h5><br/>
-		<p>
-		Nullam a vulputate leo. Nulla tristique metus eros. Curabitur ultrices commodo mauris, sit amet faucibus lectus fermentum in. Nulla eleifend, augue hendrerit tempus faucibus, diam lacus aliquet urna, eget facilisis turpis risus quis arcu. Cras placerat suscipit sem, ac consequat dui iaculis eu. Cras elit enim, adipiscing lobortis rutrum ac, vehicula nec massa. Praesent pharetra ligula ac erat venenatis feugiat. Quisque id nulla mi. Mauris at orci nec nisi eleifend auctor. Mauris placerat consectetur tincidunt. Nam eu tellus vitae dolor vestibulum commodo. Etiam tristique, urna ac convallis laoreet, enim enim aliquet neque, id cursus risus nulla sed ligula. Nunc quam libero, accumsan vitae consequat at, sollicitudin eget mi. Phasellus in molestie diam. Aliquam enim purus, tempor id sodales non, volutpat eu diam. Donec eu nisl lacinia leo semper lobortis sed sit amet elit.
+		For more information on our customer services call 123-4567-890.
 		</p>
-		<h5>Lorem ipsum dolor sit amet</h5><br/>
-		<p>
-		Aliquam interdum, ipsum a posuere dictum, tellus risus blandit dolor, at tristique sapien urna vel purus. Pellentesque in dictum urna. Sed feugiat libero sit amet arcu malesuada eu convallis dui convallis. Donec facilisis massa a ipsum aliquam lobortis. Praesent ac lectus sed leo aliquam egestas. Sed ante neque, volutpat ac tempor et, bibendum at ligula. Nunc porta vestibulum sodales.
-			</p>
 	</div>
 	</div>
 </div>

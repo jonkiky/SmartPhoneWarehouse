@@ -18,7 +18,7 @@ public class Product {
 	private String brand; 
 
 	private double price; 
-	private String color_id; 
+	private String color; 
 	private int number_in_stroe;
 	private String product_information;  
 	private String des;
@@ -28,7 +28,14 @@ public class Product {
 	private Date modify_data;
 	private Integer seller_id;
 	
-	
+	@Column (name="color_id")
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+
 	@Id
 	@Column (name="id")
 	public int getId() {
@@ -66,13 +73,7 @@ public class Product {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	@Column (name="color_id")
-	public String getColor_id() {
-		return color_id;
-	}
-	public void setColor_id(String color_id) {
-		this.color_id = color_id;
-	}
+
 	@Column (name="number_in_stroe")
 	public int getNumber_in_stroe() {
 		return number_in_stroe;
