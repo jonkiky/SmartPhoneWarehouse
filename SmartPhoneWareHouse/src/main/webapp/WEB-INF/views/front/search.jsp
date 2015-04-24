@@ -212,6 +212,7 @@
 	 <script type="text/javascript">
     $(function() {
         $('#gallery a').lightBox();
+       
     });
     </script>
   </body>

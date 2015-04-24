@@ -94,7 +94,7 @@
          				if(obj.statusCode!="200"){
          					$.notify(obj.message, "error");
          				}else{
-         					$.notify("Shopping Cart Update Success", "success");
+         					$.notify("Loading page success", "success");
          					
          					$("#number_of_product_in_shoppingcart").text(12);
          					$("#shoppingcart_total_price").text(12312);

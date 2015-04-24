@@ -332,38 +332,33 @@
         $('#gallery a').lightBox();
       
         $("#register_btn").click(function(){
-        	  $.ajax({
-             	  type: "POST",
-             	  url: '<c:url value="/getData"/>',
-             	 contentType: "application/json"
-           		}).done(function(e){
-           			alert(e.message);
-           		});
+        	console.log(1);
+        	 $.ajax({
+            	  type: "POST",
+            	  url: '<c:url value="/register"/>',
+            	  data: JSON.stringify({
+               		"user_name":$("#register_inputUserName").val(),
+               		"title":$("#register_title option:selected" ).text(),
+               		"fname":$("#register_inputFname").val(),
+       		     	 "lname":$("#register_inputLname").val(),
+       				 "email":$("#register_inputEmail").val(),
+       				"password":"password",
+       				"day_of_birth":12,
+       				 "year_of_birth":123,
+       				 "month_of_birth":123,
+       		 		"phone_number":12313,
+       				"log_time":"log_time",
+       				 "status": "status"
+               }),
+               contentType: "application/json"
+            	}).done(function(e){
+            			alert(e.message);
+            	});
              	  
         	 
         })
        
-       $.ajax({
-         	  type: "POST",
-         	  url: '<c:url value="/register"/>',
-         	  data: JSON.stringify({
-            		"user_name":$("#register_inputUserName").val(),
-            		"title":$("#register_title option:selected" ).text(),
-            		"fname":$("#register_inputFname").val(),
-    		     	 "lname":"lname",
-    				 "email":"email",
-    				"password":"password",
-    				"day_of_birth":12,
-    				 "year_of_birth":123,
-    				 "month_of_birth":123,
-    		 		"phone_number":12313,
-    				"log_time":"log_time",
-    				 "status": "status"
-            }),
-            contentType: "application/json"
-         	}).done(function(e){
-         			alert(e.message);
-         	});
+      
     });
     </script>
   </body>

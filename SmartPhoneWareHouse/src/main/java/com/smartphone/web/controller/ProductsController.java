@@ -38,6 +38,7 @@ public class ProductsController {
 	}
 	
 	
+	
 	@RequestMapping(value = "/search/{key}", method = RequestMethod.GET)
 	public String searchProductByKeyWords( @PathVariable String key,ModelMap model) throws JsonProcessingException {
 		if(key.isEmpty()){
