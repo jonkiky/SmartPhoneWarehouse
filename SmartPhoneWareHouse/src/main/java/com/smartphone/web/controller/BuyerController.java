@@ -27,12 +27,13 @@ public class BuyerController extends BaseController{
 	@RequestMapping(value = "/buyer/login", method = RequestMethod.POST)
 	@ResponseBody
 	public String buyerLogin(HttpServletRequest request,@RequestBody Buyer buyer ) throws JsonProcessingException {
-		boolean flag=false;
+		int flag=-1;
 		if(null!=buyer){
 			flag=buyerService.login(buyer);
 			
 		}
-		if(flag){
+		if(flag!=-1){
+			buyer.setId(flag);
 			setSessionUser(request, buyer);
 			String msg = lang.loginSuccess;
 			return  JsonObject.objcetTOJson(msg, null);
@@ -53,6 +54,67 @@ public class BuyerController extends BaseController{
 			setSessionUser(request, null);
 			String msg = lang.sigoutSuccess;
 			return  JsonObject.objcetTOJson(msg, null);
+	
+		
+		
+	}
+	
+	
+	@RequestMapping(value = "/buyer/welcome", method = RequestMethod.GET)
+	public String buyerWelcome() throws JsonProcessingException {
+	
+			return "/front/welcome";
+	
+		
+		
+	}
+	
+	
+	@RequestMapping(value = "/buyer/bankinfo", method = RequestMethod.GET)
+	public String buyerBankInfo() throws JsonProcessingException {
+	
+			return "/front/bank";
+	
+		
+		
+	}
+	
+	
+
+	@RequestMapping(value = "/buyer/newbankinfo", method = RequestMethod.GET)
+	public String createBankInfo() throws JsonProcessingException {
+	
+			return "/front/Createbank";
+	
+		
+		
+	}
+	
+	
+	@RequestMapping(value = "/buyer/setting", method = RequestMethod.GET)
+	public String userSetting() throws JsonProcessingException {
+	
+			return "/front/setting";
+	
+		
+		
+	}
+	
+	@RequestMapping(value = "/buyer/deliveryaddress", method = RequestMethod.GET)
+	public String getAddress() throws JsonProcessingException {
+	
+			return "/front/address";
+	
+		
+		
+	}
+	
+	
+
+	@RequestMapping(value = "/buyer/editdeliveryaddress", method = RequestMethod.GET)
+	public String editAddress() throws JsonProcessingException {
+	
+			return "/front/editaddress";
 	
 		
 		

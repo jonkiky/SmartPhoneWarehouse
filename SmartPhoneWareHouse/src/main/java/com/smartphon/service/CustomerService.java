@@ -9,13 +9,13 @@ public class CustomerService {
 	
 	private BuyerDao buyerDao=new BuyerDao();
 	
-	public Boolean login(Buyer buyer){
-		boolean flag = false;
+	public int login(Buyer buyer){
+		int flag = -1;
 		if(!buyer.getUser_name().isEmpty()&&!buyer.getPassword().isEmpty()){
 			Buyer buyerInDB=buyerDao.findCustomerbyName(buyer.getUser_name());
 			if(null!=buyerInDB){
 				if(buyerInDB.getPassword().equals(buyer.getPassword())){
-					flag=true;
+					flag=buyerInDB.getId();
 				}
 			}
 		}

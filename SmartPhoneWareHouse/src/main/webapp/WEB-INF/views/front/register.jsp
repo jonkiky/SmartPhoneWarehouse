@@ -107,61 +107,21 @@
 		<div class="control-group">
 		<label class="control-label" for="dob">Date of Birth <sup>*</sup></label>
 		<div class="controls">
-		  <select class="span1" name="register_birth_month">
-				<option value="">-Month</option>
-					<option value="1">1&nbsp;&nbsp;</option>
-					<option value="2">2&nbsp;&nbsp;</option>
-					<option value="3">3&nbsp;&nbsp;</option>
-					<option value="4">4&nbsp;&nbsp;</option>
-					<option value="5">5&nbsp;&nbsp;</option>
-					<option value="6">6&nbsp;&nbsp;</option>
-					<option value="7">7&nbsp;&nbsp;</option>
-					<option value="8">8&nbsp;&nbsp;</option>
-					<option value="9">9&nbsp;&nbsp;</option>
-					<option value="10">10&nbsp;&nbsp;</option>
-					<option value="11">11&nbsp;&nbsp;</option>
-					<option value="12">12&nbsp;&nbsp;</option>
-			</select>
-			<select class="span1" name="register_birth_days">
-				<option value="">-Day</option>
-					<option value="1">1&nbsp;&nbsp;</option>
-					<option value="2">2&nbsp;&nbsp;</option>
-					<option value="3">3&nbsp;&nbsp;</option>
-					<option value="4">4&nbsp;&nbsp;</option>
-					<option value="5">5&nbsp;&nbsp;</option>
-					<option value="6">6&nbsp;&nbsp;</option>
-					<option value="7">7&nbsp;&nbsp;</option>
-					<option value="8">8&nbsp;&nbsp;</option>
-					<option value="9">9&nbsp;&nbsp;</option>
-					<option value="10">10&nbsp;&nbsp;</option>
-					<option value="11">11&nbsp;&nbsp;</option>
-					
-					<option value="12">12&nbsp;&nbsp;</option>
-					<option value="13">13&nbsp;&nbsp;</option>
-					<option value="14">14&nbsp;&nbsp;</option>
-					<option value="15">15&nbsp;&nbsp;</option>
-					<option value="16">16&nbsp;&nbsp;</option>
-					<option value="17">17&nbsp;&nbsp;</option>
-					<option value="18">18&nbsp;&nbsp;</option>
-					<option value="19">19&nbsp;&nbsp;</option>
-					<option value="20">20&nbsp;&nbsp;</option>
-					<option value="21">21&nbsp;&nbsp;</option>
-					<option value="22">22&nbsp;&nbsp;</option>
-					<option value="23">23&nbsp;&nbsp;</option>
-					<option value="24">24&nbsp;&nbsp;</option>
-					<option value="25">25&nbsp;&nbsp;</option>
-					<option value="26">26&nbsp;&nbsp;</option>
-					<option value="27">27&nbsp;&nbsp;</option>
-					<option value="28">28&nbsp;&nbsp;</option>
-					<option value="29">29&nbsp;&nbsp;</option>
-					<option value="30">30&nbsp;&nbsp;</option>
-					<option value="31">31&nbsp;&nbsp;</option>
-			</select>
-			<select class="span1" name="register_birth_year">
-				<option value="">-Year</option>
-					<option value="1988">1988&nbsp;&nbsp;</option>
-					<option value="1987">1987&nbsp;&nbsp;</option>
-			</select>
+		  <input type="password" id="register_inputbirth" placeholder="MM/DD/YYYY">
+		</div>
+		
+			<div class="control-group">
+			<label class="control-label" for="phone">Home phone <sup>*</sup></label>
+			<div class="controls">
+			  <input type="text"  name="phone" id="register_phone" placeholder="phone"/> <span>You must register at least one phone number</span>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="mobile">Mobile Phone </label>
+			<div class="controls">
+			  <input type="text"  name="mobile" id="register_mobile" placeholder="Mobile Phone"/> 
+			</div>
 		</div>
 	  </div>
 
@@ -169,25 +129,13 @@
 
 		<h3>Your address</h3>
 		<div class="control-group">
-			<label class="control-label" for="inputFname">First name <sup>*</sup></label>
+			<label class="control-label" for="inputFname">User name <sup>*</sup></label>
 			<div class="controls">
-			  <input type="text" id="register_inputFname" placeholder="First Name">
+			  <input type="text" id="register_inputAddressUserName" placeholder="User Name">
 			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label" for="inputLname">Last name <sup>*</sup></label>
-			<div class="controls">
-			  <input type="text" id="register_inputLname" placeholder="Last Name"/>
-			</div>
-		</div>
+		 </div>
 		
-		<div class="control-group">
-			<label class="control-label" for="company">Company</label>
-			<div class="controls">
-			  <input type="text" id="register_company" placeholder="company"/>
-			</div>
-		</div>
-		
+			
 		<div class="control-group">
 			<label class="control-label" for="adress">Address<sup>*</sup></label>
 			<div class="controls">
@@ -227,7 +175,7 @@
 			<div class="controls">
 			  <select type="text" id="register_country" >
 				<option value="">-</option>
-				<option value="1">Country</option>
+				<option value="USA">USA</option>
 			</select>
 			</div>
 		</div>	
@@ -237,19 +185,7 @@
 			  <textarea name="aditionalInfo" id="aditionalInfo" cols="26" rows="3">Additional information</textarea>
 			</div>
 		</div>
-		<div class="control-group">
-			<label class="control-label" for="phone">Home phone <sup>*</sup></label>
-			<div class="controls">
-			  <input type="text"  name="phone" id="register_phone" placeholder="phone"/> <span>You must register at least one phone number</span>
-			</div>
-		</div>
-		
-		<div class="control-group">
-			<label class="control-label" for="mobile">Mobile Phone </label>
-			<div class="controls">
-			  <input type="text"  name="mobile" id="register_mobile" placeholder="Mobile Phone"/> 
-			</div>
-		</div>
+	
 		
 	<p><sup>*</sup>Required field	</p>
 	
@@ -330,32 +266,129 @@
 	 <script type="text/javascript">
     $(function() {
         $('#gallery a').lightBox();
-      
-        $("#register_btn").click(function(){
-        	console.log(1);
+        var check = function(){
+        	var flag =true;
+        	var title=$("#register_title option:selected" ).text();
+       		var fname=$("#register_inputFname").val();
+		    var lname=$("#register_inputLname").val();
+			var	email=$("#register_inputEmail").val();
+			var	password=$("#register_inputPassword").val();
+			var	birth=$("#register_inputPassword").val();
+		 	var phone_number=$("#register_inputPassword").val();
+		 	
+		 	var addressUsername =$("#register_inputAddressUserName").val();
+		 	var address1=$("#register_address").val();
+		 	var address2 =$("#register_address2").val();
+		 	var city=$("#register_city").val();
+		 	var state=$("#register_state").text();
+		 		$("#aditionalInfo").val();
+		 	
+		 	
+      	
+      		if(title==="-"){
+      			$.notify("Title  is required", "warn");
+      			flag =false;
+      		}
+      		if(fname==""){
+      			$.notify("First Name is required", "warn");
+      			flag =false;
+      		}
+		 	
+      		if(lname==""){
+      			$.notify("Last Name is required", "warn");
+      			flag =false;
+      		}
+		 	if (!isInteger(phone_number)){
+		 		$.notify("Worning Phone Number", "warn");
+      			flag =false;
+		 	}
+      		if(email==""){
+      			$.notify("Email is required", "warn");
+      			flag =false;
+      		}
+		 	
+      		if(password==""){
+      			$.notify("Password is required", "warn");
+      			flag =false;
+      		}
+		 	
+   	
+		 	return flag;
+        }
+        
+        function isInteger(x) {
+            return x % 1 === 0;
+        }
+        
+        var register = function(){
+        	
+         	 $.ajax({
+           	  type: "POST",
+           	  url: '<c:url value="/register"/>',
+           	  data: JSON.stringify({
+              		"user_name":$("#register_inputUserName").val(),
+              		"title":$("#register_title option:selected" ).text(),
+              		"fname":$("#register_inputFname").val(),
+      		     	 "lname":$("#register_inputLname").val(),
+      				 "email":$("#register_inputEmail").val(),
+      				"password":$("#register_inputPassword").val(),
+      				"birth":$("#register_inputPassword").val(),
+      		 		"phone_number":$("#register_inputPassword").val(),
+      				"log_time":new Date().toString(),
+      				 "status": "status"
+              }),
+              contentType: "application/json"
+           	}).done(function(e){
+           		obj = JSON.parse(e);
+     				if(obj.statusCode!="200"){
+     					$.notify(obj.message, "error");
+     				}else{
+     					$.notify(obj.message, "success");
+     					setTimeout(function(){ location.reload(); }, 1000);
+     				}
+           	});
+        	
+        }
+        
+        
+        var address = function(){
+        	
         	 $.ajax({
-            	  type: "POST",
-            	  url: '<c:url value="/register"/>',
-            	  data: JSON.stringify({
-               		"user_name":$("#register_inputUserName").val(),
-               		"title":$("#register_title option:selected" ).text(),
-               		"fname":$("#register_inputFname").val(),
-       		     	 "lname":$("#register_inputLname").val(),
-       				 "email":$("#register_inputEmail").val(),
-       				"password":"password",
-       				"day_of_birth":12,
-       				 "year_of_birth":123,
-       				 "month_of_birth":123,
-       		 		"phone_number":12313,
-       				"log_time":"log_time",
-       				 "status": "status"
-               }),
-               contentType: "application/json"
-            	}).done(function(e){
-            			alert(e.message);
-            	});
-             	  
-        	 
+          	  type: "POST",
+          	  url: '<c:url value="/register"/>',
+          	  data: JSON.stringify({
+             		"user_name":$("#register_inputUserName").val(),
+             		"title":$("#register_title option:selected" ).text(),
+             		"fname":$("#register_inputFname").val(),
+     		     	 "lname":$("#register_inputLname").val(),
+     				 "email":$("#register_inputEmail").val(),
+     				"password":$("#register_inputPassword").val(),
+     				"birth":$("#register_inputPassword").val(),
+     		 		"phone_number":$("#register_inputPassword").val(),
+     				"log_time":new Date().toString(),
+     				 "status": "status"
+             }),
+             contentType: "application/json"
+          	}).done(function(e){
+          		obj = JSON.parse(e);
+    				if(obj.statusCode!="200"){
+    					$.notify(obj.message, "error");
+    				}else{
+    					$.notify(obj.message, "success");
+    					setTimeout(function(){ location.reload(); }, 1000);
+    				}
+          	});
+       	
+       }
+       
+        $("#register_btn").click(function(){
+        	var d = new Date();
+        	var n = d.toString();
+        	if(check()){
+  
+             	  var buyer_id =register();
+             	   address(buyer_id);
+        	}
         })
        
       

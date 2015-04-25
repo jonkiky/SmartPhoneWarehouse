@@ -50,7 +50,7 @@
 							<c:if test="${!empty buyer.user_name}">
 								
 							<div id="Welcome User">
-							Welcome <Strong>${buyer.user_name}</Strong>&nbsp;
+							Welcome <Strong><a href="<c:url value="/buyer/welcome"/>">${buyer.user_name}</a></Strong>&nbsp;
 							<a id="signout-btn" >[Sign out]</a>
 							</div>
 							</c:if>

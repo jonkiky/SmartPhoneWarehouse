@@ -14,13 +14,19 @@ import javax.persistence.Table;
 		private String lname;
 		private String email;
 		private String password;
-		private int day_of_birth;
-		private int year_of_birth;
-		private int month_of_birth;
+		private int birth;
 		private int phone_number;
 		private String log_time;
 		private String status;
 		
+		@Column (name="birth")
+		public int getBirth() {
+			return birth;
+		}
+
+		public void setBirth(int birth) {
+			this.birth = birth;
+		}
 
 		@Id
 		@Column (name="id")
@@ -78,29 +84,6 @@ import javax.persistence.Table;
 		}
 		public void setPassword(String password) {
 			this.password = password;
-		}
-		
-		@Column(name = "day_of_birth")
-		public int getDay_of_birth() {
-			return day_of_birth;
-		}
-		public void setDay_of_birth(int day_of_birth) {
-			this.day_of_birth = day_of_birth;
-		}
-		@Column(name = "year_of_birth")
-		public int getYear_of_birth() {
-			return year_of_birth;
-		}
-		public void setYear_of_birth(int year_of_birth) {
-			this.year_of_birth = year_of_birth;
-		}
-		
-		@Column(name = "month_of_birth")
-		public int getMonth_of_birth() {
-			return month_of_birth;
-		}
-		public void setMonth_of_birth(int month_of_birth) {
-			this.month_of_birth = month_of_birth;
 		}
 		
 		@Column(name = "phone_number")

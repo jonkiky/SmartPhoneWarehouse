@@ -60,13 +60,10 @@
 			Enter your e-mail address to create an account.<br/><br/><br/>
 			<form action="register">
 			  <div class="control-group">
-				<label class="control-label" for="inputEmail">E-mail address</label>
-				<div class="controls">
-				  <input class="span3"  type="text" id="create-account-inputEmail" placeholder="Email">
-				</div>
+				
 			  </div>
 			  <div class="controls">
-			  <button type="submit" class="btn block">Create Your Account</button>
+			  <button type="button" class="btn block" id="createAccount">Create Your Account</button>
 			  </div>
 			</form>
 		</div>
@@ -165,6 +162,10 @@
 	 <script type="text/javascript">
     $(function() {
         $('#gallery a').lightBox();
+        
+        $("#createAccount").click(function(){
+        	window.location.replace("<c:url value="/register"/>");
+        })
         $('#btn-signin').click(function(){
         	
         	$.post(
