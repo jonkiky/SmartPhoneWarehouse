@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.smartphon.service.CustomerService;
 import com.smartphone.model.Buyer;
+import com.smartphone.model.Shipping_Address;
 import com.smartphone.web.i18n.Language;
 import com.smartphone.web.i18n.i18nConfigure;
 import com.smartphone.webservice.util.JsonObject;
@@ -22,9 +23,29 @@ public class CustomerServiceController {
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	@ResponseBody
 	public String CreateCustomerAccount(@RequestBody Buyer buyer ) throws JsonProcessingException {
-		boolean flag=false;
+		int flag=-1;
 		if(null!=buyer){
 			flag=customerService.createCustomer(buyer);
+		}
+		if(flag!=-1){
+			String msg = lang.createCustomerSuccess;
+			return  JsonObject.objcetTOJson(msg,flag);
+		}else{
+			String errMsg=lang.createCustomerfailed;
+			return JsonObject.customerExcetption(errMsg);
+			}
+		
+		
+	}
+	
+	
+
+	@RequestMapping(value = "/newAddress", method = RequestMethod.POST)
+	@ResponseBody
+	public String CreateCustomerAccount(@RequestBody Shipping_Address  address ) throws JsonProcessingException {
+		boolean flag=false;
+		if(null!=address){
+			flag=customerService.newAddress(address);
 		}
 		if(flag){
 			String msg = lang.createCustomerSuccess;

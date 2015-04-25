@@ -25,8 +25,12 @@
                     
                     <ul class="nav pull-right">
                     <c:if test="${empty buyer}">
+                    <li>
+                    <a  href="<c:url value="/register"/>">Sign Up </a>
+                    </li>
+                    
 					<li class="dropdown">
-					
+						
 						<a data-toggle="dropdown" class="dropdown-toggle" href="#">Login <b class="caret"></b></a>
 						<div class="dropdown-menu">
 						<form class="form-horizontal loginFrm">

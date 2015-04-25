@@ -1,6 +1,7 @@
 package com.smartphone.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,26 +15,30 @@ import javax.persistence.Table;
 		private String lname;
 		private String email;
 		private String password;
-		private int birth;
+		private String birth;
 		private int phone_number;
 		private String log_time;
 		private String status;
 		
-		@Column (name="birth")
-		public int getBirth() {
-			return birth;
-		}
-
-		public void setBirth(int birth) {
-			this.birth = birth;
-		}
+	
 
 		@Id
+		@GeneratedValue
 		@Column (name="id")
+		
 		public int getId() {
 			return id;
 		}
 	
+		public String getBirth() {
+			return birth;
+		}
+		@Column (name="birth")
+		
+		public void setBirth(String birth) {
+			this.birth = birth;
+		}
+
 		public void setId(int id) {
 			this.id = id;
 		}

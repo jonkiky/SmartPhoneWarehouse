@@ -19,22 +19,24 @@ public class BuyerDao extends MemberDao {
 	}
 	
 	
-	public Boolean createCustomer(Buyer buyer){
-		Boolean flag =true;
+	public int createCustomer(Buyer buyer){
 		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
 		session.beginTransaction();
 		session.save(buyer);
+		int id = buyer.getId();
+		
 		session.getTransaction().commit();
 		session.clear();
 		session.close();
-		return flag;
+		
+		return id;
 	}
 	
 	public Buyer findCustomerbyName(String name){
 		
 		Buyer buyer= new Buyer();
 		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
-		Query query = session.createQuery("from Buyer as buyer where buyer.user_name=:name");
+		Query query = session.createQuery("from Buyer as buyer where buyer.email=:name");
 		query.setParameter("name", name);
 		List list = query.list();
 		if(null!=list){

@@ -1,6 +1,12 @@
 package com.smartphon.dao.user;
 
-public abstract class ShippingAddressDao {
+import org.hibernate.Session;
+
+import com.smartphone.model.Buyer;
+import com.smartphone.model.Shipping_Address;
+import com.smartphone.webservice.util.HibernateDbUtil;
+
+public  class ShippingAddressDao {
 
 	private MemberDao member;
 	private String fname;
@@ -73,6 +79,19 @@ public abstract class ShippingAddressDao {
 	}
 	public void setMobilePhone(int mobilePhone) {
 		this.mobilePhone = mobilePhone;
+	}
+	public boolean createAddress(Shipping_Address address2) {
+		
+			Boolean flag =true;
+			Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+			session.beginTransaction();
+			session.save(address2);
+			session.getTransaction().commit();
+			session.clear();
+			session.close();
+		
+		
+		return true;
 	}
 	
 	

@@ -53,14 +53,7 @@
 	<h3> Registration</h3>	
 	<hr class="soft"/>
 	<div class="well">
-	<div class="alert fade in">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-	 </div>
-	 <div class="alert alert-block alert-error fade in">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Lorem Ipsum is simply</strong> dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-	 </div>
+
 	<form class="form-horizontal" >
 		<h3>Your personal information</h3>
 		<div class="control-group">
@@ -105,7 +98,7 @@
 		</div>
 	  </div>	  
 		<div class="control-group">
-		<label class="control-label" for="dob">Date of Birth <sup>*</sup></label>
+		<label class="control-label" for="dob">Date of Birth <sup></sup></label>
 		<div class="controls">
 		  <input type="password" id="register_inputbirth" placeholder="MM/DD/YYYY">
 		</div>
@@ -185,7 +178,19 @@
 			  <textarea name="aditionalInfo" id="aditionalInfo" cols="26" rows="3">Additional information</textarea>
 			</div>
 		</div>
-	
+		<div class="control-group">
+			<label class="control-label" for="phone">Home phone <sup>*</sup></label>
+			<div class="controls">
+			  <input type="text"  name="phone" id="register_address_phone" placeholder="phone"/> <span>You must register at least one phone number</span>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="mobile">Mobile Phone </label>
+			<div class="controls">
+			  <input type="text"  name="mobile" id="register_address_mobile" placeholder="Mobile Phone"/> 
+			</div>
+		</div>
 		
 	<p><sup>*</sup>Required field	</p>
 	
@@ -274,16 +279,40 @@
 			var	email=$("#register_inputEmail").val();
 			var	password=$("#register_inputPassword").val();
 			var	birth=$("#register_inputPassword").val();
-		 	var phone_number=$("#register_inputPassword").val();
+		 	var phone_number=$("#register_phone").val();
 		 	
 		 	var addressUsername =$("#register_inputAddressUserName").val();
 		 	var address1=$("#register_address").val();
 		 	var address2 =$("#register_address2").val();
 		 	var city=$("#register_city").val();
 		 	var state=$("#register_state").text();
-		 		$("#aditionalInfo").val();
-		 	
-		 	
+		 		
+		 	var phone_address=$("#register_address_phone").val();
+      		var mobile_address=$("#register_address_mobile").val();
+      		
+      		var postcode = $("#postcode").val();
+      		
+      		if(postcode=="" ){
+      			$.notify("Zip Code is required", "warn");
+      			flag =false;
+      		}
+      		
+      		if(address1=="" || address2 == ""){
+      			$.notify("address is required", "warn");
+      			flag =false;
+      		}
+      		
+      		
+      		if(city=="-" ){
+      			$.notify("city is required", "warn");
+      			flag =false;
+      		}
+      		
+      		if(state=="-" ){
+      			$.notify("state is required", "warn");
+      			flag =false;
+      		}
+      		
       	
       		if(title==="-"){
       			$.notify("Title  is required", "warn");
@@ -299,7 +328,7 @@
       			flag =false;
       		}
 		 	if (!isInteger(phone_number)){
-		 		$.notify("Worning Phone Number", "warn");
+		 		$.notify("Wrong Phone Number", "warn");
       			flag =false;
 		 	}
       		if(email==""){
@@ -320,7 +349,7 @@
             return x % 1 === 0;
         }
         
-        var register = function(){
+        function register(){
         	
          	 $.ajax({
            	  type: "POST",
@@ -332,41 +361,41 @@
       		     	 "lname":$("#register_inputLname").val(),
       				 "email":$("#register_inputEmail").val(),
       				"password":$("#register_inputPassword").val(),
-      				"birth":$("#register_inputPassword").val(),
-      		 		"phone_number":$("#register_inputPassword").val(),
+      				"birth":$("#register_inputbirth").val(),
+      		 		"phone_number":$("#register_phone").val(),
       				"log_time":new Date().toString(),
       				 "status": "status"
               }),
               contentType: "application/json"
            	}).done(function(e){
-           		obj = JSON.parse(e);
-     				if(obj.statusCode!="200"){
-     					$.notify(obj.message, "error");
+           		obj2 = JSON.parse(e);
+     				if(obj2.statusCode!="200"){
+     					$.notify(obj2.message, "error");
      				}else{
-     					$.notify(obj.message, "success");
-     					setTimeout(function(){ location.reload(); }, 1000);
+     					$.notify(obj2.message, "success");
+     					//setTimeout(function(){ location.reload(); }, 1000);
+     					return obj2.obj
      				}
            	});
         	
         }
         
         
-        var address = function(){
+        var address = function(buyerId){
         	
         	 $.ajax({
           	  type: "POST",
-          	  url: '<c:url value="/register"/>',
+          	  url: '<c:url value="/newAddress"/>',
           	  data: JSON.stringify({
-             		"user_name":$("#register_inputUserName").val(),
-             		"title":$("#register_title option:selected" ).text(),
-             		"fname":$("#register_inputFname").val(),
-     		     	 "lname":$("#register_inputLname").val(),
-     				 "email":$("#register_inputEmail").val(),
-     				"password":$("#register_inputPassword").val(),
-     				"birth":$("#register_inputPassword").val(),
-     		 		"phone_number":$("#register_inputPassword").val(),
-     				"log_time":new Date().toString(),
-     				 "status": "status"
+          		"buyerId":buyerId,
+          		"user_name":$("#register_inputAddressUserName").val(),
+          	    "address":$("#register_address").val()+$("#register_address2").val(),
+          		 "city":$("#register_city").val(),
+          		 "state":$("#register_state").val(),
+          		 "desc":$("#aditionalInfo").val(),
+          		 "homePhone":$("#register_address_phone").val(),
+          		"mobilePhone":$("#register_address_mobile").val(),
+          		"company":"company"
              }),
              contentType: "application/json"
           	}).done(function(e){
@@ -375,7 +404,7 @@
     					$.notify(obj.message, "error");
     				}else{
     					$.notify(obj.message, "success");
-    					setTimeout(function(){ location.reload(); }, 1000);
+    					setTimeout(function(){ window.location.replace("login"); }, 1000);
     				}
           	});
        	

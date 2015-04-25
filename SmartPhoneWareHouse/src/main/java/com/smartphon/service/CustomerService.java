@@ -3,7 +3,9 @@ package com.smartphon.service;
 import org.springframework.stereotype.Service;
 
 import com.smartphon.dao.user.BuyerDao;
+import com.smartphon.dao.user.ShippingAddressDao;
 import com.smartphone.model.Buyer;
+import com.smartphone.model.Shipping_Address;
 @Service
 public class CustomerService {
 	
@@ -28,7 +30,7 @@ public class CustomerService {
 	}
 	
 	
-	public Boolean createCustomer(Buyer buyer){
+	public int createCustomer(Buyer buyer){
 		return  buyerDao.createCustomer(buyer);
 	}
 	
@@ -40,5 +42,11 @@ public class CustomerService {
 	
 	public Boolean removeCustomer(){
 		throw new UnsupportedOperationException("Implement this");
+	}
+
+
+	public boolean newAddress(Shipping_Address address) {
+		ShippingAddressDao d=new ShippingAddressDao() ;
+		return  d.createAddress(address);
 	}
 }
