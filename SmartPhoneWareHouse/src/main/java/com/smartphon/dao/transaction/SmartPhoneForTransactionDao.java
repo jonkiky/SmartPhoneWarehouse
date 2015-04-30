@@ -7,7 +7,7 @@ import com.smartphon.dao.product.SmartPhoneStanderDescriptionDao;
 
 public class SmartPhoneForTransactionDao extends SmartPhoneDao{
 
-	SmartPhoneForTransactionDao() {
+	public SmartPhoneForTransactionDao() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

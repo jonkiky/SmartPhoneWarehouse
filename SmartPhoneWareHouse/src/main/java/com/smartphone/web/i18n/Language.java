@@ -10,6 +10,18 @@ public abstract class Language {
 	public String loginSuccess;
 	public String loginFail;
 	public String sigoutSuccess;
+	public String addBankSuccess;
+	public String addBankfail;
+	public String removeBankSuccess;
+	public String removeBankfail;
+	public String canelOrderFail;
+	public String canelOrderSuccess;
+	public String createAddressSuccess;
+	public String createAddressFail;
+	public String recieveAddressesfail;
+	public String updateCustomerSuccess;
+	public String updateCustomerfailed;
+	
 	
 	public Language(){
 		userPremissionError= "User No Permission Error";
@@ -21,5 +33,17 @@ public abstract class Language {
 		loginSuccess="login Success";
 		loginFail="login Fail";
 		sigoutSuccess="sigout Success";
+		addBankSuccess="New payment added.";
+		addBankfail="New payment failed";
+		removeBankSuccess="Remove payment success.";
+		removeBankfail="Remove payment failed";
+		canelOrderSuccess="Cancel Order Success";
+		canelOrderFail="Cancel Order Fail";
+		createAddressSuccess="Create Address Success";
+		createAddressFail="Create Address Fail";
+		recieveAddressesfail ="Recieve Delivery Address Fail";
+
+		updateCustomerSuccess="Modify Profile Success";
+		updateCustomerfailed="Modify Profile failed";
 	}
 }

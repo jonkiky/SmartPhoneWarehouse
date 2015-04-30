@@ -368,13 +368,14 @@
               }),
               contentType: "application/json"
            	}).done(function(e){
-           		obj2 = JSON.parse(e);
+           		 obj2= JSON.parse(e);
      				if(obj2.statusCode!="200"){
      					$.notify(obj2.message, "error");
      				}else{
      					$.notify(obj2.message, "success");
      					//setTimeout(function(){ location.reload(); }, 1000);
-     					return obj2.obj
+     					
+     					address(obj2.obj);
      				}
            	});
         	
@@ -416,7 +417,7 @@
         	if(check()){
   
              	  var buyer_id =register();
-             	   address(buyer_id);
+             	   
         	}
         })
        

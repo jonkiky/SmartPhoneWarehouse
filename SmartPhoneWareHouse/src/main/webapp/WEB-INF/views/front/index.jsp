@@ -461,7 +461,10 @@
       <script type="text/javascript">
      
     $(function() {
-     	/// function definitions
+
+      
+		
+    	/// function definitions
     	 var newProduct =function(){
         	 $.ajax({
              	  type: "POST",
@@ -581,12 +584,12 @@
  						         
 
  						         
- 
+ 						        
+ 								newProduct();
+ 								FeaturedProduct();
+ 								normProduct();
  						         
-							      
-								newProduct();
-								FeaturedProduct();
-								normProduct();
+							  
 							//	shoppingCart();
 
 							});

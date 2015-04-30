@@ -166,21 +166,50 @@
         $("#createAccount").click(function(){
         	window.location.replace("<c:url value="/register"/>");
         })
+        
+  
         $('#btn-signin').click(function(){
         	
-        	$.post(
-        		"signin",
-        		{
-        			userName:$('#login-inputEmail').val(),
-        		    password:$('#login-inputPassword').val()   		}
-
-        		).done(
-        		function(data){
-        			console.log(data);
-        		})
+        	
+        		login();
 
         })
     	
+        
+      function login(){
+		var n =2;
+		if($("#login-inputEmail").val().length===0){
+			$.notify("Plese enter User Name", "warn");
+			n--;
+		}
+		if($("#login-inputPassword").val().length===0){
+			$.notify("Plese enter password", "warn");
+			n--;
+		}
+		if(n==2){
+			
+			  $.ajax({
+	         	  type: "POST",
+	         	  url: '<c:url value="/buyer/login"/>',
+	         	  data: JSON.stringify({
+	            		"user_name":$("#login-inputEmail").val(),
+	    				"password":$("#login-inputPassword").val()
+	            }),
+	            contentType: "application/json"
+	         	}).done(function(e){
+	         		obj = JSON.parse(e);
+      				if(obj.statusCode!="200"){
+      					$.notify(obj.message, "error");
+      				}else{
+      					$.notify(obj.message, "success");
+      					setTimeout(function(){  window.location.replace("buyer/welcome"); }, 1000);
+      				}
+	         	});
+		}
+		
+		
+		
+	}
     });
     
     </script>

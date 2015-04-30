@@ -71,8 +71,7 @@
 <c:if test="${!empty buyer.user_name}">
 								
 	<div class="pull-right"> <br/>
-	<a href="product_summary"> <span class="btn btn-mini btn-warning"> <i class="icon-shopping-cart icon-white"></i><span  id="number_of_product_in_shoppingcart"> [ 3 ]</span> </span> </a>
-	<a href="product_summary"><span class="btn btn-mini active" id="shoppingcart_total_price"><div>$155.00</div></span></a>
+	<a href="<c:url value="/product_summary"/>"> <span class="btn btn-mini btn-warning"> <i class="icon-shopping-cart icon-white"></i><span  id="number_of_product_in_shoppingcart"> Shopping Cart</span> </span> </a>
 	<!-- <span class="btn btn-mini">&pound;</span>
 	<span class="btn btn-mini">&euro;</span>  --> 
 </div>
@@ -100,8 +99,8 @@
          				}else{
          					$.notify("Loading page success", "success");
          					
-         					$("#number_of_product_in_shoppingcart").text(12);
-         					$("#shoppingcart_total_price").text(12312);
+         					$("#number_of_product_in_shoppingcart").text("Shopping Cart");
+         					$("#shoppingcart_total_price").text("Shopping Cart");
          					
          				
          			 

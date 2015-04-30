@@ -33,4 +33,12 @@ public class QueryRepo {
 	public final String SearchProductByColor="from Product as p where p.color=:key ";
 	public final String getProductById="from Product as p where p.id=:key";
 	
+	public final String getOrderByBuyerId="from Order as o where o.buyerId =:key";
+	public final String getOrderProductByOrderId="from OrderProduct as o where o.order_id =:key";
+	public final String getBankInfoBuyerId="from BankInfo where  buyerId =:key";
+	public final String getAddressByBuyerId="from Shipping_Address where  buyerId =:key";
+	public final String getAddressById="from Shipping_Address where  id =:key";
+	public final String deleteAddress="delete  Shipping_Address where  id =:key";
+	
+	public final String getShippingCartByBuyerId="from  ShoppingCart where  buyerId =:key";
 }

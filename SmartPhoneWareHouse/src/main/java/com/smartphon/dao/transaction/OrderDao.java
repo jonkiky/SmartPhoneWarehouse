@@ -1,12 +1,22 @@
 package com.smartphon.dao.transaction;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.hibernate.Query;
+import org.hibernate.Session;
+
 import com.smartphon.dao.product.ProductDao;
+import com.smartphon.dao.product.SmartPhoneDao;
 import com.smartphon.dao.user.BankInfoDao;
 import com.smartphon.dao.user.BuyerDao;
 import com.smartphon.dao.user.ShippingAddressDao;
+import com.smartphone.model.Order;
+import com.smartphone.model.OrderProduct;
+import com.smartphone.model.Product;
+import com.smartphone.webservice.repository.QueryRepo;
+import com.smartphone.webservice.util.HibernateDbUtil;
 
 public class OrderDao {
 	private int id ;
@@ -18,7 +28,7 @@ public class OrderDao {
 	private String Status;
 	private int packageTrackingCode;
 	private int code;
-	private int totalPrice;
+	private double totalPrice;
 	
 	
 	
@@ -28,11 +38,11 @@ public class OrderDao {
 	public void setPhones(List<SmartPhoneForTransactionDao> phones) {
 		this.phones = phones;
 	}
-	public int getTotalPrice() {
+	public double getTotalPrice() {
 		return totalPrice;
 	}
-	public void setTotalPrice(int totalPrice) {
-		this.totalPrice = totalPrice;
+	public void setTotalPrice(double totalPrice2) {
+		this.totalPrice = totalPrice2;
 	}
 	public int getId() {
 		return id;
@@ -85,6 +95,73 @@ public class OrderDao {
 	public void setCode(int code) {
 		this.code = code;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public QueryRepo q = new QueryRepo();
+	
+	
+	public  List<Order> getOrderHistoryByBuyerId(int id) {
+		
+		List<Order> Orders = new ArrayList<Order>();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		Query query = session.createQuery(q.getOrderByBuyerId);
+		query.setParameter("key", id);
+		List Order = query.list();
+		for(Object o : Order){
+			Orders.add((Order) o);
+		}
+		session.clear();
+		session.close();
+		
+		
+		return Orders;
+	}
+	public List<OrderProduct> getOrderPrdoct(int id) {
+		
+		
+		List<OrderProduct> Orders = new ArrayList<OrderProduct>();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		Query query = session.createQuery(q.getOrderProductByOrderId);
+		query.setParameter("key", id);
+		List Order = query.list();
+		for(Object o : Order){
+			Orders.add((OrderProduct) o);
+		}
+		session.clear();
+		session.close();
+		return Orders;
+	}
+	
+	
+public boolean deleteOrder(int id) {
+		
+		
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		session.getTransaction().begin();
+		Query query = session.createQuery("delete Order where id=:key");
+		query.setParameter("key", id);
+		int result = query.executeUpdate();
+		session.getTransaction().commit();
+		
+		session.getTransaction().begin();
+		Query query2 = session.createQuery("delete OrderProduct where order_id=:key");
+		query2.setParameter("key", id);
+		int result2 = query2.executeUpdate();
+		session.getTransaction().commit();
+		
+		session.clear();
+		session.close();
+		return true;
+	}
+	
 	
 	
 

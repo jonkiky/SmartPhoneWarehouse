@@ -279,11 +279,11 @@ public  class ProductDao {
 	}
 	
 	
-	public ProductDao getProductById(String key){
+	public ProductDao getProductById(int key){
 		ProductDao pd = new ProductDao();
 		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
 		Query query = session.createQuery(q.getProductById);
-		query.setParameter("key", Integer.valueOf(key));
+		query.setParameter("key", key);
 		List product = query.list();
 		
 		session.clear();

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.smartphon.dao.user.BuyerDao;
 import com.smartphon.service.CustomerService;
 import com.smartphone.model.Buyer;
 import com.smartphone.model.Shipping_Address;
@@ -32,6 +33,29 @@ public class CustomerServiceController {
 			return  JsonObject.objcetTOJson(msg,flag);
 		}else{
 			String errMsg=lang.createCustomerfailed;
+			return JsonObject.customerExcetption(errMsg);
+			}
+		
+		
+	}
+	
+	
+	
+	@RequestMapping(value = "/eidtBuyer", method = RequestMethod.POST)
+	@ResponseBody
+	public String eidtBuyer(@RequestBody Buyer buyer ) throws JsonProcessingException {
+		boolean flag=false;
+		Buyer cs = null;
+		BuyerDao dao = new BuyerDao();
+		if(null!=buyer){
+			cs=customerService.update(buyer);
+		}
+		
+		if(cs!=null){
+			String msg = lang.updateCustomerSuccess;
+			return  JsonObject.objcetTOJson(msg,cs);
+		}else{
+			String errMsg=lang.updateCustomerfailed;
 			return JsonObject.customerExcetption(errMsg);
 			}
 		

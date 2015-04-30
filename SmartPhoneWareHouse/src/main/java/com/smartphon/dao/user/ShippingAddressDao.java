@@ -1,9 +1,15 @@
 package com.smartphon.dao.user;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 
+import com.smartphone.model.BankInfo;
 import com.smartphone.model.Buyer;
 import com.smartphone.model.Shipping_Address;
+import com.smartphone.webservice.repository.QueryRepo;
 import com.smartphone.webservice.util.HibernateDbUtil;
 
 public  class ShippingAddressDao {
@@ -80,6 +86,9 @@ public  class ShippingAddressDao {
 	public void setMobilePhone(int mobilePhone) {
 		this.mobilePhone = mobilePhone;
 	}
+	
+	
+	public QueryRepo q = new QueryRepo();
 	public boolean createAddress(Shipping_Address address2) {
 		
 			Boolean flag =true;
@@ -94,6 +103,47 @@ public  class ShippingAddressDao {
 		return true;
 	}
 	
+	public List<Shipping_Address> getAddresses(int key) {
+		List<Shipping_Address> addresses = new ArrayList<Shipping_Address>();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		Query query = session.createQuery(q.getAddressByBuyerId);
+		query.setParameter("key", key);
+		List Order = query.list();
+		for(Object o : Order){
+			addresses.add((Shipping_Address) o);
+		}
+		session.clear();
+		session.close();
+		return addresses;
+	}
+	
+	
+	public List<Shipping_Address> getAddress(int key) {
+		List<Shipping_Address> addresses = new ArrayList<Shipping_Address>();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		Query query = session.createQuery(q.getAddressById);
+		query.setParameter("key", key);
+		List Order = query.list();
+		for(Object o : Order){
+			addresses.add((Shipping_Address) o);
+		}
+		session.clear();
+		session.close();
+		return addresses;
+	}
+	
+	public boolean deleteAddress(int key) {
+	
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		session.getTransaction().begin();
+		Query query = session.createQuery(q.deleteAddress);
+		query.setParameter("key", key);
+		int result = query.executeUpdate();
+		session.getTransaction().commit();
+		session.clear();
+		session.close();
+		return true;
+	}
 	
 	
 }

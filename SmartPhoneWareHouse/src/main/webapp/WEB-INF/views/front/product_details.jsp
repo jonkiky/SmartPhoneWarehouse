@@ -112,8 +112,8 @@
 				  <div class="control-group">
 					<label class="control-label"><span>$${product.price }</span></label>
 					<div class="controls">
-					<input type="number" class="span1" placeholder="Qty."/>
-					  <button type="submit" class="btn btn-large pull-right"><i class=" icon-shopping-cart"></i> Add to cart</button>
+					<input type="number" id="pnumber" class="span1" placeholder="1"/>
+					  <button type="button" id="add_shopping_cart"  class="btn btn-large pull-right"><i class=" icon-shopping-cart"></i> Add to cart</button>
 					</div>
 				  </div>
 				</form>
@@ -510,7 +510,34 @@
 	 <script type="text/javascript">
     $(function() {
         $('#gallery a').lightBox();
+        
+        $("#add_shopping_cart").click(function(){
+        	addToShoppingCart();
+        })
     });
+    
+    function addToShoppingCart(){
+    	 $.ajax({
+         	  type: "POST",
+         	  url: '<c:url value="/addToShoppingCart"/>',
+         	  data: JSON.stringify({
+         		"buyerId":${buyer.id},
+         		"shoppingcartId":"1",
+         	    "productId":${product.id},
+         		 "count":$("#pnumber").val()
+            }),
+            contentType: "application/json"
+         	}).done(function(e){
+         		obj = JSON.parse(e);
+   				if(obj.statusCode!="200"){
+   					$.notify(obj.message, "error");
+   				}else{
+   					$.notify("Product has added to shoppingcart", "success");
+   				}
+         	});
+      	
+      }
+  
     </script>
   </body>
 </html>

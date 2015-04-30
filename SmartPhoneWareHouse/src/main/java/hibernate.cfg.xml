@@ -29,7 +29,7 @@
  	<mapping class="com.smartphone.model.ProductImage"/>
  		<mapping class="com.smartphone.model.Shipping_Address"/>
  			<mapping class="com.smartphone.model.ShoppingCart"/>
- 	
+ 	<mapping class="com.smartphone.model.OrderProduct"/>
  	
 </session-factory>
 </hibernate-configuration>

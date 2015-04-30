@@ -50,48 +50,17 @@
 		<li><a href="index">Home</a> <span class="divider">/</span></li>
 		<li class="active"> SHOPPING CART</li>
     </ul>
-	<h3>  SHOPPING CART [ <small>3 Item(s) </small>]<a href="products" class="btn btn-large pull-right"><i class="icon-arrow-left"></i> Continue Shopping </a></h3>	
+	<h3>  SHOPPING CART <a href="products" class="btn btn-large pull-right"><i class="icon-arrow-left"></i> Continue Shopping </a></h3>	
 	<hr class="soft"/>
-	<table class="table table-bordered">
-	<tbody>
-		<tr><th colspan="2"> I AM ALREADY REGISTERED  </th></tr>
-		 <tr> 
-		 <td colspan="2">
-			<form class="form-horizontal">
-			  <div class="control-group">
-				<label class="span2 control-label" for="username">Username</label>
-				<div class="controls">
-				  <input type="text" id="username" placeholder="Username"> 
-				</div>
-			  </div>
-			 </div>
-			  <div class="control-group">
-				<label class="span2 control-label" for="inputPassword">Password</label> 
-				<div class="controls">
-				  <input type="password" id="inputPassword" placeholder="Password"> <a href="forgetpass">Forgot your password?</a>
-				</div>
-			  </div>
-			  <div class="control-group">
-				<div class="controls">
-				  <button type="submit" class="btn">Sign in</button> <a href="register"> Register now !</a>
-				</div>
-			  </div>
-			</form>				  
-		  </td>
-		  </tr>
-	  </tbody>
-	</table>		
+		
 			
-	<table class="table table-bordered">
+	<table class="table table-bordered" id="shoppingCartTable">
               <thead>
                 <tr>
                   <th>Product</th>
                   <th>Description</th>
                   <th>Quantity/Update</th>
 				  <th>Price</th>
-                  <th>Discount</th>
-                  <th>Tax</th>
-                  <th>Total</th>
 				</tr>
               </thead>
               <tbody>
@@ -99,50 +68,27 @@
                   <td> <img width="60" src="front/assets/products/4.jpg" alt=""/></td>
                   <td>MASSA AST<br/>Color : black, Material : metal</td>
 				  <td>
-					<div class="input-append"><input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button"><i class="icon-minus"></i></button><button class="btn" type="button"><i class="icon-plus"></i></button><button class="btn btn-danger" type="button"><i class="icon-remove icon-white"></i></button>				</div>
+					<div class="input-append"><input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text">		</div>
 				  </td>
                   <td>$120.00</td>
-                  <td>$25.00</td>
-                  <td>$15.00</td>
-                  <td>$110.00</td>
-                </tr>
-				<tr>
-                  <td> <img width="60" src="front/assets/products/8.jpg" alt=""/></td>
-                  <td>MASSA AST<br/>Color : black, Material : metal</td>
-				  <td>
-					<div class="input-append"><input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button"><i class="icon-minus"></i></button><button class="btn" type="button"><i class="icon-plus"></i></button><button class="btn btn-danger" type="button"><i class="icon-remove icon-white"></i></button>				</div>
-				  </td>
-                  <td>$7.00</td>
-                  <td>--</td>
-                  <td>$1.00</td>
-                  <td>$8.00</td>
-                </tr>
-				<tr>
-                  <td> <img width="60" src="front/assets/products/3.jpg" alt=""/></td>
-                  <td>MASSA AST<br/>Color : black, Material : metal</td>
-				  <td>
-					<div class="input-append"><input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button"><i class="icon-minus"></i></button><button class="btn" type="button"><i class="icon-plus"></i></button><button class="btn btn-danger" type="button"><i class="icon-remove icon-white"></i></button>				</div>
-				  </td>
-                  <td>$120.00</td>
-                  <td>$25.00</td>
-                  <td>$15.00</td>
-                  <td>$110.00</td>
+          
                 </tr>
 				
+				
                 <tr>
-                  <td colspan="6" align="right">Total Price:	</td>
+                  <td colspan="3" align="right">Total Price:	</td>
                   <td> $228.00</td>
                 </tr>
 				 <tr>
-                  <td colspan="6" align="right">Total Discount:	</td>
+                  <td colspan="3" align="right">Total Discount:	</td>
                   <td> $50.00</td>
                 </tr>
                  <tr>
-                  <td colspan="6" align="right">Total Tax:	</td>
+                  <td colspan="3" align="right">Total Tax:	</td>
                   <td> $31.00</td>
                 </tr>
 				 <tr>
-                  <td colspan="6" align="right"><strong>TOTAL ($228 - $50 + $31) =</strong>	</td>
+                  <td colspan="3" align="right"><strong>TOTAL ($228 - $50 + $31) =</strong>	</td>
                   <td class="label label-important"> <strong> $155.00 </strong></td>
                 </tr>
 				</tbody>
@@ -164,6 +110,37 @@
 			</tbody>
 			</table>
 			
+				<table class="table table-bordered">
+			<tbody>
+                <tr><th>
+			<hr class="soft"/>
+		<div >	  
+		 <a href="newbankinfo" class="btn btn-media"><i class=" icon-credit"></i> Add New Payment</a>
+		</div>
+		
+			<div class="">	  
+			<div id="" class="">
+	
+			<div class="" id="bankInfo">
+			</div>
+			</div>
+			</div></th></tr></tbody></table>
+			
+				<table class="table table-bordered">
+			<tbody>
+                <tr><th>
+			<hr class="soft"/>
+		<div>	  
+		 <a href="buyer/newAddress" class="btn btn-media"><i class=" icon-credit"></i> Add New Address</a>
+		</div>
+		<div class="">	  
+			<div id="productView" class="">
+	
+			<div class="" id="addresseslist">
+				</div></div>
+				</div>
+			</th></tr></tbody></table>
+			<!-- 
 			<table class="table table-bordered">
 			<tbody>
                 <tr><th colspan="2">ESTIMATE YOUR SHIPPING </th></tr>
@@ -191,9 +168,10 @@
 				  </td>
 				  </tr>
               </tbody>
-            </table>		
+            </table>	
+             -->	
 	<a href="products" class="btn btn-large"><i class="icon-arrow-left"></i> Continue Shopping </a>
-	<a href="login" class="btn btn-large pull-right">Next <i class="icon-arrow-right"></i></a>
+	<a class="btn btn-large pull-right" id="check_out">Check Out </a>
 	
 </div>
 </div>
@@ -261,7 +239,151 @@
 	 <script type="text/javascript">
     $(function() {
         $('#gallery a').lightBox();
+        
+        init();
+        address();
+		bank();
+        $("#check_out").click(function(){
+        	checkout();
+        })
+         function address(){
+       	 $.ajax({
+           	  type: "GET",
+           	  url:"<c:url value="/buyer/getAddresses/"/>"+${buyer.id},
+   	           contentType: "application/json"
+           	}).done(function(e){
+           		object = JSON.parse(e);
+    				if(object.statusCode!="200"){
+    					$.notify(obj.message, "error");
+    				}else{
+    					var html ="";
+    					$("#addresseslist").html("");
+    					for(var i = 0; i < object.obj.length;i++){
+    	 					var o= object.obj[i];
+   			
+   				html+="<hr class=\"soft\"/>"
+   				if(i==0){
+   					html+="<input type=\"radio\" name=\"address\" value="+o.id+" checked/>  &nbsp;" 
+   				}else{
+   					html+="<input type=\"radio\" name=\"address\" value="+o.id+" />  &nbsp;" 	
+   				}
+   				html+=o.user_name
+   				+"<Br> "+o.address+""
+   				+"<Br> "+o.city+" "
+   				+"<Br> Mobile Phone: "+o.mobilePhone+" "
+   				+"<Br> Home Phone: "+o.mobilePhone+" "
+   				+""
+   				+"<div> "
+   				+" <a href=\"javascript:onclick=deleteAddress("+o.id+")\" class=\"btn btn-media\"><i class=\" icon-credit\"></i>Remove this Address</a>"
+   				+" </div>";
+   				
+    					}
+    					$("#addresseslist").html(html);
+    				}
+           		
+           		
+           	})
+           	}
+           	
+        function bank(){
+       	 $.ajax({
+           	  type: "GET",
+           	  url:"<c:url value="/getBankInfo/"/>"+${buyer.id},
+   	           contentType: "application/json"
+           	}).done(function(e){
+           		object = JSON.parse(e);
+    				if(object.statusCode!="200"){
+    					$.notify(obj.message, "error");
+    				}else{
+    					var html ="";
+    					$("#bankInfo").html("");
+    					for(var i = 0; i < object.obj.length;i++){
+    	 					var o= object.obj[i];
+   			
+   				html+="<hr class=\"soft\"/>"
+   				+"<div>"
+   				+"<p>";
+   				if(i==0){
+   					html+="<input type=\"radio\" name=\"bankcard\" value="+o.id+" checked>  &nbsp;  FemaleBank Card Number : "+o.cardNumber
+   		   			
+   				}else{
+   					html+="<input type=\"radio\" name=\"bankcard\" value="+o.id+" >  &nbsp;  FemaleBank Card Number : "+o.cardNumber
+   	   		   		
+   				}
+   				html+="<Br> Name On Card : "+o.nameOnCard
+   				+"<Br> Expiration Date : "+o.expirationDate
+   				+"<Br> Expiration Year : "+o.expirationYear
+   				+"</p>"	+"</div>";
+   				
+    					}
+    					$("#bankInfo").html(html);
+    				}
+           		
+           		
+           	})
+       }
+        function checkout(){
+        	
+        	confirm("Confirm Check out ");
+        	$.notify("Order is processing.", "success");
+        	
+        }
+    	function init(){
+    		
+        	 $.ajax({
+            	  type: "GET",
+            	  url: '<c:url value="/getShoppingCart/"/>'+${buyer.id},
+               contentType: "application/json"
+            	}).done(function(e){
+            		obj = JSON.parse(e);
+      				if(obj.statusCode!="200"){
+      					$.notify(obj.message, "error");
+      				}else{
+      					$.notify(obj.message, "success");
+      					
+
+      	           		object = JSON.parse(e);
+      	    				if(object.statusCode!="200"){
+      	    					$.notify(obj.message, "error");
+      	    				}else{
+      	    					var html ="";
+      	    					html+="<table class=\"table table-bordered\" id=\"shoppingCartTable\">"
+    	 				              +"<thead>"
+    	 				           +" <tr>"
+    	 				        +"  <th>Product</th>"
+    	 				     +"      <th>Description</th>"
+    	 				  +"      <th>Quantity/Update</th>"
+    	 				               +"	  <th>Price</th>"
+    	 				            +"	</tr>"
+    	 				         +"    </thead>"
+    	 				      +"    <tbody>";
+      	    					for(var i = 0; i < object.obj.phones.length;i++){
+      	    	 					var o= object.obj.phones[i];
+      	    	 					
+      	    	 				
+      	    	 					html+="       <tr>"
+      	    	 				 +"        <td> "+o.name+o.brand+"</td>"
+      	    	 				 +"  <td>MASSA AST<br/>"+o.des+"</td>"
+      	    	 				 +"	  <td>"
+      	    	 				 +"		<div class=\"input-append\"><input class=\"span1\" style=\"max-width:34px\" placeholder=\""+o.count+"\" id=\"appendedInputButtons\" size=\"16\" type=\"text\">	</div>"
+      	    	 				 +"	  </td>"
+      	    	 				 +"         <td>$"+o.price+"</td>"
+      	    	 				 +"       </tr>";
+      	    	 				
+      	   				
+      	    				}       	    	 		
+    	 				     html+="			</tbody>"
+  	    	 				 +"          </table>";
+      	    					
+      	    					$("#shoppingCartTable").html(html)
+      	           		
+      	           		
+      	           	}
+      				}
+            	});
+        }
     });
+    
     </script>
   </body>
 </html>

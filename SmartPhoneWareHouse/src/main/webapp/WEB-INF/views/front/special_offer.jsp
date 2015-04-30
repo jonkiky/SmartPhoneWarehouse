@@ -492,7 +492,7 @@
               							+"				  <p> "
               							+obj.obj[d].productTitle+
               							+"				  </p>"
-              							+"				  <h4><a class=\"btn btn-large\" href=\"product_details\\"+obj.obj[d].id+"\">VIEW</a> <span class=\"pull-right\">$"+obj.obj[d].price+"</span></h4>"
+              							+"				  <h4><a class=\"btn btn-large\" href=\"product_details/"+obj.obj[d].id+"\">VIEW</a> <span class=\"pull-right\">$"+obj.obj[d].price+"</span></h4>"
               							+"				</div>"
               							+"			  </div>"
               							+"			</li>";
