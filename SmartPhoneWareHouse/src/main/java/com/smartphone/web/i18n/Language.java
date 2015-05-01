@@ -21,6 +21,7 @@ public abstract class Language {
 	public String recieveAddressesfail;
 	public String updateCustomerSuccess;
 	public String updateCustomerfailed;
+	public String pageLoadSuccess;
 	
 	
 	public Language(){
@@ -45,5 +46,6 @@ public abstract class Language {
 
 		updateCustomerSuccess="Modify Profile Success";
 		updateCustomerfailed="Modify Profile failed";
+		pageLoadSuccess="Loading Success";
 	}
 }

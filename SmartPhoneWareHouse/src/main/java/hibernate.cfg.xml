@@ -30,6 +30,6 @@
  		<mapping class="com.smartphone.model.Shipping_Address"/>
  			<mapping class="com.smartphone.model.ShoppingCart"/>
  	<mapping class="com.smartphone.model.OrderProduct"/>
- 	
+ 	<mapping class="com.smartphone.model.Seller"/>
 </session-factory>
 </hibernate-configuration>

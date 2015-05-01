@@ -124,6 +124,23 @@ public class OrderDao {
 		
 		return Orders;
 	}
+	
+	
+public  List<Order> getOrderHistory() {
+		
+		List<Order> Orders = new ArrayList<Order>();
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		Query query = session.createQuery("from Order");
+		List Order = query.list();
+		for(Object o : Order){
+			Orders.add((Order) o);
+		}
+		session.clear();
+		session.close();
+		
+		
+		return Orders;
+	}
 	public List<OrderProduct> getOrderPrdoct(int id) {
 		
 		
@@ -161,8 +178,66 @@ public boolean deleteOrder(int id) {
 		session.close();
 		return true;
 	}
+public void updateOrderPackage(int pid, int pcode) {
+
+	Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+	session.getTransaction().begin();
+	Query query = session.createQuery("update OrderProduct "
+			+ "set package_tracking_code=:code   "
+			+ "where id=:key");
+	query.setParameter("code",pcode );
+	query.setParameter("key", pid);
+	int result = query.executeUpdate();
+	session.getTransaction().commit();
+	session.clear();
+	session.close();
+	
+}
+public void updateOrderStatus(int pid, String status2) {
+
+	Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+	session.getTransaction().begin();
+	Query query = session.createQuery(" update Order "
+			+ "set Status=:Status   "
+			+ "where id=:key");
+	query.setParameter("Status",status2 );
+	query.setParameter("key", pid);
+	int result = query.executeUpdate();
+	session.getTransaction().commit();
+	session.clear();
+	session.close();
+	
+}
+	
+public int addOrder(Order order) {
+	Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+	session.beginTransaction();
+	session.save(order);
+	int id = order.getId();
+	
+	session.getTransaction().commit();
+	session.clear();
+	session.close();
+	
+	return id;
+
+	
+}
 	
 	
+public int addOrderProduct(OrderProduct order) {
+	Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+	session.beginTransaction();
+	session.save(order);
+	int id = order.getId();
 	
+	session.getTransaction().commit();
+	session.clear();
+	session.close();
+	
+	return id;
+
+	
+}
 
 }

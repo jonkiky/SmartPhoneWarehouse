@@ -1,12 +1,17 @@
 package com.smartphone.web.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.smartphon.dao.product.ProductDao;
 import com.smartphon.dao.user.BuyerDao;
 import com.smartphon.service.CustomerService;
 import com.smartphone.model.Buyer;
@@ -82,5 +87,10 @@ public class CustomerServiceController {
 		
 	}
 	
-
+	
+	
+			
+			
+		
+	
 }

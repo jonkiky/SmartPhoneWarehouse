@@ -41,4 +41,5 @@ public class QueryRepo {
 	public final String deleteAddress="delete  Shipping_Address where  id =:key";
 	
 	public final String getShippingCartByBuyerId="from  ShoppingCart where  buyerId =:key";
+	public final String getProductBySellerId="from Product as p where p.seller_id=:key ";
 }

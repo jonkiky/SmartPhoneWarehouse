@@ -65,6 +65,7 @@ public class ShoppingCartDao {
 				st.setName(pd.getName());
 				st.setCount(p.getCount());
 				st.setDes(pd.getDes());
+				st.setPrice(pd.getPrice());
 				sts.add(st);
 			}
 			
@@ -72,5 +73,28 @@ public class ShoppingCartDao {
 		shoppingCart.setPhones(sts);
 		return 	shoppingCart;
 	
+	}
+	public void removeFromShoppingCart(int key) {
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		session.getTransaction().begin();
+		Query query = session.createQuery("delete ShoppingCart as b where b.productId=:key");
+		query.setParameter("key", key);
+		int result = query.executeUpdate();
+		session.getTransaction().commit();
+		session.clear();
+		session.close();
+		
+	}
+	
+	public void clearShoppingCart(int key) {
+		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();
+		session.getTransaction().begin();
+		Query query = session.createQuery("delete ShoppingCart as b where b.buyerId=:key");
+		query.setParameter("key", key);
+		int result = query.executeUpdate();
+		session.getTransaction().commit();
+		session.clear();
+		session.close();
+		
 	}
 }

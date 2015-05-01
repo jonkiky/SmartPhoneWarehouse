@@ -324,8 +324,15 @@
        }
         function checkout(){
         	
-        	confirm("Confirm Check out ");
+        	
         	$.notify("Order is processing.", "success");
+        	
+        	
+        	
+        }
+        
+        
+        function clearShoppingCartByBuyerId(){
         	
         }
     	function init(){
@@ -368,6 +375,7 @@
       	    	 				 +"		<div class=\"input-append\"><input class=\"span1\" style=\"max-width:34px\" placeholder=\""+o.count+"\" id=\"appendedInputButtons\" size=\"16\" type=\"text\">	</div>"
       	    	 				 +"	  </td>"
       	    	 				 +"         <td>$"+o.price+"</td>"
+      	    	 				 +"         <td><a class=\"btn btn-media\"  href='javascript:onclick=removeFromShoppingCart("+o.id+")' >Remove</a></td>"
       	    	 				 +"       </tr>";
       	    	 				
       	   				
@@ -383,6 +391,16 @@
             	});
         }
     });
+    function removeFromShoppingCart(id){
+
+   	 $.ajax({
+       	  type: "GET",
+       	  url: '<c:url value="/removeFromShoppingCart/"/>'+id,
+          contentType: "application/json"
+       	}).done(function(e){
+       		setTimeout(function(){ window.location.reload(); }, 1000);
+       	})
+    }
     
     </script>
   </body>

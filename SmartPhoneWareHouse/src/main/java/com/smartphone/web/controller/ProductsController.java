@@ -172,5 +172,27 @@ public class ProductsController {
 			 return JsonObject.objcetTOJson(lang.canelOrderFail,null);
 		 }
 		}
+	 
+		@RequestMapping(value = "/removeFromShoppingCart/{key}", method = RequestMethod.GET)
+		@ResponseBody
+		public String searchProductByKeyWords( @PathVariable int key) throws JsonProcessingException {
+			productService.removeFromShoppingCart(key);
+				return  JsonObject.objcetTOJson("", null);
+			}
+		
+		@RequestMapping(value = "/saveOrder", method = RequestMethod.POST)
+		@ResponseBody
+		public String saveOrder( @RequestBody OrderDao order) throws JsonProcessingException {
+				return  JsonObject.objcetTOJson("", null);
+			}
+		
+
+		@RequestMapping(value = "/clearShoppingCart/{id}", method = RequestMethod.POST)
+		@ResponseBody
+		public String saveOrder(  @PathVariable int id) throws JsonProcessingException {
+				return  JsonObject.objcetTOJson("", null);
+			}
+		
+
 	
 }
