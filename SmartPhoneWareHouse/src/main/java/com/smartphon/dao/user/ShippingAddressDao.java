@@ -13,19 +13,25 @@ import com.smartphone.webservice.repository.QueryRepo;
 import com.smartphone.webservice.util.HibernateDbUtil;
 
 public  class ShippingAddressDao {
-
+	private int id ;
 	private MemberDao member;
 	private String fname;
 	private String lname;
 	private String company;
 	private String address;
 	private String city;
-	private String state;
+	private String state;	
 	private String desc;
 	private int homePhone;
 	private int mobilePhone;
 	
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public MemberDao getMember() {
 		return member;
 	}

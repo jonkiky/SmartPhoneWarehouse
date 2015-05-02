@@ -263,9 +263,9 @@
    			
    				html+="<hr class=\"soft\"/>"
    				if(i==0){
-   					html+="<input type=\"radio\" name=\"address\" value="+o.id+" checked/>  &nbsp;" 
+   					html+="<input type=\"radio\" id='address'  name=\"address\" value="+o.id+" checked/>  &nbsp;" 
    				}else{
-   					html+="<input type=\"radio\" name=\"address\" value="+o.id+" />  &nbsp;" 	
+   					html+="<input type=\"radio\" id='address'  name=\"address\" value="+o.id+" />  &nbsp;" 	
    				}
    				html+=o.user_name
    				+"<Br> "+o.address+""
@@ -304,10 +304,10 @@
    				+"<div>"
    				+"<p>";
    				if(i==0){
-   					html+="<input type=\"radio\" name=\"bankcard\" value="+o.id+" checked>  &nbsp;  FemaleBank Card Number : "+o.cardNumber
+   					html+="<input type=\"radio\" id='bankcard' name=\"bankcard\" value="+o.id+" checked>  &nbsp;  FemaleBank Card Number : "+o.cardNumber
    		   			
    				}else{
-   					html+="<input type=\"radio\" name=\"bankcard\" value="+o.id+" >  &nbsp;  FemaleBank Card Number : "+o.cardNumber
+   					html+="<input type=\"radio\" id='bankcard' name=\"bankcard\" value="+o.id+" >  &nbsp;  FemaleBank Card Number : "+o.cardNumber
    	   		   		
    				}
    				html+="<Br> Name On Card : "+o.nameOnCard
@@ -327,14 +327,91 @@
         	
         	$.notify("Order is processing.", "success");
         	
-        	
+        	transShoppingCartToTranscation()
         	
         }
         
+        
+        function computeTotilePrice(){
+
+        	var count =0
+        	var price=0
+        	var totalPrice=0;
+        	$('.appendedInputButtons').each(function(i, obj) {
+        	    console.log($(this).val())
+        	    if(i%2==1){
+        	      count =$(this).val();
+        	      
+        	      totalPrice+=count*price;
+        	      price=0
+        	    }else{
+        	      price =$(this).val();
+        	      
+        	      totalPrice+=count*price;
+        	      count =0
+        	    }
+        	    
+        	      
+        	});
+        	return totalPrice;
+        }
+        
+        function transShoppingCartToTranscation(){
+        	var count =[]
+        	$('.appendedInputButtons').each(function(i, obj) {
+        	    console.log($(this).val())
+        	    if(i%2==1){
+        	      count.push($(this).val());
+        	      
+        	    }
+        	    }
+        	)
+			var phones=[];
+			$(".pid").each(function(i, obj){
+				phones.push({
+					
+					"count":count[i],
+					"id":parseInt($(this).val())
+					})
+			})
+        	
+              	 $.ajax({
+             	  type: "POST",
+             	  url: '<c:url value="/addTranscation/"/>',
+             	 data: JSON.stringify({
+               		"bankInfo":{
+               			"id": $( "#bankcard:checked" ).val()
+               			
+               		},
+               		"address":{
+               			"id": $( "#address:checked" ).val()
+               		},
+               		"buyer":{
+               			"id":${buyer.id}
+               		},
+               		//"Status":"Processing",
+               		"packageTrackingCode":-1,
+               		"totalPrice":computeTotilePrice(),
+               		"phones":phones,
+               		
+                  }),
+                contentType: "application/json"
+             	}).done(function(e){
+             		$.notify("Clear ShoppingCart Completed", "success");
+             	})
+           }
         
         function clearShoppingCartByBuyerId(){
-        	
+       	 $.ajax({
+          	  type: "GET",
+          	  url: '<c:url value="/clearShoppingCart/"/>'+id,
+             contentType: "application/json"
+          	}).done(function(e){
+          		$.notify("Clear ShoppingCart Completed", "success");
+          	})
         }
+        
+        
     	function init(){
     		
         	 $.ajax({
@@ -372,9 +449,9 @@
       	    	 				 +"        <td> "+o.name+o.brand+"</td>"
       	    	 				 +"  <td>MASSA AST<br/>"+o.des+"</td>"
       	    	 				 +"	  <td>"
-      	    	 				 +"		<div class=\"input-append\"><input class=\"span1\" style=\"max-width:34px\" placeholder=\""+o.count+"\" id=\"appendedInputButtons\" size=\"16\" type=\"text\">	</div>"
+      	    	 				 +"		<div class=\"input-append\"><input class=\"appendedInputButtons span1\" style=\"max-width:34px\" value=\""+o.count+"\"  size=\"16\" type=\"text\">	</div>"
       	    	 				 +"	  </td>"
-      	    	 				 +"         <td>$"+o.price+"</td>"
+      	    	 				 +"         <td ><input class=\"appendedInputButtons\" value="+o.price+" type='hidden'><input class=\"pid\" value="+o.id+" type='hidden'>$"+o.price+"</td>"
       	    	 				 +"         <td><a class=\"btn btn-media\"  href='javascript:onclick=removeFromShoppingCart("+o.id+")' >Remove</a></td>"
       	    	 				 +"       </tr>";
       	    	 				

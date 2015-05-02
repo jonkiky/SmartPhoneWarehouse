@@ -1,5 +1,7 @@
 package com.smartphone.web.controller;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -16,9 +18,11 @@ import com.smartphon.dao.product.ProductDao;
 import com.smartphon.dao.product.SmartPhoneDao;
 import com.smartphon.dao.transaction.OrderDao;
 import com.smartphon.dao.transaction.ShoppingCartDao;
+import com.smartphon.dao.transaction.SmartPhoneForTransactionDao;
 import com.smartphon.service.ProductService;
 import com.smartphone.model.Buyer;
 import com.smartphone.model.Order;
+import com.smartphone.model.OrderProduct;
 import com.smartphone.model.Product;
 import com.smartphone.model.ShoppingCart;
 import com.smartphone.web.i18n.Language;
@@ -190,9 +194,40 @@ public class ProductsController {
 		@RequestMapping(value = "/clearShoppingCart/{id}", method = RequestMethod.POST)
 		@ResponseBody
 		public String saveOrder(  @PathVariable int id) throws JsonProcessingException {
+			
+			
 				return  JsonObject.objcetTOJson("", null);
 			}
 		
+		
+		
 
+		@RequestMapping(value = "/addTranscation", method = RequestMethod.POST)
+		@ResponseBody
+		public String addTransaction(@RequestBody OrderDao order) throws JsonProcessingException {
+			OrderDao dao = new OrderDao();
+			Order o = new Order();
+			List<OrderProduct> opLs = new ArrayList<OrderProduct>();
+			
+			o.setBankinfoId(order.getBankInfo().getId());
+			o.setBuyerId(Integer.parseInt(order.getBuyer().getId()));
+			  Date date = new Date();
+			o.setOrderTime(date.toString());
+			o.setShippinginfoId(order.getAddress().getId());
+			o.setStatus("processing");
+			o.setTotalPrice(order.getTotalPrice());
+			int order_id = dao.addOrder(o);
+			for(SmartPhoneForTransactionDao st : order.getPhones()){
+				OrderProduct op = new OrderProduct();
+				op.setCount(st.getCount());
+				op.setPackage_tracking_code(order.getPackageTrackingCode());
+				op.setProduct_id(st.getId());
+				op.setOrder_id(order_id);
+				dao.addOrderProduct(op);
+			}
+			
+				return  JsonObject.objcetTOJson("", null);
+			}
+		
 	
 }
