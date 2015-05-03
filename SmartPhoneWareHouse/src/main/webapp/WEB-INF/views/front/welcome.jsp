@@ -158,11 +158,8 @@
     })
     function init(){
     	 $.ajax({
-        	  type: "POST",
-        	  url: '<c:url value="/getOrderHistory"/>',
-        	  data: JSON.stringify({
-        		  "id":"${buyer.id}"
-        		  }),
+        	  type: "GET",
+        	  url: '<c:url value="/getOrderHistory/"/>'+${buyer.id},
            contentType: "application/json"
         	}).done(function(e){
         		object = JSON.parse(e);

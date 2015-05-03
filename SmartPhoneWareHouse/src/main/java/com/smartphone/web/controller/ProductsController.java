@@ -138,6 +138,14 @@ public class ProductsController {
 			
 		}
 	 
+	 @RequestMapping(value = "/getOrderHistory/{id}", method = RequestMethod.GET)
+		@ResponseBody
+		public String getOrderHistory(@PathVariable int id) throws JsonProcessingException {
+		List<OrderDao> orders = productService.getOrderHistoryByBuyerId(id);
+		 return JsonObject.objcetTOJson("Retrieve Data Success",orders);
+			
+		}
+	 
 	 @RequestMapping(value = "/cancelOrder/{id}", method = RequestMethod.GET)
 		@ResponseBody
 		public String cancelOrder(@PathVariable int id ) throws JsonProcessingException {

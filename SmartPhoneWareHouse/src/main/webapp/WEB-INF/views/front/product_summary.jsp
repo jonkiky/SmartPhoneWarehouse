@@ -328,7 +328,7 @@
         	$.notify("Order is processing.", "success");
         	
         	transShoppingCartToTranscation()
-        	clearShoppingCartByBuyerId()
+        	
         	
         }
         
@@ -399,6 +399,7 @@
                 contentType: "application/json"
              	}).done(function(e){
              		$.notify("Transfer shoppingcart to transcation Completed", "success");
+             		clearShoppingCartByBuyerId()
              	})
            }
         

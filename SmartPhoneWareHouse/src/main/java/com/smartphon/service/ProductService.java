@@ -96,7 +96,7 @@ public class ProductService {
 			od.setId(o.getId());
 			// Get Order's Product id by Order Id
 			List<OrderProduct> orderProduct = orderDao.getOrderPrdoct(o.getId());
-			double totalPrice =0;
+			double totalPrice =o.getTotalPrice();
 			// Get Order's Product  by Product Id
 			List<SmartPhoneForTransactionDao> phones = new ArrayList<SmartPhoneForTransactionDao>();
 			for(OrderProduct p : orderProduct){
@@ -114,7 +114,7 @@ public class ProductService {
 				
 				st.setCount(p.getCount());
 				phones.add(st);
-				totalPrice += st.getPrice()*st.getCount();
+				//totalPrice += st.getPrice()*st.getCount();
 				
 			}
 			

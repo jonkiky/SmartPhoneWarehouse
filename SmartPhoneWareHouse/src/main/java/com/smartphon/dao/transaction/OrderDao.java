@@ -120,8 +120,7 @@ public class OrderDao {
 		}
 		session.clear();
 		session.close();
-		
-		
+			
 		return Orders;
 	}
 	
