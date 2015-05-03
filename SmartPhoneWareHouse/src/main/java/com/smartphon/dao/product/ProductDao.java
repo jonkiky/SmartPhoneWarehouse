@@ -136,6 +136,7 @@ public  class ProductDao {
 				pd.setProductTitle(p.getTitle());
 				pd.setSeller(null);
 				pd.setPrice(p.getPrice());
+				pd.setImg(getProductPic(p.getId()));
 				pd.setNumberInStroe(p.getNumber_in_stroe());
 				productDaoLs.add(pd);
 			}
@@ -168,6 +169,7 @@ public  class ProductDao {
 				pd.setSeller(null);
 				pd.setPrice(p.getPrice());
 				pd.setNumberInStroe(p.getNumber_in_stroe());
+				pd.setImg(getProductPic(p.getId()));
 				productDaoLs.add(pd);
 			}
 		}
@@ -200,6 +202,7 @@ public  class ProductDao {
 				pd.setSeller(null);
 				pd.setPrice(p.getPrice());
 				pd.setNumberInStroe(p.getNumber_in_stroe());
+				pd.setImg(getProductPic(p.getId()));
 				productDaoLs.add(pd);
 			}
 		}
@@ -243,6 +246,7 @@ public  class ProductDao {
 				pd.setSeller(null);
 				pd.setPrice(p.getPrice());
 				pd.setNumberInStroe(p.getNumber_in_stroe());
+				pd.setImg(getProductPic(p.getId()));
 				productDaoLs.add(pd);
 			}
 		}
@@ -273,6 +277,7 @@ public  class ProductDao {
 				pd.setSeller(null);
 				pd.setPrice(p.getPrice());
 				pd.setNumberInStroe(p.getNumber_in_stroe());
+				pd.setImg(getProductPic(p.getId()));
 				productDaoLs.add(pd);
 			}
 		}
@@ -302,7 +307,7 @@ public  class ProductDao {
 				pd.setSeller(null);
 				pd.setPrice(p.getPrice());
 				pd.setNumberInStroe(p.getNumber_in_stroe());
-				pd.setImg(getProductPic(p.getSeller_id()));
+				pd.setImg(getProductPic(p.getId()));
 			}
 		}
 		
@@ -332,7 +337,7 @@ public  class ProductDao {
 				pd.setSeller(null);
 				pd.setPrice(p.getPrice());
 				pd.setNumberInStroe(p.getNumber_in_stroe());
-				pd.setImg(getProductPic(p.getSeller_id()));
+				pd.setImg(getProductPic(p.getId()));
 				productDaoLs.add(pd);
 			}
 		}
@@ -405,6 +410,7 @@ public  class ProductDao {
 		session.clear();
 		session.close();
 	}
+	
 	public void addProductPic(ProductImage pi) {
 
 		Session session=HibernateDbUtil.getInstance().getSessionFactory().openSession();

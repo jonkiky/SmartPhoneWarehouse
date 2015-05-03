@@ -48,7 +48,7 @@
  <%@ include file="admincheckLogin.jsp" %>
 <div class="span9">
 
-	<h3>Order History</h3>
+	<h3>Transations</h3>
 	<div class="tab-pane" id="listView">
 	
 	<hr class="soft"/>
@@ -181,7 +181,7 @@
  	 		  		+"		<h3>Order Number:  # "+ o.id
  	 		  		+"                      <small><strong><b><i> Total Price: $"+o.totalPrice+"</i></b></strong></small></h3>		"
  	 		  		+"<h4>State:<span style=\"color:blue\">"+ o.status+"</span></h4>";
- 	 		  		if(o.status!="processing"){
+ 	 		  		if(o.status=="processing"){
  	 		  			html+="Add Package Code :<input type='text' id='packageCode' >"
  	 		  			+"<input type='text' id='status' >"
  	 		  			+"<a class=\"btn btn-media\"  href='javascript:onclick=CancelTranscation("+o.id+")' >Modeify Status & Add Package Code</a>";

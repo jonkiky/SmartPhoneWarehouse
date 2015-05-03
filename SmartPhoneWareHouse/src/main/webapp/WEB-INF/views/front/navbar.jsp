@@ -5,7 +5,7 @@
 <div class="navbar navbar-fixed-top">
               <div class="navbar-inner">
                 <div class="container">
-                 <a id="logoM" href="/"><img src="<c:url value="/front/assets/img/logo.png"/>" alt="Bootsshop"/></a>
+                 <a id="logoM" href="<c:url value="/"/>"><img src="<c:url value="/front/assets/img/logo.png"/>" alt="Bootsshop"/></a>
 					<a data-target="#sidebar" data-toggle="collapse" class="btn btn-navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>

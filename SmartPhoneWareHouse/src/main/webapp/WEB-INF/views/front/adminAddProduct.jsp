@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+  <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"> 
     <!-- Le styles  -->
     <link href="<c:url value="/front/assets/css/bootstrap.css"/>" rel="stylesheet"/>
     <link href="<c:url value="/front/assets/css/bootstrap-responsive.css"/>" rel="stylesheet"/>
@@ -535,14 +535,14 @@
     					$.notify(obj2.message, "success");
     					//setTimeout(function(){ location.reload(); }, 1000);
     					
-    					addImg(e.obj);
+    					addImg(obj2.obj);
     				}
           	});
        	
        }
        
        
-       var addImg = function(pid){
+       function addImg(pid){
        	
        	 $.ajax({
          	  type: "POST",
@@ -572,7 +572,7 @@
    					$.notify(obj.message, "error");
    				}else{
    					$.notify(obj.message, "success");
-   					setTimeout(function(){ window.location.replace("../adminProducts"); }, 1000);
+   					//setTimeout(function(){ window.location.replace("/smartphone/adminProducts"); }, 1000);
    				}
          	});
       	

@@ -130,4 +130,16 @@ public class IndexController {
 		// return JsonObjcet.objcetTOJson(user);
 	}
 
+	
+	
+	@RequestMapping(value = "/undefined", method = RequestMethod.GET)
+	public void undefined() {
+		// return JsonObjcet.objcetTOJson(user);
+	}
+	@RequestMapping(value = "/undefined", method = RequestMethod.POST)
+	public void undefined2() {
+		// return JsonObjcet.objcetTOJson(user);
+	}
+
+
 }

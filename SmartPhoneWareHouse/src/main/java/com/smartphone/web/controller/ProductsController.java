@@ -191,11 +191,12 @@ public class ProductsController {
 			}
 		
 
-		@RequestMapping(value = "/clearShoppingCart/{id}", method = RequestMethod.POST)
+		@RequestMapping(value = "/clearShoppingCart/{id}", method = RequestMethod.GET)
 		@ResponseBody
-		public String saveOrder(  @PathVariable int id) throws JsonProcessingException {
+		public String clearShoppingCart(  @PathVariable int id) throws JsonProcessingException {
 			
-			
+			ShoppingCartDao dao = new ShoppingCartDao();
+			dao.clearShoppingCart(id);
 				return  JsonObject.objcetTOJson("", null);
 			}
 		

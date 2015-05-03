@@ -2,6 +2,7 @@ package com.smartphone.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -21,6 +22,7 @@ public class ProductImage {
 		private String status;
 
 		@Id
+		@GeneratedValue
 		@Column (name="id")
 		public int getId() {
 			return id;

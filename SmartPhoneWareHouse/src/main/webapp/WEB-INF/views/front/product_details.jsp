@@ -51,8 +51,8 @@
 
 	<div class="span9">
     <ul class="breadcrumb">
-    <li><a href="index">Home</a> <span class="divider">/</span></li>
-    <li><a href="products">Products</a> <span class="divider">/</span></li>
+    <li><a href="<c:url value="/"/>">Home</a> <span class="divider">/</span></li>
+    <li><a href="<c:url value="/products"/>">Products</a> <span class="divider">/</span></li>
     <li class="active">product Details</li>
     </ul>	
 	<div class="row">	  
@@ -71,20 +71,20 @@
 			#lightbox-image-details-caption { font-weight: bold; }#lightbox-image-details-currentNumber {display: block; clear: left; padding-bottom: 1.0em;}
 			#lightbox-secNav-btnClose {width: 66px; float: right;padding-bottom: 0.7em;	}
 			</style>
-            <a href="<c:url value="/front/assets/products/1.jpg"/>" title="<h4>${product.name }</h4>">
-				<img src="<c:url value="/front/assets/products/1.jpg"/>" width="100%" />
+            <a href="<c:url value="${product.img[0]}"/>" title="<h4>${product.name }</h4>">
+				<img src="<c:url value="${product.img[0]}"/>" width="100%" />
             </a>
 			<div id="myCarousel" class="moreOptopm carousel slide">
                 <div class="carousel-inner">
                   <div class="item active">
-                   <a href="<c:url value="/front/assets/products/1.jpg"/>"> <img width="29%" src="<c:url value="/front/assets/products/1.jpg"/>" alt=""/></a>
-                   <a href="<c:url value="/front/assets/products/1.jpg"/>"> <img width="29%" src="<c:url value="/front/assets/products/2.jpg"/>" alt=""/></a>
-                   <a href="<c:url value="/front/assets/products/1.jpg"/>" > <img width="29%" src="<c:url value="/front/assets/products/3.jpg"/>" alt=""/></a>
+                   <a href="<c:url value="${product.img[1]}"/>"> <img width="29%" style="max-height:200px" src="<c:url value="${product.img[1]}"/>" alt=""/></a>
+                   <a href="<c:url value="${product.img[2]}"/>"> <img width="29%" style="max-height:200px"  src="<c:url value="${product.img[2]}"/>" alt=""/></a>
+                   <a href="<c:url value="${product.img[3]}"/>" > <img width="29%"  style="max-height:200px"  src="<c:url value="${product.img[3]}"/>" alt=""/></a>
                   </div>
                   <div class="item">
-                   <a href="<c:url value="/front/assets/products/1.jpg" />"> <img width="29%" src="<c:url value="/front/assets/products/3.jpg" />"alt=""/></a>
-                   <a href="<c:url value="/front/assets/products/1.jpg"/>"> <img width="29%" src="<c:url value="/front/assets/products/1.jpg"/>" alt=""/></a>
-                   <a href="<c:url value="/front/assets/products/1.jpg"/>"> <img width="29%" src="<c:url value="/front/assets/products/2.jpg"/>" alt=""/></a>
+                   <a href="<c:url value="${product.img[1]}" />"> <img width="29%" style="max-height:200px"  src="<c:url value="${product.img[1]}" />"alt=""/></a>
+                   <a href="<c:url value="${product.img[2]}"/>"> <img width="29%" style="max-height:200px"  src="<c:url value="${product.img[2]}"/>" alt=""/></a>
+                   <a href="<c:url value="${product.img[3]}"/>"> <img width="29%" style="max-height:200px"  src="<c:url value="${product.img[3]}"/>" alt=""/></a>
                   </div>
                 </div>
               <!--  

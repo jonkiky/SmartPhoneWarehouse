@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+  <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"> 
     <!-- Le styles  -->
     <link href="<c:url value="/front/assets/css/bootstrap.css"/>" rel="stylesheet"/>
     <link href="<c:url value="/front/assets/css/bootstrap-responsive.css"/>" rel="stylesheet"/>
@@ -184,7 +184,7 @@
  	 		  		+"		<h3>Order Number:  # "+ o.id
  	 		  		+"                      <small><strong><b><i> Total Price: $"+o.totalPrice+"</i></b></strong></small></h3>		"
  	 		  		+"<h4>State:<span style=\"color:blue\">"+ o.status+"</span></h4>";
- 	 		  		if(o.status!="processing"){
+ 	 		  		if(o.status=="processing"){
  	 		  			html+="<a class=\"btn btn-media\"  href='javascript:onclick=CancelTranscation("+o.id+")' >Cancel</a>";
  	 		  		}
  	 		  		
@@ -210,7 +210,7 @@
  	 			  +	"</div>";
  	 			}
  					$("#listView").html(html);
- 					$.notify(obj.message, "success");
+ 					$.notify(object.message, "success");
  					
  				}
         	});
@@ -221,10 +221,10 @@
     	$.ajax({
         	  type: "GET",
         	  url: '<c:url value="/cancelOrder/"/>'+id,
-           contentType: "application/json"
+         	  contentType: "application/json"
         	}).done(function(e){
         		$.notify(obj.message, "success");
-				setTimeout(function(){ window.location.reload(); }, 1000);
+				setTimeout(function(){ init(); }, 1000);
         	})
     }
 	

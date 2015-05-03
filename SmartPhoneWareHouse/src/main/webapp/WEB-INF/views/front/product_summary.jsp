@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"> 
     <!-- Le styles  -->
     <link href="front/assets/css/bootstrap.css" rel="stylesheet"/>
     <link href="front/assets/css/bootstrap-responsive.css" rel="stylesheet"/>
@@ -328,6 +328,7 @@
         	$.notify("Order is processing.", "success");
         	
         	transShoppingCartToTranscation()
+        	clearShoppingCartByBuyerId()
         	
         }
         
@@ -397,17 +398,18 @@
                   }),
                 contentType: "application/json"
              	}).done(function(e){
-             		$.notify("Clear ShoppingCart Completed", "success");
+             		$.notify("Transfer shoppingcart to transcation Completed", "success");
              	})
            }
         
         function clearShoppingCartByBuyerId(){
        	 $.ajax({
           	  type: "GET",
-          	  url: '<c:url value="/clearShoppingCart/"/>'+id,
+          	  url: '<c:url value="/clearShoppingCart/"/>'+${buyer.id},
              contentType: "application/json"
           	}).done(function(e){
           		$.notify("Clear ShoppingCart Completed", "success");
+          		setTimeout(function(){ window.location.replace("/smartphone/special_offer"); }, 1000);
           	})
         }
         

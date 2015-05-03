@@ -95,7 +95,7 @@
 			<form class="form-horizontal qtyFrm">
 			<h3> $${i.price}</h3>
 			<label class="checkbox">
-				<input type="checkbox">  Adds product to compair
+				<input type="checkbox">  Adds product to compare
 			</label><br/>
 			
 			  <a href="product_details/${i.id}" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
@@ -116,7 +116,7 @@
 		<c:forEach var="i" items="${Productlist}">
 			<li class="span3">
 			  <div class="thumbnail">
-				<a href="product_details"><img src="/front/assets/products/3.jpg" alt=""/></a>
+				<a href="product_details"><img src='${i.img[0]}' alt=""/></a>
 				<div class="caption">
 				  <h5>${i.name}</h5>
 				  <p> 
